@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>附件：iS3脚本库使用说明 · GitBook</title>
+        <title>iS3脚本库使用说明 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../chapter3/" />
+    <link rel="next" href=" Attributes.html" />
     
     
-    <link rel="prev" href="常见问题.html" />
+    <link rel="prev" href="Python接口使用demo.html" />
     
 
     </head>
@@ -478,12 +478,26 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.4" data-path="常见问题.html">
+        <li class="chapter active" data-level="1.3.4.4" data-path="iS3脚本库说明.html">
             
-                <a href="常见问题.html">
+                <a href="iS3脚本库说明.html">
             
                     
-                    常见问题
+                    iS3脚本库使用说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.4.1" data-path=" Attributes.html">
+            
+                <a href=" Attributes.html">
+            
+                    
+                    1. Attribute
             
                 </a>
             
@@ -491,12 +505,43 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4.5" data-path="iS3脚本库说明.html">
+        <li class="chapter " data-level="1.3.4.4.2" data-path="Class.html">
             
-                <a href="iS3脚本库说明.html">
+                <a href="Class.html">
             
                     
-                    附件：iS3脚本库使用说明
+                    2. Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4.3" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    3. Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="常见问题.html">
+            
+                <a href="常见问题.html">
+            
+                    
+                    常见问题
             
                 </a>
             
@@ -686,7 +731,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >附件：iS3脚本库使用说明</a>
+        <a href="../.." >iS3脚本库使用说明</a>
     </h1>
 </div>
 
@@ -702,872 +747,16 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="is3&#x811A;&#x672C;&#x5E93;&#x8BF4;&#x660E;">iS3&#x811A;&#x672C;&#x5E93;&#x8BF4;&#x660E;</h3>
-<p>&#x8BE5;&#x9879;&#x76EE;&#x4E2D;..\Output\IS3Py &#x76EE;&#x5F55;&#x4E0B;&#x653E;&#x7F6E;&#x4E86;&#x4EE5;i3.py&#x4E3A;&#x4E3B;&#x3001;&#x4F9B;&#x7528;&#x6237;&#x8C03;&#x7528;&#x7684;Python&#x811A;&#x672C;&#x5E93;&#x3002;plugin-demo.py, graphics-demo.py&#x90FD;&#x662F;&#x8C03;&#x7528;is3&#x5E93;&#x5C01;&#x88C5;&#x7684;&#x51FD;&#x6570;&#x4EE5;&#x5B9E;&#x73B0;&#x529F;&#x80FD;&#x7684;&#x8303;&#x4F8B;&#x3002;&#x7528;&#x6237;&#x7F16;&#x5199;&#x7684;python&#x811A;&#x672C;&#x6587;&#x4EF6;&#x4E5F;&#x53EF;&#x653E;&#x7F6E;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F9B;IronPythonConsole&#x9762;&#x677F;&#x8C03;&#x7528;&#x3002;</p>
-<p>&#x672C;&#x6587;&#x6863;&#x5C06;&#x4ECB;&#x7ECD;is3.py&#x811A;&#x672C;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x51FD;&#x6570;&#xFF0C;&#x4F9B;&#x7528;&#x6237;&#x5BF9;&#x7167;&#x4F7F;&#x7528;&#x3002;</p>
-<h4 id="1-attributes">1. Attributes</h4>
-<p>is3&#x811A;&#x672C;&#x5E93;&#x4E2D;&#x76F4;&#x63A5;&#x5C01;&#x88C5;&#x4E86;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x4E00;&#x4E9B;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x4E3A;&#x7075;&#x6D3B;&#x7684;&#x5F00;&#x53D1;&#x7A7A;&#x95F4;&#x3002;&#x7531;&#x4E8E;UI &#x7EBF;&#x7A0B;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x51FD;&#x6570;&#x88AB;&#x9650;&#x5236;&#x5728;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x5F53;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5728;UI&#x7EBF;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;Python&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#x5E94;&#x5206;&#x5916;&#x5C0F;&#x5FC3;&#x3002;&#x76F4;&#x63A5;&#x8C03;&#x7528;is3&#x811A;&#x672C;&#x5E93;&#x7F16;&#x5199;&#x51FD;&#x6570;&#x65F6;&#x9700;&#x6CE8;&#x610F;&#x4F7F;&#x7528;delegate&#x65B9;&#x6CD5;&#x3002;</p>
-<h5 id="11-&#x5C5E;&#x6027;&#x540D;&#x79F0;">1.1 &#x5C5E;&#x6027;&#x540D;&#x79F0;</h5>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x5C5E;&#x6027;&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x5C5E;&#x6027;&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">mainframe</td>
-<td style="text-align:center">IMainFrame</td>
-<td style="text-align:center">the UI main frame</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">prj</td>
-<td style="text-align:center">Project</td>
-<td style="text-align:center">project data</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">dispatcher</td>
-<td style="text-align:center">Dispatcher</td>
-<td style="text-align:center">the Dispatcher of mainframe</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">graphicsEngine</td>
-<td style="text-align:center">IGraphicEngine</td>
-<td style="text-align:center">graphics engine</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">geometryEngine</td>
-<td style="text-align:center">IGeometryEngine</td>
-<td style="text-align:center">gemoetry engine</td>
-</tr>
-</tbody>
-</table>
-<h5 id="12-&#x5C5E;&#x6027;&#x5B9A;&#x4E49;">1.2 &#x5C5E;&#x6027;&#x5B9A;&#x4E49;</h5>
-<pre><code class="lang-python">mainframe = Globals.mainframe            <span class="hljs-comment"># Global var: mainframe</span>
-prj = mainframe.prj                      <span class="hljs-comment"># Global var: prj</span>
-dispatcher = mainframe.Dispatcher        <span class="hljs-comment"># Global var: dispatcher -&gt; UI thread manager</span>
-graphicsEngine = Runtime.graphicEngine   <span class="hljs-comment"># Global var: graphics Engine</span>
-geometryEngine = Runtime.geometryEngine  <span class="hljs-comment"># Global var: geometry Engine</span>
-</code></pre>
-<h4 id="2-functions">2. Functions</h4>
-<p>is3&#x811A;&#x672C;&#x5E93;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E9B;C#&#x91CC;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x6EE1;&#x8DB3;&#x7528;&#x6237;&#x6DFB;&#x52A0;&#x56FE;&#x5C42;&#x7684;&#x57FA;&#x672C;&#x9700;&#x6C42;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;UI&#x7EBF;&#x7A0B;&#x4E2D;&#x51FD;&#x6570;&#x7684;&#x5B89;&#x5168;&#x8C03;&#x7528;&#xFF0C;Mainframe&#xFF0C;View&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x4EE5;Wrapper&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x5305;&#x88C5;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x60F3;&#x8981;&#x66F4;&#x591A;&#x7684;&#x529F;&#x80FD;&#x6027;&#x62D3;&#x5C55;&#xFF0C;&#x4EFF;&#x7167;addView&#xFF08;&#xFF09;&#x7B49;&#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x8C03;&#x7528;C#&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5373;&#x53EF;&#x3002;</p>
-<h5 id="21-mainframewrapper">2.1 MainframeWrapper</h5>
-<p>MainframeWrapper&#x7C7B;&#x4E0B;&#x76EE;&#x524D;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4E14;&#x5747;&#x4E3A;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x3002;</p>
-<h6 id="211-addview">2.1.1 addView</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x89C6;&#x56FE;&#xFF08;View&#xFF09;&#x3002;&#x5C01;&#x88C5;&#x5728;MainrameWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;Mainframe.xaml.cs&#x4E2D;&#x7684;addView&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">emap</td>
-<td style="text-align:center">EngineeringMap</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9700;&#x6DFB;&#x52A0;&#x7684;engineering map</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">canClose</td>
-<td style="text-align:center">bool</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;&#x4E3A;true</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ViewWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;View&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python">emap = is3.EngineeringMap(<span class="hljs-string">&apos;demo&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">0.01</span>)
-safe_view = is3.MainframeWrapper.addView(emap)
-</code></pre>
-<h6 id="212-loaddomainpanels">2.1.2 loadDomainPanels</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x52A0;&#x8F7D;Domain&#x9762;&#x677F;&#xFF0C;&#x5E94;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;&#x5DE5;&#x7A0B;&#x9879;&#x76EE;&#x65F6;&#x3002;&#x5C01;&#x88C5;&#x5728;MainrameWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;Mainframe.xaml.cs&#x4E2D;&#x7684;loadDomainPanels()&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<p>&#x65E0;</p>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<p>void</p>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-is3.MainframeWrapper.loadDomainPanels()
-</code></pre>
-<h5 id="22-viewwrapper">2.2 ViewWrapper</h5>
-<p>ViewWrapper&#x4E2D;&#x7684;addGdbLayer()&#x548C;addShpLayer()&#x65B9;&#x6CD5;&#x4E00;&#x822C;&#x4E0D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x6DFB;&#x52A0;GdbLayer&#x548C;ShpLayer&#x65F6;&#x5E94;&#x8C03;&#x7528;is3&#x4E0B;&#x5C01;&#x88C5;&#x597D;&#x7684;addGdbLayer()&#x548C;addShpLayer()&#x65B9;&#x6CD5;&#x3002;</p>
-<h6 id="221--init">2.2.1  _init_</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x521D;&#x59CB;&#x5316;ViewWrapper</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">view</td>
-<td style="text-align:center">IView</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">graphics layer</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ViewWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;IView&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<p>&#x65E0;</p>
-<h6 id="222-addlayer">2.2.2 addLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x56FE;&#x5C42;&#xFF08;Layer&#xFF09;&#x3002;&#x5C01;&#x88C5;&#x5728;ViewWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;View.cs&#x4E2D;&#x7684;addLayer()&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">layer</td>
-<td style="text-align:center">IGraphicsLayer</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">graphics layer</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<p>void</p>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-emap = is3.EngineeringMap(<span class="hljs-string">&apos;demo&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">0.01</span>)
-safe_view = is3.MainframeWrapper.addView(emap)
-layer3WP = is3.newGraphicsLayer(<span class="hljs-string">&apos;layer3&apos;</span>, <span class="hljs-string">&apos;layer3&apos;</span>)
-safe_view.addLayer(layer3WP.layer)
-</code></pre>
-<h6 id="223-addlocaltiledlayer">2.2.3 addLocalTiledLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x6DFB;&#x52A0;&#x672C;&#x5730;&#x7684;Tiled Layer&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E3A;.TPK&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5728;ViewWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;View.cs&#x4E2D;&#x7684;addLocalTiledLayer()&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">file</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x201C;Empty.tpk&#x201D;</td>
-<td style="text-align:center">.TPK&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">id</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&apos;baselayer&apos;</td>
-<td style="text-align:center">layer&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<p>void</p>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-<span class="hljs-comment"># tilePath: path to tiled packages (.TPK)</span>
-tilefile = is3.Runtime.tilePath + <span class="hljs-string">&quot;\\Empty.tpk&quot;</span>   
-safe_view.addLocalTiledLayer(tilefile, <span class="hljs-string">&apos;baselayer&apos;</span>)
-</code></pre>
-<h6 id="224-addgdblayer">2.2.4 addGdbLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7684;geodatabase&#x4E2D;&#x52A8;&#x6001;&#x52A0;&#x8F7D;Gdb&#x56FE;&#x5C42;(GdbLayer)&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5728;ViewWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;View.cs&#x4E2D;&#x7684;addGdbLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">layerDef</td>
-<td style="text-align:center">LayerDef</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">layer definition</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">gdbFile</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">geodatabase&#x6587;&#x4EF6;&#x540D;</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">start</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">layer&#x4E2D;feature&#x7684;&#x8D77;&#x59CB;&#x7D22;&#x5F15;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; 0</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">maxFeatures</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x52A0;&#x8F7D;layer&#x65F6;&#x6240;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;features&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; 0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;GraphicsLayer&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-layerWrapper = viewWrapper.addGdbLayer(layerDef, gdbFile, start, maxFeatures)
-</code></pre>
-<h6 id="225-addshplayer">2.2.5 addShpLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7684;shape&#x6587;&#x4EF6;&#x4E2D;&#x52A8;&#x6001;&#x52A0;&#x8F7D;Shp&#x56FE;&#x5C42;(ShpLayer)&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5728;ViewWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;View.cs&#x4E2D;&#x7684; addShpLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">layerDef</td>
-<td style="text-align:center">LayerDef</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">layer definition</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">shpFile</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">shape file&#x6587;&#x4EF6;&#x540D;</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">start</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">layer&#x4E2D;feature&#x7684;&#x8D77;&#x59CB;&#x7D22;&#x5F15;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; 0</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">maxFeatures</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x52A0;&#x8F7D;layer&#x65F6;&#x6240;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;features&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; 0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;GraphicsLayer&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-layerWrapper = viewWrapper.addShpLayer(layerDef, shpfile, start, maxFeatures)
-</code></pre>
-<h6 id="226-selectbyrect">2.2.6 selectByRect</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x5728;iS3&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x56FE;&#x5C42;&#x5DE6;&#x4E0A;&#x65B9;&#x7684;&#x7D2B;&#x8272;&#x77E9;&#x5F62;&#x201C;select objects on the map&#x201D;&#x7684;&#x89E6;&#x53D1;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5728;ViewWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;IS3View.cs&#x4E2D;&#x7684; selectByRect&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p>&#x8BE5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5C1A;&#x4E0D;&#x660E;&#x786E;&#xFF0C;&#x529F;&#x80FD;&#x5C1A;&#x4E0D;&#x5B8C;&#x5584;&#x3002;</p>
-<h5 id="23-graphicslayerwrapper">2.3 GraphicsLayerWrapper</h5>
-<h6 id="231---init">2.3.1   _init_</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x521D;&#x59CB;&#x5316;GraphicsLayerWrapper&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">glayer</td>
-<td style="text-align:center">IS3GraphicsLayer</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9700;&#x5305;&#x88C5;&#x7684;Graphic&#x56FE;&#x5C42;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;IS3GraphicsLayer&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-layer = graphicsEngine.newGraphicsLayer(id, displayName)
-layerWrapper = GraphicsLayerWrapper(layer)
-</code></pre>
-<h6 id="232-setrenderer">2.3.2 setRenderer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x8BBE;&#x7F6E;Render&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5728;GraphicsLayerWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;IS3Layer.cs&#x4E2D;&#x7684; setRenderer()&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">renderer</td>
-<td style="text-align:center">IRenderer</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9700;&#x8BBE;&#x7F6E;&#x7684;Renderer&#x76EE;&#x6807;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<p>void</p>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-renderer1 = is3.graphicsEngine.newSimpleRenderer(sym_point)
-layer1WP = is3.newGraphicsLayer(<span class="hljs-string">&apos;layer1&apos;</span>, <span class="hljs-string">&apos;layer1&apos;</span>)
-layer1WP.setRenderer(renderer1)
-</code></pre>
-<h6 id="223-addgraphic">2.2.3 addGraphic</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x6DFB;&#x52A0;Graphic&#x56FE;&#x5C42;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5728;GraphicsLayerWrapper&#x7C7B;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E86;IS3Layer.cs&#x4E2D;&#x7684; addGraphic&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">graphic</td>
-<td style="text-align:center">IGraphic</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9700;&#x6DFB;&#x52A0;&#x7684;Graphic&#x56FE;&#x5C42;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<p>void</p>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-line = is3.graphicsEngine.newLine(x1, y1, x2, y2, sr)
-myLayer.addGraphic(line)
-</code></pre>
-<h5 id="24-&#x5176;&#x4ED6;&#x51FD;&#x6570;">2.4 &#x5176;&#x4ED6;&#x51FD;&#x6570;</h5>
-<h6 id="241-newgraphicslayer">2.4.1 newGraphicsLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x65B0;&#x5EFA;graphics layer&#x5C42;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E86;IS3GraphicEngine.cs&#x4E2D;&#x7684; newGraphicsLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">id</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x65E0;</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">displayName</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x65E0;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;IS3GraphicsLayer&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-layer1WP = is3.newGraphicsLayer(<span class="hljs-string">&apos;layer1&apos;</span>, <span class="hljs-string">&apos;layer1&apos;</span>)
-</code></pre>
-<h6 id="242-addview3d">2.4.2 addView3d</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x6DFB;&#x52A0;3D&#x89C6;&#x56FE;&#x3002;&#x8C03;&#x7528;&#x4E86;MainframeWrapper&#x4E2D;&#x7684; addView()&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">id</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">Map &#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">file</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x672C;&#x5730;3D&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ViewWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;3D&#x89C6;&#x56FE;&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-is3.addView3d(<span class="hljs-string">&apos;Map3D&apos;</span>, <span class="hljs-string">&apos;TONGJI.unity3d&apos;</span>)
-</code></pre>
-<h6 id="243-addgdblayer">2.4.3 addGdbLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x52A8;&#x6001;&#x52A0;&#x8F7D;Gdb&#x56FE;&#x5C42;(GdbLayer)&#xFF0C;&#x8C03;&#x7528;&#x4E86;ViewWrapper&#x4E2D;&#x7684;addGdbLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;&#x6DFB;&#x52A0;GdbLayer&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x800C;&#x975E;ViewWrapper&#x4E2D;&#x7684;addGdbLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">viewWrapper</td>
-<td style="text-align:center">ViewWrapper</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9700;&#x52A0;&#x8F7D;&#x7684;&#x76EE;&#x6807;&#x89C6;&#x56FE;</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">layerDef</td>
-<td style="text-align:center">LayerDef</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">layer  definition</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">gdbFile</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">gdb&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x9ED8;&#x8BA4;None</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">start</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;0</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">maxFeatures</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;&#x56FE;&#x5C42;&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-strLayerWP = is3.addGdbLayer(viewWP, layerDef)
-</code></pre>
-<h6 id="244-addgdblayerlazy">2.4.4 addGdbLayerLazy</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x65B0;&#x5EFA;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x7A7A;&#x767D;Gdb&#x56FE;&#x5C42;(GdbLayer)&#x3002;&#x8C03;&#x7528;&#x4E86;addGdbLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;&#x4E0E;2.6&#x533A;&#x522B;&#xFF1A;&#x52A0;&#x8F7D;&#x548C;&#x65B0;&#x5EFA;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">view</td>
-<td style="text-align:center">ViewWrapper</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9700;&#x52A0;&#x8F7D;&#x7684;&#x76EE;&#x6807;&#x89C6;&#x56FE;</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">name</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x56FE;&#x5C42;&#x540D;&#x79F0;</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">type</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x56FE;&#x5C42;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">gdbFile</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">Gdb&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x9ED8;&#x8BA4;None</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">start</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;0</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">maxFeatures</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;&#x56FE;&#x5C42;&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-is3.addGdbLayerLazy(viewWP, <span class="hljs-string">&apos;MON_WAT&apos;</span>, is3.GeometryType.Point)
-</code></pre>
-<h6 id="245-addshplayer">2.4.5 addShpLayer</h6>
-<p><strong>&#x63A5;&#x53E3;&#x529F;&#x80FD;</strong></p>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7684;shape&#x6587;&#x4EF6;&#x4E2D;&#x52A8;&#x6001;&#x52A0;&#x8F7D;Shp&#x56FE;&#x5C42;(ShpLayer)&#x3002;&#x8C03;&#x7528;&#x4E86;ViewWrapper&#x4E2D;&#x7684; addShpLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;&#x6DFB;&#x52A0;ShpLayer&#x65F6;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x800C;&#x975E;ViewWrapper&#x4E2D;&#x7684;addShpLayer&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
-<p><strong>&#x63A5;&#x53E3;&#x53C2;&#x6570;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x540D;&#x79F0;</th>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">viewWrapper</td>
-<td style="text-align:center">ViewWrapper</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x65E0;</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">layerDef</td>
-<td style="text-align:center">LayerDef</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x65E0;</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">shpfile</td>
-<td style="text-align:center">string</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x65E0;</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">start</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;0</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">maxFeatures</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x9ED8;&#x8BA4;0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x793A;&#x4F8B;&#x503C;</th>
-<th style="text-align:center">&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GraphicsLayerWrapper</td>
-<td style="text-align:center">&#x65E0;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x65B0;&#x56FE;&#x5C42;&#x7684;&#x5305;&#x88C5;&#x7C7B;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x8C03;&#x7528;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> is3
-bkgLayerWP = is3.addShpLayer(viewWP, layerDef, file, start, maxFeatures)
-</code></pre>
+<p>&#x8BE5;&#x9879;&#x76EE;&#x4E2D;..\Output\IS3Py &#x76EE;&#x5F55;&#x4E0B;&#x653E;&#x7F6E;&#x4E86;&#x4EE5;i3.py&#x4E3A;&#x4E3B;&#x3001;&#x4F9B;&#x7528;&#x6237;&#x8C03;&#x7528;&#x7684;Python&#x811A;&#x672C;&#x5E93;&#x3002;plugin-demo.py, graphics-demo.py&#x90FD;&#x662F;&#x8C03;&#x7528;is3&#x5E93;&#x5C01;&#x88C5;&#x7684;&#x51FD;&#x6570;&#x4EE5;&#x5B9E;&#x73B0;&#x529F;&#x80FD;&#x7684;&#x8303;&#x4F8B;&#x3002;&#x7528;&#x6237;&#x7F16;&#x5199;&#x7684;python&#x811A;&#x672C;&#x6587;&#x4EF6;&#x4E5F;&#x53EF;&#x653E;&#x7F6E;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F9B;IronPythonConsole&#x9762;&#x677F;&#x8C03;&#x7528;&#x3002;
+&#x672C;&#x6587;&#x6863;&#x5C06;&#x4ECB;&#x7ECD;is3.py&#x811A;&#x672C;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x51FD;&#x6570;&#xFF0C;&#x4F9B;&#x7528;&#x6237;&#x5BF9;&#x7167;&#x4F7F;&#x7528;&#x3002;</p>
+<ul>
+<li><p><a href="Attributes.md">1. Attributes</a></p>
+</li>
+<li><p><a href="Class.html">2. Class</a></p>
+</li>
+<li><p><a href="Function.html">3. Function</a></p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1595,12 +784,12 @@ bkgLayerWP = is3.addShpLayer(viewWP, layerDef, file, start, maxFeatures)
 
             
                 
-                <a href="常见问题.html" class="navigation navigation-prev " aria-label="Previous page: 常见问题">
+                <a href="Python接口使用demo.html" class="navigation navigation-prev " aria-label="Previous page: Python接口使用demo">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../chapter3/" class="navigation navigation-next " aria-label="Next page: 附录">
+                <a href=" Attributes.html" class="navigation navigation-next " aria-label="Next page: 1. Attribute">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1611,7 +800,7 @@ bkgLayerWP = is3.addShpLayer(viewWP, layerDef, file, start, maxFeatures)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"附件：iS3脚本库使用说明","level":"1.3.4.5","depth":3,"next":{"title":"附录","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"EFCF属性映射约定","level":"1.4.1","depth":2,"path":"chapter3/appendix.md","ref":"chapter3/appendix.md","articles":[{"title":"表名及所有者","level":"1.4.1.1","depth":3,"path":"chapter3/section1/appendix1.md","ref":"chapter3/section1/appendix1.md","articles":[]},{"title":"字段名、长度、数据类型及是否可空","level":"1.4.1.2","depth":3,"path":"chapter3/section1/appendix2.md","ref":"chapter3/section1/appendix2.md","articles":[]},{"title":"主键","level":"1.4.1.3","depth":3,"path":"chapter3/section1/appendix3.md","ref":"chapter3/section1/appendix3.md","articles":[]},{"title":"数据库自动生成字段值","level":"1.4.1.4","depth":3,"path":"chapter3/section1/appendix4.md","ref":"chapter3/section1/appendix4.md","articles":[]},{"title":"数字类型长度及精度","level":"1.4.1.5","depth":3,"path":"chapter3/section1/appendix5.md","ref":"chapter3/section1/appendix5.md","articles":[]},{"title":"非数据库字段属性","level":"1.4.1.6","depth":3,"path":"chapter3/section1/appendix6.md","ref":"chapter3/section1/appendix6.md","articles":[]},{"title":"Fluent API配置Configuration映射类","level":"1.4.1.7","depth":3,"path":"chapter3/section1/appendix7.md","ref":"chapter3/section1/appendix7.md","articles":[]}]}]},"previous":{"title":"常见问题","level":"1.3.4.4","depth":3,"path":"chapter2/section4/常见问题.md","ref":"chapter2/section4/常见问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section4/iS3脚本库说明.md","mtime":"2019-12-12T07:32:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-12T15:51:18.183Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"iS3脚本库使用说明","level":"1.3.4.4","depth":3,"next":{"title":"1. Attribute","level":"1.3.4.4.1","depth":4,"path":"chapter2/section4/ Attributes.md","ref":"chapter2/section4/ Attributes.md","articles":[]},"previous":{"title":"Python接口使用demo","level":"1.3.4.3","depth":3,"path":"chapter2/section4/Python接口使用demo.md","ref":"chapter2/section4/Python接口使用demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section4/iS3脚本库说明.md","mtime":"2019-12-13T08:27:32.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-13T08:29:48.309Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

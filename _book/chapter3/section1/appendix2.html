@@ -478,12 +478,26 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.4" data-path="../../chapter2/section4/常见问题.html">
+        <li class="chapter " data-level="1.3.4.4" data-path="../../chapter2/section4/iS3脚本库说明.html">
             
-                <a href="../../chapter2/section4/常见问题.html">
+                <a href="../../chapter2/section4/iS3脚本库说明.html">
             
                     
-                    常见问题
+                    iS3脚本库使用说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.4.1" data-path="../../chapter2/section4/ Attributes.html">
+            
+                <a href="../../chapter2/section4/ Attributes.html">
+            
+                    
+                    1. Attribute
             
                 </a>
             
@@ -491,12 +505,43 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.5" data-path="../../chapter2/section4/iS3脚本库说明.html">
+        <li class="chapter " data-level="1.3.4.4.2" data-path="../../chapter2/section4/Class.html">
             
-                <a href="../../chapter2/section4/iS3脚本库说明.html">
+                <a href="../../chapter2/section4/Class.html">
             
                     
-                    附件：iS3脚本库使用说明
+                    2. Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4.3" data-path="../../chapter2/section4/Function.html">
+            
+                <a href="../../chapter2/section4/Function.html">
+            
+                    
+                    3. Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../chapter2/section4/常见问题.html">
+            
+                <a href="../../chapter2/section4/常见问题.html">
+            
+                    
+                    常见问题
             
                 </a>
             
@@ -702,77 +747,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5B57;&#x6BB5;&#x540D;&#x3001;&#x957F;&#x5EA6;&#x3001;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53CA;&#x662F;&#x5426;&#x53EF;&#x7A7A;">&#x5B57;&#x6BB5;&#x540D;&#x3001;&#x957F;&#x5EA6;&#x3001;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53CA;&#x662F;&#x5426;&#x53EF;&#x7A7A;</h1>
-<p>&#x200B;    &#x5728;&#x9ED8;&#x8BA4;&#x7EA6;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Entity Framework Code First&#x521B;&#x5EFA;&#x7684;&#x5217;&#x540D;&#x4E0E;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x76F8;&#x540C;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6307;&#x5B9A;&#x7C7B;&#x5C5E;&#x6027;&#x4E0E;&#x5217;&#x540D;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x3002;</p>
-<h2 id="data-annotation-&#x65B9;&#x5F0F;">Data Annotation &#x65B9;&#x5F0F;</h2>
-<pre><code class="lang-csharp">[Column(<span class="hljs-string">&quot;ProductID&quot;</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> ProductID { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-[MaxLength(<span class="hljs-number">100</span>)]
-[Required, Column(<span class="hljs-string">&quot;ProductName&quot;</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> ProductName { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-</code></pre>
-<p>&#x5728;&#x4F7F;&#x7528;Required&#x7279;&#x6027;(Attribute)&#x8BBE;&#x7F6E;&#x5B57;&#x6BB5;&#x4E0D;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5F15;&#x7528;&#xFF1A;</p>
-<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System.ComponentModel.DataAnnotations;
-</code></pre>
-<h2 id="fluent-api&#x65B9;&#x5F0F;">Fluent API&#x65B9;&#x5F0F;</h2>
-<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnModelCreating</span>(<span class="hljs-params">DbModelBuilder modelBuilder</span>)
-</span>{
-    modelBuilder.Entity&lt;Product&gt;().Property(t =&gt; t.ProductID)
-        .HasColumnName(<span class="hljs-string">&quot;ProductID&quot;</span>);
-    modelBuilder.Entity&lt;Product&gt;().Property(t =&gt; t.ProductName)
-        .IsRequired()
-        .HasColumnName(<span class="hljs-string">&quot;ProductName&quot;</span>)
-        .HasMaxLength(<span class="hljs-number">100</span>);
-}
-</code></pre>
-<p> &#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x751F;&#x6210;&#x7684;&#x5217;&#x540D;&#x5BF9;&#x5E94;SQL SERVER&#x5217;<code>int</code>&#x7C7B;&#x578B;&#xFF1B;&#x800C;<code>String</code>&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x5219;&#x5BF9;&#x5E94;<code>SQL SERVER</code>&#x5217;&#x7684;<code>NVARCHAR</code>&#x7C7B;&#x578B;&#x3002;&#x82E5;&#x7C7B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x5C5E;&#x6027;&#x672A;&#x8BBE;&#x7F6E;<code>MaxLength</code>&#xFF0C;&#x5219;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x7C7B;&#x578B;&#x4E3A;<code>NVARCHAR(MAX)</code>&#x3002;</p>
-<p> &#x4E3A;&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x5BF9;&#x5E94;&#x7684;<code>SQL SERVER</code>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;</p>
-<pre><code class="lang-csharp">[Column(<span class="hljs-string">&quot;UnitPrice&quot;</span>, TypeName = <span class="hljs-string">&quot;MONEY&quot;</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">decimal</span> UnitPrice { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-</code></pre>
-<p>&#x91CD;&#x5199;<code>OnModelCreating</code>&#x65B9;&#x6CD5;&#xFF0C;&#x914D;&#x7F6E;&#x7C7B;&#x5BF9;&#x5E94;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x540D;&#xFF1A;</p>
-<pre><code class="lang-csharp"> <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnModelCreating</span>(<span class="hljs-params">DbModelBuilder  modelBuilder</span>)
- </span>{
-     modelBuilder.Entity&lt;Product&gt;().ToTable(<span class="hljs-string">&quot;Product&quot;</span>);
- }
-</code></pre>
-<pre><code class="lang-csharp">modelBuilder.Entity&lt;Product&gt;().Property(t =&gt; t.UnitPrice)
-        .HasColumnName(<span class="hljs-string">&quot;UnitPrice&quot;</span>)
-        .HasColumnType(<span class="hljs-string">&quot;MONEY&quot;</span>);
-</code></pre>
-<p> &#x5230;&#x6B64;&#x6B65;&#xFF0C;<code>Product.cs</code>&#x7C7B;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-csharp">     <span class="hljs-keyword">using</span> System;
-    <span class="hljs-keyword">using</span> System.Collections.Generic;
-    <span class="hljs-keyword">using</span> System.Linq;
-    <span class="hljs-keyword">using</span> System.Text;
-
-    <span class="hljs-keyword">using</span> System.ComponentModel.DataAnnotations;
-    <span class="hljs-keyword">using</span> System.ComponentModel.DataAnnotations.Schema;
-
-    <span class="hljs-keyword">namespace</span> <span class="hljs-title">Portal.Entities</span>
-    {
-        [Table(<span class="hljs-string">&quot;Product&quot;</span>, Schema = <span class="hljs-string">&quot;dbo&quot;</span>)]
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Product</span>
-        {
-            [Column(<span class="hljs-string">&quot;ProductID&quot;</span>)]
-            <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> ProductID { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-
-            [MaxLength(<span class="hljs-number">100</span>)]
-            [Required, Column(<span class="hljs-string">&quot;ProductName&quot;</span>)]
-            <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> ProductName { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-
-            [Column(<span class="hljs-string">&quot;UnitPrice&quot;</span>, TypeName = <span class="hljs-string">&quot;MONEY&quot;</span>)]
-            <span class="hljs-keyword">public</span> <span class="hljs-keyword">decimal</span> UnitPrice { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        }
-    }
-</code></pre>
-<p>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;text&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;</p>
-<pre><code class="lang-csharp">[Column(<span class="hljs-string">&quot;Remark&quot;</span>, TypeName = <span class="hljs-string">&quot;text&quot;</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Remark { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-</code></pre>
-<pre><code class="lang-csharp">modelBuilder.Entity&lt;Category&gt;().Property(t =&gt; t.Remark)
-        .HasColumnName(<span class="hljs-string">&quot;Remark&quot;</span>)
-        .HasColumnType(<span class="hljs-string">&quot;text&quot;</span>);
-</code></pre>
 
                                 
                                 </section>
@@ -816,7 +790,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字段名、长度、数据类型及是否可空","level":"1.4.1.2","depth":3,"next":{"title":"主键","level":"1.4.1.3","depth":3,"path":"chapter3/section1/appendix3.md","ref":"chapter3/section1/appendix3.md","articles":[]},"previous":{"title":"表名及所有者","level":"1.4.1.1","depth":3,"path":"chapter3/section1/appendix1.md","ref":"chapter3/section1/appendix1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section1/appendix2.md","mtime":"2019-12-12T07:32:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-12T15:51:18.183Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字段名、长度、数据类型及是否可空","level":"1.4.1.2","depth":3,"next":{"title":"主键","level":"1.4.1.3","depth":3,"path":"chapter3/section1/appendix3.md","ref":"chapter3/section1/appendix3.md","articles":[]},"previous":{"title":"表名及所有者","level":"1.4.1.1","depth":3,"path":"chapter3/section1/appendix1.md","ref":"chapter3/section1/appendix1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section1/appendix2.md","mtime":"2019-12-13T07:30:49.406Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-13T08:29:48.309Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

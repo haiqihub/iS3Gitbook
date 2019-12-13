@@ -9,8 +9,12 @@
    * [Python调用方式](./section4/Python调用方式.md)
 
    * [Python接口使用demo](.section4/Python接口使用demo.md)
-
+   
+   * [iS3脚本库使用说明](./section4/iS3脚本库说明.md)
+        * [1. Attribute](./section4/Attributes.md)
+        * [2. Class](./section4/Class.md)
+        * [3. Function](./section4/Function.md) 
+        
    * [常见问题](.section4/常见问题.md)
 
-   * [附件：iS3脚本库使用说明](./section4/iS3脚本库说明.md)
 
