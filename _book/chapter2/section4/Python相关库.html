@@ -1,0 +1,823 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python相关库 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Python调用方式.html" />
+    
+    
+    <link rel="prev" href="../section4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    iS3平台帮助文档
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    平台说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1/section1.html">
+            
+                <a href="../../chapter1/section1.html">
+            
+                    
+                    平台架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1/section2.html">
+            
+                <a href="../../chapter1/section2.html">
+            
+                    
+                    界面说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    平台使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../section1.html">
+            
+                <a href="../section1.html">
+            
+                    
+                    数据准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../section1/part1.html">
+            
+                <a href="../section1/part1.html">
+            
+                    
+                    本地数据配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../section1/part1/detail1.html">
+            
+                <a href="../section1/part1/detail1.html">
+            
+                    
+                    数据文件准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="../section1/part1/detail2.html">
+            
+                <a href="../section1/part1/detail2.html">
+            
+                    
+                    配置文件生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../section1/part2.html">
+            
+                <a href="../section1/part2.html">
+            
+                    
+                    数据库配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="../section1/part2/detail1.html">
+            
+                <a href="../section1/part2/detail1.html">
+            
+                    
+                    数据库说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="../section1/part2/detail2.html">
+            
+                <a href="../section1/part2/detail2.html">
+            
+                    
+                    表的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.3" data-path="../section1/part2/detail3.html">
+            
+                <a href="../section1/part2/detail3.html">
+            
+                    
+                    server端的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../section2.html">
+            
+                <a href="../section2.html">
+            
+                    
+                    server端准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../section2/server1.html">
+            
+                <a href="../section2/server1.html">
+            
+                    
+                    数据配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../section2/server2.html">
+            
+                <a href="../section2/server2.html">
+            
+                    
+                    API配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../section3.html">
+            
+                <a href="../section3.html">
+            
+                    
+                    client端准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../section3/client1.html">
+            
+                <a href="../section3/client1.html">
+            
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../section3/client2.html">
+            
+                <a href="../section3/client2.html">
+            
+                    
+                    创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../section3/client3.html">
+            
+                <a href="../section3/client3.html">
+            
+                    
+                    实现EntryPoint类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../section3/client4.html">
+            
+                <a href="../section3/client4.html">
+            
+                    
+                    实现数据对象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../section3/client5.html">
+            
+                <a href="../section3/client5.html">
+            
+                    
+                    修改C#项目文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../section3/client6.html">
+            
+                <a href="../section3/client6.html">
+            
+                    
+                    生成动态链接库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../section4.html">
+            
+                <a href="../section4.html">
+            
+                    
+                    Python接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.4.1" data-path="Python相关库.html">
+            
+                <a href="Python相关库.html">
+            
+                    
+                    Python相关库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="Python调用方式.html">
+            
+                <a href="Python调用方式.html">
+            
+                    
+                    Python调用方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="Python接口使用demo.html">
+            
+                <a href="Python接口使用demo.html">
+            
+                    
+                    Python接口使用demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="常见问题.html">
+            
+                <a href="常见问题.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="iS3脚本库说明.html">
+            
+                <a href="iS3脚本库说明.html">
+            
+                    
+                    附件：iS3脚本库使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../chapter3/">
+            
+                <a href="../../chapter3/">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../chapter3/appendix.html">
+            
+                <a href="../../chapter3/appendix.html">
+            
+                    
+                    EFCF属性映射约定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../chapter3/section1/appendix1.html">
+            
+                <a href="../../chapter3/section1/appendix1.html">
+            
+                    
+                    表名及所有者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../chapter3/section1/appendix2.html">
+            
+                <a href="../../chapter3/section1/appendix2.html">
+            
+                    
+                    字段名、长度、数据类型及是否可空
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../chapter3/section1/appendix3.html">
+            
+                <a href="../../chapter3/section1/appendix3.html">
+            
+                    
+                    主键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../chapter3/section1/appendix4.html">
+            
+                <a href="../../chapter3/section1/appendix4.html">
+            
+                    
+                    数据库自动生成字段值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../chapter3/section1/appendix5.html">
+            
+                <a href="../../chapter3/section1/appendix5.html">
+            
+                    
+                    数字类型长度及精度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../chapter3/section1/appendix6.html">
+            
+                <a href="../../chapter3/section1/appendix6.html">
+            
+                    
+                    非数据库字段属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../chapter3/section1/appendix7.html">
+            
+                <a href="../../chapter3/section1/appendix7.html">
+            
+                    
+                    Fluent API配置Configuration映射类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../end/">
+            
+                <a href="../../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Python相关库</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="python&#x76F8;&#x5173;&#x5E93;">Python&#x76F8;&#x5173;&#x5E93;</h3>
+<h4 id="1-is3-python">1. IS3-Python</h4>
+<p>&#x653E;&#x7F6E;&#x4E8E;..\iS3-Desktop-Client\IS3-Python&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;&#x7684;C#&#x4EE3;&#x7801;&#x5E93;&#xFF0C;&#x63D0;&#x4F9B;IS3&#x5185;&#x7F6E;&#x7684;Python&#x529F;&#x80FD;&#xFF0C;&#x5305;&#x62EC;&#x5BF9;IronPythonControl&#x7B49;&#x7684;&#x5B9E;&#x73B0;&#x548C;&#x63A7;&#x5236;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x5FC5;&#x5173;&#x5FC3;&#x3002;</p>
+<h4 id="2-python&#x6269;&#x5C55;&#x63D2;&#x4EF6;">2. Python&#x6269;&#x5C55;&#x63D2;&#x4EF6;</h4>
+<p>&#x653E;&#x7F6E;&#x4E8E;..\iS3-Desktop-Client\Output\PyPlugins &#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;&#x7684;*.py&#x811A;&#x672C;&#x6587;&#x4EF6;&#x5E93;&#x3002;&#x4E3B;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x5C06;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x4F4D;&#x4E8E;&#x8BE5;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6240;&#x6709;Python&#x811A;&#x672C;&#x6587;&#x4EF6;&#xFF08;&#x901A;&#x8FC7;Mainframe.xaml.cs&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;loadPyPlugins&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x52A0;&#x8F7D;&#xFF09;&#x3002;</p>
+<p>iS3&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x540D;&#x4E3A;plugin-demo.py&#x7684;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x6837;&#x4F8B;&#x4F4D;&#x4E8E;..\Output\IS3Py&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x521D;&#x59CB;&#x60C5;&#x51B5;&#x4E0B;&#x8BE5;&#x8DEF;&#x5F84;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x9700;&#x7528;&#x6237;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+</blockquote>
+<h4 id="3-python&#x811A;&#x672C;&#x5E93;">3. Python&#x811A;&#x672C;&#x5E93;</h4>
+<p>&#x653E;&#x7F6E;&#x4E8E;..\Output\IS3Py\&#x76EE;&#x5F55;&#x4E0B;&#x7684;Python&#x811A;&#x672C;&#x6587;&#x4EF6;&#x3002;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x4F9B;&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528;Python&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x65F6;&#x8C03;&#x7528;&#x3002;&#x7528;&#x6237;&#x7F16;&#x5199;&#x7684;Python&#x6587;&#x4EF6;&#x4E5F;&#x5E94;&#x653E;&#x7F6E;&#x4E8E;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x4EE5;import&#x8BED;&#x53E5;&#x5BFC;&#x5165;&#x8BE5;&#x5E93;&#x540D;&#x79F0;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x4EE5;iS3.py&#x811A;&#x672C;&#x5E93;&#x4E3A;&#x4F8B;&#xFF0C;&#x8BE5;&#x5E93;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;addView&#xFF08;&#xFF09;&#x7684;&#x5C01;&#x88C5;&#x7B49;&#x64CD;&#x4F5C;,&#x8C03;&#x7528;&#x6837;&#x4F8B;&#x53EF;&#x53C2;&#x8003;TONGJI.py&#x548C;plugin-demo.py&#x3002;</p>
+<blockquote>
+<p>&#x8865;&#x5145;&#x8BF4;&#x660E;&#xFF1A;IronPython-2.7.5.msi&#x662F;iS3 &#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x4E3B;&#x8981;&#x63D2;&#x4EF6;&#xFF0C;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x548C;&#x53D1;&#x5E03;&#x90FD;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x6B64;&#x63D2;&#x4EF6;&#x3002;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x5185;&#x5D4C;Python&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x63D0;&#x4F9B;Python&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x8303;&#x4F8B;&#xFF0C;&#x63D0;&#x4F9B;C#&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x63A5;&#x53E3;&#x548C;&#x8303;&#x4F8B;&#x3002;   </p>
+</blockquote>
+<h4 id="4-python&#x914D;&#x7F6E;&#x6587;&#x4EF6;">4. Python&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p>&#x653E;&#x7F6E;&#x4E8E;..\iS3-Desktop-Client\Output\Data\[project_name]&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;&#x7684;Python&#x811A;&#x672C;&#x6587;&#x4EF6;&#x3002;&#x8BE5;Python&#x811A;&#x672C;&#x53EF;&#x4F5C;&#x4E3A;iS3&#x5DE5;&#x7A0B;&#x7BA1;&#x7406;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x7A0B;&#xFF0C;&#x5173;&#x8054;XML&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5BFC;&#x5165;&#x4E8C;&#x7EF4;&#x3001;&#x4E09;&#x7EF4;&#x56FE;&#x5F62;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;[project_name]&#x5DE5;&#x7A0B;&#x7684;Python&#x811A;&#x672C;&#xFF0C;&#x662F;&#x52A0;&#x8F7D;iS3&#x5DE5;&#x7A0B;&#x9879;&#x76EE;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF08;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x5C31;&#x662F;&#x5728;iS3-Desktop&#x91CC;&#x901A;&#x8FC7;C#&#x52A0;&#x8F7D; &#xFF09;&#x3002;</p>
+<p>&#x4EE5;TONGJI&#x7684;&#x5DE5;&#x7A0B;&#x9879;&#x76EE;&#x4E3A;&#x4F8B;&#xFF0C;Python&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;&#x5176;&#x4E2D;&#xFF0C;LoadPrj() &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;&#x5DE5;&#x7A0B;&#x53CA;&#x5176;&#x76F8;&#x5E94;XML&#x6587;&#x4EF6;&#x3002;&#x8BE5;py&#x6587;&#x4EF6;&#x5728;&#x4F7F;&#x7528;cong.exe&#x914D;&#x7F6E;&#x9879;&#x76EE;&#x65F6;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x751F;&#x6210;&#x3002;</p>
+<pre><code class="lang-python">   <span class="hljs-comment"># -*- coding:gb2312 -*-</span>
+   <span class="hljs-keyword">import</span> is3
+   is3.mainframe.LoadProject(<span class="hljs-string">&apos;TONGJI.xml&apos;</span>)
+   is3.prj = is3.mainframe.prj
+   is3.MainframeWrapper.loadDomainPanels()
+   <span class="hljs-keyword">for</span> emap <span class="hljs-keyword">in</span> is3.prj.projDef.EngineeringMaps:
+       is3.MainframeWrapper.addView(emap)
+   is3.addView3d(<span class="hljs-string">&apos;Map3D&apos;</span>, <span class="hljs-string">&apos;TONGJI.unity3d&apos;</span>)
+</code></pre>
+<h4 id="5-&#x539F;readmetxt&#x9644;&#x4EF6;">5. &#x539F;readme.txt&#x9644;&#x4EF6;</h4>
+<p>&#x6B64;&#x5904;&#x9644;&#x4E0A;&#x539F;readme&#x6587;&#x4EF6;&#xFF08;&#x7565;&#x6709;&#x4FEE;&#x6B63;&#xFF09;&#x3002;</p>
+<blockquote>
+<p><strong>readme.txt</strong></p>
+<p>(1) Scripts can be loadded and runned in iS3. In this case, the scripts is runned in the main UI thread. Note that script call to IS3View.addGdbLayer will hang the program (load tt. py will hang the program). This problem doesn&apos;t exist in the following case.</p>
+<p>(2) Scripts can be inputted and runned immediately in the Python console window. In this case, the scripts is runned in another thread which is different from the main UI thread. In Windows, UI thread vars and functions are restricted to other threads. So, be caution with script calls to functions in UI thread. Classes in the main UI thread include: mainframe, view, layer, etc.</p>
+<p>(3) is3. py provides some friendly classes and vars to facilitate use of iS3, such as adding views and layers. Please note that wrapper classes to mainframe, view, and layer are provided to overcome the restrictions of calls to the main UI thread. The wrapper classes are also called thread safe classes.</p>
+<p>(4) Scripts located in /IS3/bin/PyPlugins/(&#x4FEE;&#x6B63;&#xFF1A;&#x5B9E;&#x9645;&#x5E94;&#x4E3A;../Output/PyPlugins)  will be automatically runned when program starts. It is a nice place to put your frequent use scripts here, such as user-defined toolboxes. See plugin-demo. py for more details.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../section4.html" class="navigation navigation-prev " aria-label="Previous page: Python接口">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Python调用方式.html" class="navigation navigation-next " aria-label="Next page: Python调用方式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python相关库","level":"1.3.4.1","depth":3,"next":{"title":"Python调用方式","level":"1.3.4.2","depth":3,"path":"chapter2/section4/Python调用方式.md","ref":"chapter2/section4/Python调用方式.md","articles":[]},"previous":{"title":"Python接口","level":"1.3.4","depth":2,"path":"chapter2/section4.md","ref":"chapter2/section4.md","articles":[{"title":"Python相关库","level":"1.3.4.1","depth":3,"path":"chapter2/section4/Python相关库.md","ref":"chapter2/section4/Python相关库.md","articles":[]},{"title":"Python调用方式","level":"1.3.4.2","depth":3,"path":"chapter2/section4/Python调用方式.md","ref":"chapter2/section4/Python调用方式.md","articles":[]},{"title":"Python接口使用demo","level":"1.3.4.3","depth":3,"path":"chapter2/section4/Python接口使用demo.md","ref":"chapter2/section4/Python接口使用demo.md","articles":[]},{"title":"常见问题","level":"1.3.4.4","depth":3,"path":"chapter2/section4/常见问题.md","ref":"chapter2/section4/常见问题.md","articles":[]},{"title":"附件：iS3脚本库使用说明","level":"1.3.4.5","depth":3,"path":"chapter2/section4/iS3脚本库说明.md","ref":"chapter2/section4/iS3脚本库说明.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section4/Python相关库.md","mtime":"2019-12-12T07:32:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-12T15:51:18.183Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
