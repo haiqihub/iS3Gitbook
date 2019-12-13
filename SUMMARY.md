@@ -28,7 +28,7 @@
         * [Python调用方式](chapter2/section4/Python调用方式.md)
         * [Python接口使用demo](chapter2/section4/Python接口使用demo.md)
         * [iS3脚本库使用说明](chapter2/section4/iS3脚本库说明.md)
-            * [1. Attribute](chapter2/section4/ Attributes.md)
+            * [1. Attribute](chapter2/section4/Attributes.md)
             * [2. Class](chapter2/section4/Class.md)
             * [3. Function](chapter2/section4/Function.md)
         * [常见问题](chapter2/section4/常见问题.md)
