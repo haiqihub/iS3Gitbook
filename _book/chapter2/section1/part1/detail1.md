@@ -2,6 +2,8 @@
 
 
 
+​	本小节涉及的数据类型的介绍详见[平台架构](./../../../chapter1/section1.md)中的`iS3数据层架构`的内容。
+
 ### step1
 
 ​	在`.\iS3-Desktop-Client\Output\Data`路径下新建名为项目名称的文件夹，并在该文件夹下加入`geodatabase` ,`py`,`unity3d`三个数据文件。

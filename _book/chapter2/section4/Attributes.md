@@ -24,7 +24,7 @@ graphicsEngine = Runtime.graphicEngine   # Global var: graphics Engine
 geometryEngine = Runtime.geometryEngine  # Global var: geometry Engine
 ```
 
-#### 1.3 属性详细说明
+#### 1.3 属性说明
 
 ##### 1.3.1 mainframe
 

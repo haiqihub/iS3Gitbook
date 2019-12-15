@@ -1,5 +1,7 @@
 ### Python调用方式
 
+此处将介绍调用Python脚本文件的3种途径，包括IronPython控制面板，IronPython Pad面板，以及Python扩展插件库，并对其适用场景和使用方法进行简单介绍。
+
 #### 1. IronPython Console
 
 IronPython 控制面板如下图所示，此处可实时执行Python代码，适用于实时的、简短直接的调用或测试。注意。供调用的Python脚本库应放置在..\Out\IS3Py\目录下。

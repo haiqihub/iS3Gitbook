@@ -4,7 +4,9 @@
 
 ​	在.\iS3.MiniServer\iS3.MiniServer\App.config中添加新加项目的数据库信息。
 
-​	以TONGJI项目为例，在<connectionStrings>里添加TONGJI项目的数据库信息。
+​	以TONGJI项目为例，在< connectionStrings >里添加TONGJI项目的数据库信息。
+
+​	本例中，TS_iS3_V2 数据库中定义了Project的信息(含义参考[平台架构](./../../../chapter1/section1.md)中的数据组织)，TS_iS3_V2_Test 数据库中定义了不同DGObject的信息(含义参考[平台架构](./../../../chapter1/section1.md)中的数据组织)。
 
 
 
