@@ -1,0 +1,4 @@
+1、cmd定位到该目录
+2、gitbook init
+3、gitbook serve
+4、浏览器打开http://localhost:4000/

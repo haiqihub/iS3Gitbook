@@ -78,18 +78,6 @@ public void selectObject(String type,DGObject obj){
 在此，我们将调用上述补充的C#接口，完成自定义demo。代码如下：
 
 ```python
-import is3
-from is3 import DomainType,Globals
-
-# Changes
-# IS3View.cs: public void selectObject(String type,DGObject obj)    
-# DGOjects.cs: public DGObject[] getDGObject()  
-# Relative Classes
-# IS3View.cs, DGOjects.cs, Domain.cs, MainFrame.xaml.cs
-# Relative Functions
-# public async Task<bool> selectByPoint(Point screenPoint)   IS3View.cs
-# public void objSelectionChangedListener(object sender,ObjSelectionChangedEventArgs e)  MainFrame.xaml.cs
-
 def test(type,attribute,down,up):
     if(down>up):	# tranform into lower case
         tmp=up
@@ -114,6 +102,8 @@ def test(type,attribute,down,up):
 
 完成后将在IronPython Console里对该demo的实现效果进行测试。
 
+
+
 #### 4. 测试用例
 
 在IronPython Console面板里输入以下代码：
@@ -124,10 +114,9 @@ def test(type,attribute,down,up):
 ```
 
 
+
 #### 5. 测试结果
 
 测试效果如下图：
 
 <img src=".\test.png" alt="test" style="zoom: 40%;" />
-
-由上图可见，符合范围内的Borehole类型的数字化对象在地图和Data View上均被高亮，且在Object View面板中被展示。

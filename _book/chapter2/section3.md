@@ -1,6 +1,5 @@
 # client端准备
 
-本节将介绍
 
    * [目录结构](chapter2/section3/client1.md)
    * [创建项目](chapter2/section3/client2.md)
