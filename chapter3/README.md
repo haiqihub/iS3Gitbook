@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 附录
 
 
@@ -6,3 +7,9 @@
 
    * [EFCF属性映射约定](chapter3/appendix.md)
 
+=======
+# 附录
+
+* [EFCF属性映射约定](./appendix.md)
+
+>>>>>>> e46345e9c84687dd1a9ffcce55abbfcbcb5ed268

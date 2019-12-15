@@ -13,7 +13,7 @@
 
 
 
-## Fluent API方式
+## Fluent API 方式
 
 ```csharp
      protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -21,4 +21,3 @@
         modelBuilder.Entity<Product>().Ignore(t => t.Remark);
     }
 ```
-

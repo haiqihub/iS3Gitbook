@@ -73,7 +73,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="client5.html" />
+    <link rel="next" href="client5.md" />
     
     
     <link rel="prev" href="client3.html" />
@@ -410,9 +410,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.5" data-path="client5.html">
+        <li class="chapter " data-level="1.3.3.5" data-path="client5.md">
             
-                <a href="client5.html">
+                <span>
             
                     
                     第五节 修改C#项目文件
@@ -423,9 +423,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.6" data-path="client6.html">
+        <li class="chapter " data-level="1.3.3.6" data-path="client6.md">
             
-                <a href="client6.html">
+                <span>
             
                     
                     第六节 生成动态链接库文件
@@ -762,111 +762,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B9E;&#x73B0;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#x7C7B;">&#x5B9E;&#x73B0;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#x7C7B;</h1>
-<p>&#x8FD9;&#x4E9B;&#x7C7B;&#x662F;<code>DGObject</code>&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x4E5F;&#x662F;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x8981;&#x88AB;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x7684;&#x7C7B;&#xFF0C;&#x8BF8;&#x5982;&#x94BB;&#x5B54;&#x4FE1;&#x606F;&#xFF0C;&#x571F;&#x8D28;&#x4FE1;&#x606F;&#x7B49;&#x3002;&#x8FD9;&#x4E9B;&#x7C7B;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x548C;&#x57FA;&#x672C;&#x7684;<code>ToString</code>&#x65B9;&#x6CD5;&#x548C;<code>idFilter</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x4E3A;&#x6E32;&#x67D3;<code>chartViews</code>&#x800C;&#x8FDB;&#x884C;&#x51C6;&#x5907;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x4EE5;<code>borehole.cs</code>&#x4E3A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">namespace</span> <span class="hljs-title">iS3.Geology</span>
-{
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">BoreholeGeology</span>
-    {
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Top { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Base { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> StratumID { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Borehole</span> : <span class="hljs-title">DGObject</span>
-    {
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Top { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Base { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span>? Mileage { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Type { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> List&lt;BoreholeGeology&gt; Geologies { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-
-
-        <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">int</span>&gt; StratumSection { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">int</span>&gt; SectionSequence { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> BoreholeType { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> TopElevation { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> BoreholeLength { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">double</span>&gt; Xcoordinate { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">double</span>&gt; Ycoordinate { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-
-
-
-
-
-
-
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Borehole</span>(<span class="hljs-params"></span>)
-        </span>{
-            Geologies = <span class="hljs-keyword">new</span> List&lt;BoreholeGeology&gt;();
-        }
-
-
-
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">string</span> <span class="hljs-title">ToString</span>(<span class="hljs-params"></span>)
-        </span>{
-            <span class="hljs-keyword">string</span> str = <span class="hljs-keyword">base</span>.ToString();
-
-           <span class="hljs-keyword">string</span> str1 = <span class="hljs-keyword">string</span>.Format(
-                <span class="hljs-string">&quot;, Top={0}, Base={1}, Mileage={2}, Type={3}, Geo=&quot;</span>,
-                Top, Base, Mileage, Type);
-            str += str1;
-
-            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> geo <span class="hljs-keyword">in</span> Geologies)
-            {
-                str += geo.StratumID + <span class="hljs-string">&quot;,&quot;</span>;
-            }
-
-            <span class="hljs-keyword">return</span> str;
-        }
-
-
-
-        <span class="hljs-function"><span class="hljs-keyword">string</span> <span class="hljs-title">idFilter</span>(<span class="hljs-params">IEnumerable&lt;DGObject&gt; objs</span>)
-        </span>{
-            <span class="hljs-keyword">string</span> sql = <span class="hljs-string">&quot;BoreholeID in (&quot;</span>;
-            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> obj <span class="hljs-keyword">in</span> objs)
-            {
-                sql += obj.ID.ToString();
-                sql += <span class="hljs-string">&quot;,&quot;</span>;
-            }
-            sql += <span class="hljs-string">&quot;)&quot;</span>;
-            <span class="hljs-keyword">return</span> sql;
-        }
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> List&lt;FrameworkElement&gt; <span class="hljs-title">chartViews</span>(<span class="hljs-params">
-            IEnumerable&lt;DGObject&gt; objs, <span class="hljs-keyword">double</span> width, <span class="hljs-keyword">double</span> height</span>)
-        </span>{
-            List&lt;FrameworkElement&gt; charts = <span class="hljs-keyword">new</span> List&lt;FrameworkElement&gt;();
-
-            List&lt;Borehole&gt; bhs = <span class="hljs-keyword">new</span> List&lt;Borehole&gt;();
-            <span class="hljs-keyword">foreach</span> (Borehole bh <span class="hljs-keyword">in</span> objs)
-            {
-                <span class="hljs-keyword">if</span> (bh != <span class="hljs-keyword">null</span> &amp;&amp; bh.Geologies.Count &gt; <span class="hljs-number">0</span>)
-                    bhs.Add(bh);
-            }
-
-            Domain geologyDomain = Globals.project.getDomain(DomainType.Geology);
-            DGObjectsCollection strata = geologyDomain.getObjects(<span class="hljs-string">&quot;Stratum&quot;</span>);
-
-            BoreholeCollectionView bhsView = <span class="hljs-keyword">new</span> BoreholeCollectionView();
-            bhsView.Name = <span class="hljs-string">&quot;Geology&quot;</span>;
-            bhsView.Boreholes = bhs;
-            bhsView.Strata = strata;
-            bhsView.ViewerHeight = height;
-            bhsView.RefreshView();
-            bhsView.UpdateLayout();
-            charts.Add(bhsView);
-
-            <span class="hljs-keyword">return</span> charts;
-        }
-    }
-}
-</code></pre>
+                                <h1 id="&#x8FD0;&#x884C;&#x914D;&#x7F6E;">&#x8FD0;&#x884C;&#x914D;&#x7F6E;</h1>
+<h3 id="1-&#x751F;&#x6210;&#x89E3;&#x51B3;&#x65B9;&#x6848;">1. &#x751F;&#x6210;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<p>&#x6B64;&#x5904;&#x5E94;&#x70B9;&#x51FB;&#x4E0A;&#x65B9;&#x7EFF;&#x8272;&#x7BAD;&#x5934;&#xFF0C;&#x751F;&#x6210;&#x76F8;&#x5E94;&#x9879;&#x76EE;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
+<p><img src="img/client4.png" alt="client4" style="zoom:67%;"></p>
+<p>&#x751F;&#x6210;&#x60C5;&#x51B5;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="img/client5.png" alt="client5" style="zoom: 50%;"></p>
+<h3 id="2-&#x4FEE;&#x6539;dll&#x6587;&#x4EF6;&#x8DEF;&#x5F84;">2. &#x4FEE;&#x6539;dll&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</h3>
+<p>&#x5982;&#x7B2C;&#x4E8C;&#x5C0F;&#x8282;&#xFF08;&#x5B9A;&#x4E49;&#x6269;&#x5C55;&#x7C7B;&#x5165;&#x53E3;&#xFF09;&#x6240;&#x8FF0;&#xFF0C;&#x6269;&#x5C55;&#x7C7B;&#x751F;&#x6210;&#x7684;dll&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x653E;&#x7F6E;&#x5728;\bin\extensions&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x624D;&#x80FD;&#x88AB;ExtensionManager&#x7C7B;&#x8BFB;&#x53D6;&#x3002;&#x4F46;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x751F;&#x6210;&#x7684;dll&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;(Debug&#x6A21;&#x5F0F;)&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5C06;&#x751F;&#x6210;&#x7684;&#x6269;&#x5C55;&#x7C7B;&#x7684;dll&#x6587;&#x4EF6;&#x548C;pdb&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;iS3-Desktop-Client\bin\extensions&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5728;&#x751F;&#x6210;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E4B;&#x524D;&#xFF0C;&#x5728;csproj&#x4E2D;&#x5BF9;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x6B64;&#x5904;&#x4E0D;&#x518D;&#x9644;&#x56FE;&#x3002;</p>
+<p><img src="img/client6.png" alt="client6" style="zoom: 50%;"></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728;Visual Studio 2017&#x7684;&#x73AF;&#x5883;&#x4E0B;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x65E0;&#x6CD5;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#x7684;&#x5F39;&#x7A97;&#xFF0C;&#x4F46;&#x63A7;&#x5236;&#x53F0;&#x4F1A;&#x663E;&#x793A;&#x662F;&#x5426;&#x751F;&#x6210;&#x6210;&#x529F;&#x3002;</p>
+</blockquote>
+<h3 id="3-&#x542F;&#x52A8;&#x9879;&#x76EE;">3. &#x542F;&#x52A8;&#x9879;&#x76EE;</h3>
+<p>&#x542F;&#x52A8;iS3-Desktop.csproj&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#x8FD0;&#x884C;&#x6210;&#x529F;&#x7684;IS3&#x684C;&#x9762;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p><img src="img/client7.png" alt="client7" style="zoom: 50%;"></p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -900,7 +811,7 @@
                 </a>
                 
                 
-                <a href="client5.html" class="navigation navigation-next " aria-label="Next page: 第五节 修改C#项目文件">
+                <a href="client5.md" class="navigation navigation-next " aria-label="Next page: 第五节 修改C#项目文件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -911,7 +822,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第四节 实现数据对象类","level":"1.3.3.4","depth":3,"next":{"title":"第五节 修改C#项目文件","level":"1.3.3.5","depth":3,"path":"chapter2/section3/client5.md","ref":"chapter2/section3/client5.md","articles":[]},"previous":{"title":"第三节 实现EntryPoint类","level":"1.3.3.3","depth":3,"path":"chapter2/section3/client3.md","ref":"chapter2/section3/client3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","expandable-chapters","back-to-top-button","popup","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iS3平台帮助文档","gitbook":"*","description":"教你如何使用iS3平台"},"file":{"path":"chapter2/section3/client4.md","mtime":"2019-12-13T14:50:01.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-15T09:50:07.441Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四节 实现数据对象类","level":"1.3.3.4","depth":3,"next":{"title":"第五节 修改C#项目文件","level":"1.3.3.5","depth":3,"path":"chapter2/section3/client5.md","ref":"chapter2/section3/client5.md","articles":[]},"previous":{"title":"第三节 实现EntryPoint类","level":"1.3.3.3","depth":3,"path":"chapter2/section3/client3.md","ref":"chapter2/section3/client3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","expandable-chapters","back-to-top-button","popup","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iS3平台帮助文档","gitbook":"*","description":"教你如何使用iS3平台"},"file":{"path":"chapter2/section3/client4.md","mtime":"2019-12-15T11:29:53.209Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-15T11:30:45.589Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

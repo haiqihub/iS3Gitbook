@@ -1,8 +1,6 @@
-# 字段名、长度、数据类型及是否可空
+# 长度、数据类型及是否可空
 
-​	在默认约定的情况下，Entity Framework Code First创建的列名与类的属性名相同，可以根据需要进行重新指定类属性与列名之间的映射关系。
-
-
+在默认约定的情况下，Entity Framework Code First创建的列名与类的属性名相同，可以根据需要进行重新指定类属性与列名之间的映射关系。
 
 ## Data Annotation 方式
 
@@ -20,8 +18,6 @@ public string ProductName { get; set; }
 using System.ComponentModel.DataAnnotations;
 ```
 
-
-
 ## Fluent API方式
 
 ```csharp
@@ -36,11 +32,9 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 }
 ```
 
+在默认情况下，`int`类型的属性生成的列名对应SQL SERVER列`int`类型；而`String`类型的属性则对应`SQL SERVER`列的`NVARCHAR`类型。若类的字符串类型属性未设置`MaxLength`，则生成对应的列类型为`NVARCHAR(MAX)`。
 
-
- 在默认情况下，`int`类型的属性生成的列名对应SQL SERVER列`int`类型；而`String`类型的属性则对应`SQL SERVER`列的`NVARCHAR`类型。若类的字符串类型属性未设置`MaxLength`，则生成对应的列类型为`NVARCHAR(MAX)`。
-
- 为属性指定对应的`SQL SERVER`数据类型：
+为属性指定对应的`SQL SERVER`数据类型：
 
 ```csharp
 [Column("UnitPrice", TypeName = "MONEY")]
@@ -54,18 +48,15 @@ public decimal UnitPrice { get; set; }
  {
      modelBuilder.Entity<Product>().ToTable("Product");
  }
-```
-
-```csharp
 modelBuilder.Entity<Product>().Property(t => t.UnitPrice)
         .HasColumnName("UnitPrice")
         .HasColumnType("MONEY");
 ```
 
- 到此步，`Product.cs`类文件的完整代码如下：
+到此步，`Product.cs`类文件的完整代码如下：
 
 ```csharp
- 	using System;
+     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
@@ -96,11 +87,7 @@ modelBuilder.Entity<Product>().Property(t => t.UnitPrice)
 ```csharp
 [Column("Remark", TypeName = "text")]
 public string Remark { get; set; }
-```
-
-```csharp
 modelBuilder.Entity<Category>().Property(t => t.Remark)
         .HasColumnName("Remark")
         .HasColumnType("text");
 ```
-
