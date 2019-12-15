@@ -1,0 +1,16 @@
+{
+	"title": "iS3平台帮助文档",
+    "description": "教你如何使用iS3平台",
+    
+
+    "plugins": [
+       "toggle-chapters",
+	   "expandable-chapters",
+	   "back-to-top-button",
+	   "popup",
+	   "code"
+    ],
+    "pluginsConfig": {
+       
+    }
+}
