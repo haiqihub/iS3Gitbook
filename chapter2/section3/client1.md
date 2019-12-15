@@ -14,13 +14,13 @@
 
 在Visual Studio里选择文件->新建->项目，打开新建项目示例，选择其他语言-> Visual C＃-> Windows经典桌面->类库（.NET Framework），名称为“ iS3-”加域名，路径为`iS3-Desktop-Client / IS3-Extensions`。如果域名不以iS3-开头，项目会启动失败。
 
-<img src="D:/Death in TJU/Junior_1st/iS3/iS3Gitbook-master/chapter2/section3/img/client2.png" alt="client2" style="zoom:50%;" align="center"/>
+<img src="./img/client2.png" alt="client2" style="zoom:50%;" align="center"/>
 
 
 
 创建结果如下图所示。创建完毕后，用户将在该项目下添加各种文件，如EntryPoint类、自定义的数字化对象等。具体需要添加的文件将在后面小节进行介绍。
 
-![client3](D:/Death in TJU/Junior_1st/iS3/iS3Gitbook-master/chapter2/section3/img/client3.png)
+<img src="./img/client3.png" alt="client1" style="zoom:80%;" />
 
 
 
