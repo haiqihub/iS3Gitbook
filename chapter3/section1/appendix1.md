@@ -1,3 +1,4 @@
+
 # 表名及所有者
 
 在先前约定的情况下，Entity Framework Code First创建的表名是根据类名的英语复数形式，创建的表所有者为`dbo`，可以通过替换约定来指定表名及表的所有者。
@@ -84,4 +85,5 @@ Fluent API实现配置Entity Framework Code First与数据库映射关系主要�
             }
         }
     }
+
 ```

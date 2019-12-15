@@ -30,4 +30,3 @@ Entity Framework Code First的默认主键约束：*属性名为[ID]或[类名 +
     }[Column("UnitPrice", TypeName = "MONEY")]
 public decimal UnitPrice { get; set; }
 ```
-
