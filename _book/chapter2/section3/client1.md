@@ -14,7 +14,7 @@
 
 在Visual Studio里选择文件->新建->项目，打开新建项目示例，选择其他语言-> Visual C＃-> Windows经典桌面->类库（.NET Framework），名称为“ iS3-”加域名，路径为`iS3-Desktop-Client / IS3-Extensions`。如果域名不以iS3-开头，项目会启动失败。
 
-<img src="./img/client2.png" alt="client2" style="zoom:50%;" align="center"/>
+<img src="./img/Client2.png" alt="client2" style="zoom:50%;" align="center"/>
 
 
 

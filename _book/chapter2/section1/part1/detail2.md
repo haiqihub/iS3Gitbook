@@ -32,9 +32,9 @@
 
 ### Step 1 -- 常规配置
 
-​	ID为项目ID，Title为项目名，`Local data path`为[数据文件准备](./detail1.md)中存储项目数据文件，`Local tile path`为**数据文件准备**中TPKS文件的文件夹路径。默认情况下无需更改。
+​	ID为项目ID，Title为项目名，`Local data path`为[数据文件准备](./detail1.md)中存储项目数据文件，`Local tile path`为**数据文件准备**中TPKS文件的文件夹路径。这二者默认情况下无需更改。`Database`为数据库地址，分别替换掉IP地址、数据库名称、用户名称和密码。
 
-<img src= "https://i.loli.net/2019/12/07/YFCsimkxRfzHJKU.png" align=center height="450px" width="700px"/>
+<img src="./img/step1.png" alt="step1" align=center height="300px" width="600px" />
 
 ​	配置好后点击`Next`按钮。
 
@@ -78,7 +78,27 @@
 
 <img src= "https://ftp.bmp.ovh/imgs/2019/12/adc6698e9bf9a626.png" align=center height="300px" width="600px"/>
 
-​	Table name`，`Condition(SQL)`和`Order(SQL)无需填写。
+​	
+
+填写Table name。点击`Table name`右侧的按钮，打开对话框，选择数据对应的表名。如图所示，此例选择`Geology_Borehole`。
+
+
+
+<img src="./img/step3-1.png" alt="step3-1" align=center height="300px" width="600px"/>
+
+还可以对该表进行`sql`语句查询，即在`Condition(SQL)`项输入查询条件，在`Order(SQL)`项输入查询的数据以哪个属性排序。如图所示，查询`OBJECTID`大于3的数据，按`Name`排序。
+
+
+
+<img src="./img/step3-2.png" alt="step3-2" align=center height="300px" width="600px"/>
+
+点击`Preview Table`按钮。
+
+<img src="./img/step3-3.png" alt="step3-3" align=center height="300px" width="600px"/>
+
+
+
+
 
 ​	如果该`Digital object`有对应的2D模型，则勾选`Has 2D Model`项，并点击其右侧的文件选择按钮，选择其对应的模型图层。
 
