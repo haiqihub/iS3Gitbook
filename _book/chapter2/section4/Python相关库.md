@@ -1,5 +1,7 @@
 ###  Python相关库
 
+在这里我们将介绍一下iS3中与Python开发相关的文件库和脚本。本小节将围绕IS3-Python脚本库，Python扩展插件库，Python脚本库，Python配置文件等四个部分内容进行介绍。小节末尾，附上了Python进行iS3开发的readme.txt原件，供读者查阅。
+
 #### 1. IS3-Python
 
 放置于..\iS3-Desktop-Client\IS3-Python文件目录下的C#代码库，提供IS3内置的Python功能，包括对IronPythonControl等的实现和控制，一般不必关心。

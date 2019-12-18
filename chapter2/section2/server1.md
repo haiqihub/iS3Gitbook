@@ -1,11 +1,14 @@
 # 数据配置
 
-平台根据数据用途将数据分为多个`Domain`类，在这里我们以地质数据`Geology`和监测点数据`Monitoring`为例，介绍`Domain`类下数据对象`DGObject`模型的配置方法。
+
+
+​	平台根据数据用途将数据分为多个`Domain`类，在这里我们以地质数据`Geology`和监测点数据`Monitoring`为例，介绍`Domain`类下数据对象`DGObject`模型的配置方法。
 
 ### Geology
 
-Geology的数据放在`iS3.MiniServer/ iS3.Geology/ Model`中，其中记录着表的列名（不包括类`iS3AreaHandle`中的五个列名）和数据类型；
- 以`borehole.cs`（钻孔）为例：
+​	Geology的数据放在`.\iS3.MiniServer\iS3.Geology\Model`中，其中记录着表的属性和对应的数据类型。（不包括类`iS3AreaHandle`中的五个属性及其数据类型，关于类`iS3AreaHandle`详见[表的创建](./../section1/part2/detail2.md)中的 iS3AreaHandle类）
+
+​	以`borehole.cs`（钻孔）为例：
 
 ```cs
 using System;
@@ -19,7 +22,9 @@ namespace iS3.Geology.Model
 {
     [Table("Geology_Borehole")]
     public partial class Borehole:iS3AreaHandle
-    {
+    {     
+    //以下是表"Geology_Borehole"的属性及其对应的数据类型
+    //{ get; set; } get 是读取属性时进行的操作，set 是设置属性时进行的操作。
         public string OBJECTID { get; set; }
         public string Name { get; set; }
         public string FullName { get; set; }
@@ -41,8 +46,9 @@ namespace iS3.Geology.Model
 
 ### Monitoring
 
-Monitoring的数据放在`iS3.MiniServer/ iS3.Monitoring/ Model`中，其中记录着表的列名（不包括类`iS3AreaHandle`中的五个列名）和数据类型。
- 以`monpoint.cs`（监测点）为例：
+​	Monitoring的数据放在`iS3.MiniServer/ iS3.Monitoring/ Model`中，其中记录着表的列名（不包括类`iS3AreaHandle`中的五个列名）和数据类型。
+
+​	以`monpoint.cs`（监测点）为例：
 
 ```cs
 using System;
@@ -56,7 +62,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace iS3.Monitoring
 {
- 
+    //以下是表"Monpoints"的属性及其对应的数据类型
+    //{ get; set; } get 是读取属性时进行的操作，set 是设置属性时进行的操作。
     public class MonPoint: iS3AreaHandle
     {
         // Summary:

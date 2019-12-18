@@ -1,110 +1,30 @@
-# 实现数字对象类
+# 运行配置
 
-这些类是`DGObject`的子类，也是在项目中要被渲染出来的类，诸如钻孔信息，土质信息等。这些类需要有一些属性和基本的`ToString`方法和`idFilter`方法，此外，还可以有为渲染`chartViews`而进行准备的数据处理方法。
+### 1. 生成解决方案
 
-以`borehole.cs`为例：
+此处应点击上方绿色箭头，生成相应项目的解决方案。
 
-```cs
-namespace iS3.Geology
-{
-   
-    public class BoreholeGeology
-    {
-        public double Top { get; set; }
-        public double Base { get; set; }
-        public int StratumID { get; set; }
-    }
+<img src=".\img\client4.png" alt="client4" style="zoom:67%;" />
 
-    public class Borehole : DGObject
-    {
-        public double Top { get; set; }
-        public double Base { get; set; }
-        public double? Mileage { get; set; }
-        public string Type { get; set; }
-        public List<BoreholeGeology> Geologies { get; set; }
+生成情况如下图所示：
 
-
-        public Nullable<int> StratumSection { get; set; }
-        public Nullable<int> SectionSequence { get; set; }
-        public string BoreholeType { get; set; }
-        public double TopElevation { get; set; }
-        public double BoreholeLength { get; set; }
-        public Nullable<double> Xcoordinate { get; set; }
-        public Nullable<double> Ycoordinate { get; set; }
+<img src=".\img\client5.png" alt="client5" style="zoom: 50%;" />
 
 
 
+### 2. 修改dll文件路径
 
-        
+如第二小节（定义扩展类入口）所述，扩展类生成的dll文件必须放置在\bin\extensions目录下，才能被ExtensionManager类读取。但默认情况下生成的dll文件路径如上图所示(Debug模式)。因此，我们必须将生成的扩展类的dll文件和pdb文件移动到iS3-Desktop-Client\bin\extensions目录下。
 
+也可以选择在生成解决方案之前，在csproj中对路径进行修改，此处不再附图。
 
+<img src=".\img\client6.png" alt="client6" style="zoom: 50%;" />
 
-        public Borehole()
-        {
-            Geologies = new List<BoreholeGeology>();
-        }
+> 注意：在Visual Studio 2017的环境下可能会出现无法启动程序的弹窗，但控制台会显示是否生成成功。
+>
 
+### 3. 启动项目
 
-       
+启动iS3-Desktop.csproj，你将看到运行成功的IS3桌面应用程序。
 
-        public override string ToString()
-        {
-            string str = base.ToString();
-
-           string str1 = string.Format(
-                ", Top={0}, Base={1}, Mileage={2}, Type={3}, Geo=",
-                Top, Base, Mileage, Type);
-            str += str1;
-
-            foreach (var geo in Geologies)
-            {
-                str += geo.StratumID + ",";
-            }
-
-            return str;
-        }
-
-  
-
-        string idFilter(IEnumerable<DGObject> objs)
-        {
-            string sql = "BoreholeID in (";
-            foreach (var obj in objs)
-            {
-                sql += obj.ID.ToString();
-                sql += ",";
-            }
-            sql += ")";
-            return sql;
-        }
-
-        public override List<FrameworkElement> chartViews(
-            IEnumerable<DGObject> objs, double width, double height)
-        {
-            List<FrameworkElement> charts = new List<FrameworkElement>();
-
-            List<Borehole> bhs = new List<Borehole>();
-            foreach (Borehole bh in objs)
-            {
-                if (bh != null && bh.Geologies.Count > 0)
-                    bhs.Add(bh);
-            }
-
-            Domain geologyDomain = Globals.project.getDomain(DomainType.Geology);
-            DGObjectsCollection strata = geologyDomain.getObjects("Stratum");
-
-            BoreholeCollectionView bhsView = new BoreholeCollectionView();
-            bhsView.Name = "Geology";
-            bhsView.Boreholes = bhs;
-            bhsView.Strata = strata;
-            bhsView.ViewerHeight = height;
-            bhsView.RefreshView();
-            bhsView.UpdateLayout();
-            charts.Add(bhsView);
-
-            return charts;
-        }
-    }
-}
-```
-
+<img src=".\img\client7.png" alt="client7" style="zoom: 50%;" />
