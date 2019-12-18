@@ -1,16 +1,16 @@
 ### 2. Class
 
-为了实现UI线程中函数的安全调用，is3脚本库中定义了了一些类，将Mainframe，View中的函数以Wrapper的形式进行包装。
+为了实现UI线程中函数的安全调用，is3脚本库中定义了了一些类，将`Mainframe`，`View`中的函数以`Wrapper`的形式进行包装。
 
 #### 2.1 MainframeWrapper
 
-MainframeWrapper类下目前有两个方法，且均为静态方法，可直接调用。
+`MainframeWrapper`类下目前有两个方法，且均为静态方法，可直接调用。
 
 ##### 2.1.1 addView
 
 **接口功能**
 
-静态方法，添加新的视图（View）。封装在MainrameWrapper类中，调用了Mainframe.xaml.cs中的addView（）函数。
+静态方法，添加新的视图（`View`）。封装在`MainrameWrapper`类中，调用了`Mainframe.xaml.cs`中的`addView()`函数。
 
 **接口参数**
 
@@ -36,7 +36,7 @@ safe_view = is3.MainframeWrapper.addView(emap)
 
 **接口功能**
 
-静态方法，加载Domain面板，应用于加载工程项目时。封装在MainrameWrapper类中，调用Mainframe.xaml.cs中的loadDomainPanels()函数。
+静态方法，加载Domain面板，应用于加载工程项目时。封装在`MainrameWrapper`类中，调用`Mainframe.xaml.cs`中的`loadDomainPanels()`函数。
 
 **接口参数**
 
@@ -57,7 +57,7 @@ is3.MainframeWrapper.loadDomainPanels()
 
 #### 2.2 ViewWrapper
 
-ViewWrapper中的addGdbLayer()和addShpLayer()方法一般不直接调用，添加GdbLayer和ShpLayer时应调用is3下封装好的addGdbLayer()和addShpLayer()方法。
+`ViewWrapper`中的`addGdbLayer()`和`addShpLayer()`方法一般不直接调用，添加`GdbLayer`和`ShpLayer`时应调用`is3`下封装好的`addGdbLayer()`和`addShpLayer()`方法。
 
 ##### 2.2.1  \_init\_
 
@@ -85,7 +85,7 @@ ViewWrapper中的addGdbLayer()和addShpLayer()方法一般不直接调用，添�
 
 **接口功能**
 
-添加新的图层（Layer）。封装在ViewWrapper类中，调用了View.cs中的addLayer()函数。
+添加新的图层（`Layer`）。封装在`ViewWrapper`类中，调用了`View.cs`中的`addLayer()`函数。
 
 **接口参数**
 
@@ -111,7 +111,7 @@ safe_view.addLayer(layer3WP.layer)
 
 **接口功能**
 
-添加本地的Tiled Layer文件，文件格式为.TPK。该函数封装在ViewWrapper类中，调用了View.cs中的addLocalTiledLayer()函数。
+添加本地的`Tiled Layer`文件，文件格式为`.TPK`。该函数封装在`ViewWrapper`类中，调用了`View.cs`中的`addLocalTiledLayer()`函数。
 
 **接口参数**
 
@@ -137,7 +137,7 @@ safe_view.addLocalTiledLayer(tilefile, 'baselayer')
 
 **接口功能**
 
-从本地的geodatabase中动态加载Gdb图层(GdbLayer)。该函数封装在ViewWrapper类中，调用了View.cs中的addGdbLayer（）函数。
+从本地的geodatabase中动态加载Gdb图层(`GdbLayer`)。该函数封装在`ViewWrapper`类中，调用了`View.cs`中的`addGdbLayer()`函数。
 
 **接口参数**
 
@@ -165,7 +165,7 @@ layerWrapper = viewWrapper.addGdbLayer(layerDef, gdbFile, start, maxFeatures)
 
 **接口功能**
 
-从本地的shape文件中动态加载Shp图层(ShpLayer)。该函数封装在ViewWrapper类中，调用了View.cs中的 addShpLayer（）函数。
+从本地的shape文件中动态加载Shp图层(`ShpLayer`)。该函数封装在`ViewWrapper`类中，调用了`View.cs`中的 `addShpLayer()`函数。
 
 **接口参数**
 
@@ -193,7 +193,7 @@ layerWrapper = viewWrapper.addShpLayer(layerDef, shpfile, start, maxFeatures)
 
 **接口功能**
 
-在iS3程序中，对应图层左上方的紫色矩形“select objects on the map”的触发。该函数封装在ViewWrapper类中，调用了IS3View.cs中的 selectByRect（）函数。
+在iS3程序中，对应图层左上方的紫色矩形“select objects on the map”的触发。该函数封装在`ViewWrapper`类中，调用了`IS3View.cs`中的 `selectByRect()`函数。
 
 该函数调用尚不明确，功能尚不完善。
 
@@ -205,7 +205,7 @@ layerWrapper = viewWrapper.addShpLayer(layerDef, shpfile, start, maxFeatures)
 
 **接口功能**
 
-初始化GraphicsLayerWrapper。
+初始化`GraphicsLayerWrapper`。
 
 **接口参数**
 
@@ -231,7 +231,7 @@ layerWrapper = GraphicsLayerWrapper(layer)
 
 **接口功能**
 
-设置Render。该函数封装在GraphicsLayerWrapper类中，调用了IS3Layer.cs中的 setRenderer()函数。
+设置`Render`。该函数封装在`GraphicsLayerWrapper`类中，调用了`IS3Layer.cs`中的 `setRenderer()`函数。
 
 **接口参数**
 
@@ -256,7 +256,7 @@ layer1WP.setRenderer(renderer1)
 
 **接口功能**
 
-添加Graphic图层。该函数封装在GraphicsLayerWrapper类中，调用了IS3Layer.cs中的 addGraphic（）函数。
+添加`Graphic`图层。该函数封装在`GraphicsLayerWrapper`类中，调用了`IS3Layer.cs`中的 `addGraphic()`函数。
 
 **接口参数**
 

@@ -4,9 +4,9 @@
 
 #### 1. IronPython Console
 
-IronPython 控制面板如下图所示，此处可实时执行Python代码，适用于实时的、简短直接的调用或测试。注意。供调用的Python脚本库应放置在..\Out\IS3Py\目录下。
+IronPython 控制面板如下图所示，此处可实时执行Python代码，适用于实时的、简短直接的调用或测试。注意。供调用的Python脚本库应放置在`..\Out\IS3Py\`目录下。
 
->  理论上位于.. \Output\PyPlugins路径下的Python脚本库也会被iS3识别，但由于位于该目录下的脚本文件在主程序运行时就会被自动执行，不适用于上述场景。
+>  理论上位于`.. \Output\PyPlugins`路径下的Python脚本库也会被iS3识别，但由于位于该目录下的脚本文件在主程序运行时就会被自动执行，不适用于上述场景。
 
 <img src=".\IronPythonConsole.png" alt="IronPythonConsole" style="zoom: 50%;" />
 
@@ -22,7 +22,7 @@ IronPython 控制面板如下图所示，此处可实时执行Python代码，适
 
 测试结果：
 
-工程图形展示面板多了一层名为Map 3D的3D图层。
+工程图形展示面板多了一层名为`Map 3D`的3D图层。
 
 <img src=".\1.png" alt="1" style="zoom: 67%;" />
 
@@ -34,8 +34,8 @@ IronPython Pad面板如下所示，此处可加载并执行Python脚本文件，
 
 #### 3.  Python扩展插件
 
-如第一小节所述，位于.. \Output\PyPlugins目录下的所有python文件都会在加载工程时被自动执行。
+如第一小节所述，位于`.. \Output\PyPlugins`目录下的所有python文件都会在加载工程时被自动执行。
 
-以plugin-demo.py为例，将plugin-demo.py脚本文件放置于该目录下，加载工程时自动执行该脚本，将Demo加至Tools面板。点击该Demo字样时，系统会在图形展示面板添加一层名为Demo的3D图层，
+以`plugin-demo.py`为例，将`plugin-demo.py`脚本文件放置于该目录下，加载工程时自动执行该脚本，将Demo加至Tools面板。点击该Demo字样时，系统会在图形展示面板添加一层名为Demo的3D图层，
 
 <img src=".\Tools.png" alt="Tools" style="zoom: 67%;" />
