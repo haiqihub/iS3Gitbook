@@ -4,12 +4,15 @@
 
 此处应点击上方绿色箭头，生成相应项目的解决方案。
 
-<img src=".\img\client4.png" alt="client4" style="zoom:67%;" />
+<div style= text-align:center>
+<img src=".\img\client4.png" style='width:600px'; 'left: 50%' />
+</div>
 
 生成情况如下图所示：
 
-<img src=".\img\client5.png" alt="client5" style="zoom: 50%;" />
-
+<div style= text-align:center>
+<img src=".\img\client5.png" style='width:600px'; 'left: 50%' />
+</div>
 
 
 ### 2. 修改dll文件路径
@@ -18,7 +21,9 @@
 
 也可以选择在生成解决方案之前，在csproj中对路径进行修改，此处不再附图。
 
-<img src=".\img\client6.png" alt="client6" style="zoom: 50%;" />
+<div style= text-align:center>
+<img src=".\img\client6.png"  style='width:600px'; 'left: 50%' />
+</div>
 
 > 注意：在Visual Studio 2017的环境下可能会出现无法启动程序的弹窗，但控制台会显示是否生成成功。
 >
@@ -27,4 +32,6 @@
 
 启动`iS3-Desktop.csproj`，你将看到运行成功的IS3桌面应用程序。
 
-<img src=".\img\client7.png" alt="client7" style="zoom: 50%;" />
+<div style= text-align:center>
+<img src=".\img\client7.png" style='width:600px'; 'left: 50%' />
+</div>

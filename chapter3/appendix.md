@@ -1,6 +1,6 @@
 # Entity Framework Code First属性映射约定
 
-Entity Framework Code First与数据表之间的映射方式有两种实现：Data Annotation和Fluent API。这里采用创建产品类为例来说明Entity Framework Code First属性映射约定的具体方式。
+Entity Framework Code First与数据表之间的映射方式有两种实现：Data Annotation和Fluent API。这里采用创建产品类（`Product`）为例来说明Entity Framework Code First属性映射约定的具体方式。
 
 
 

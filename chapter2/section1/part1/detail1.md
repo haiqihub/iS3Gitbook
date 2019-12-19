@@ -10,7 +10,9 @@
 
 以`TONGJI`项目为例，在`.\iS3_2.0_Demo-master\iS3-Desktop-Client\Output\Data`路径下新建`TONGJI`的文件夹，在该文件夹下加入`tongji.geodatabase`,`TONGJI.py`,`tongji.unity3d`三个数据文件。
 
-<img src= "https://i.postimg.cc/hPNgZ9w5/data.png" width="600px"/>
+<div style= text-align:center>
+<img src= "https://i.postimg.cc/hPNgZ9w5/data.png" style='width:600px'; 'left: 50%'/>
+</div>
 
 ### step2
 
@@ -18,7 +20,9 @@
 
 以`TONGJI`项目为例，在`.\iS3-Desktop-Client\Output\Data\TPKs`文件夹下加入`tongji.tpk`文件。
 
-<img src= "https://i.postimg.cc/CLq919Pc/tpks.png"  width="600px"/>
+<div style= text-align:center>
+<img src= "https://i.postimg.cc/CLq919Pc/tpks.png"  style='width:600px'; 'left: 50%'/>
+</div>
 
 ### step3
 

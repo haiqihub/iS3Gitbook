@@ -1,17 +1,17 @@
 
 # 表名及所有者
 
-在先前约定的情况下，Entity Framework Code First创建的表名是根据类名的英语复数形式，创建的表所有者为`dbo`，可以通过替换约定来指定表名及表的所有者。
+在不指定表名的情况下，`Entity Framework Code First`创建的表名采取默认操作，即根据类名的英语复数形式创建表名。创建的表所有者为`dbo`，可以通过替换约定来指定表名及表的所有者。
 
 ## Data Annotation 方式
 
-在使用Data Annotation方式进行Entity Framework Code First与数据库映射之前，需要先添加命名空间引用。
+在使用`Data Annotation`方式进行`Entity Framework Code First`与数据库映射之前，需要先添加命名空间引用。
 
 ```csharp
 using System.ComponentModel.DataAnnotations.Schema;
 ```
 
-为类配置对应表名：
+为类配置对应表名，在不指定表名的情况下，创建的表名采取默认操作，即根据类名的英语复数形式创建表名：
 
 ```csharp
 [Table("Product")]
@@ -27,7 +27,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 ## Fluent API方式
 
-Fluent API实现配置Entity Framework Code First与数据库映射关系主要是通过继承DbContext并重写其中的OnModelCreating方法来进行的。在本文中新建类文件PortalContext.cs继承DbContext。
+`Fluent API`实现配置`Entity Framework Code First`与数据库映射关系主要是通过继承`DbContext`并重写其中的`OnModelCreating`方法来进行的。在本文中新建类文件`PortalContext.cs`继承`DbContext`。
 
 在继承`DbContext`之前，添加命名空间引用。
 

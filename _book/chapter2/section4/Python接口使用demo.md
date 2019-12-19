@@ -1,6 +1,6 @@
 ### Python接口使用demo
 
-此处将示例如何利用C#和Python两种语言协同进行接口开发，示例功能为选出属性值在某一范围内的数字化对象（DGObject），并将其图标和数据行高亮。该demo仅支持Borehole类型下对top属性的筛选。由于需要传入参数，该demo适合在IronPython Console中调用。
+此处将示例如何利用C#和Python两种语言协同进行接口开发，示例功能为选出属性值在某一范围内的数字化对象（`DGObject`），并将其图标和数据行高亮。该demo目前仅支持`Borehole`类型下对`top`属性的筛选。由于需要传入参数，该demo适合在`IronPython Console`中调用。
 
 #### 1. API格式
 
@@ -14,13 +14,13 @@ toolDemo.test(type,attribute,down,up)
 
 #### 2. 传入参数
 
-*type*：Domain类型，目前只支持Borehole
+*`type`*：`Domain`类型，目前只支持`Borehole`
 
-*attribute*:  筛选的属性，目前只支持Borehole的top属性
+*`attribute`*:  筛选的属性，目前只支持`Borehole`的`top`属性
 
-*down*：下限
+*`down`*：下限
 
-*up*:  上限
+*`up`*:  上限
 
 
 
@@ -28,9 +28,9 @@ toolDemo.test(type,attribute,down,up)
 
 ##### 3.1 编写C#调用接口
 
-此处我们将在C#程序里添加两个功能，getDGObject() 和 selectObject() 函数以供Python调用。娴熟Python者也可以尝试纯Python开发出自己的工具。
+此处我们将在C#程序里添加两个功能，`getDGObject() `和` selectObject() `函数以供Python调用。娴熟Python者也可以尝试纯Python开发出自己的工具。
 
-getDGObjec() 函数添加在DGOjects.cs文件中，该函数作用是以数组形式返回DGOjects里所包含的所有DGOject。代码如下：
+`getDGObjec() `函数添加在`DGOjects.cs`文件中，该函数作用是以数组形式返回`DGOjects`里所包含的所有`DGOject`。代码如下：
 
 ```c#
 //in DGOjects.cs
@@ -43,7 +43,7 @@ public DGObject[] getDGObject(){
         }
 ```
 
-selectObject()  函数添加在IS3View.cs文件中，该函数用于选取并高亮指定的数字化对象DGObject。代码如下：
+`selectObject()`  函数添加在`IS3View.cs`文件中，该函数用于选取并高亮指定的数字化对象`DGObject`。代码如下：
 
 ```c#
 //in IS3View.cs
@@ -64,7 +64,7 @@ public void selectObject(String type,DGObject obj){
             args.addedObjs=new Dictionary<string, IEnumerable<DGObject>>();
             List<DGObject> objs=new List<DGObject>();
             objs.Add(obj);
-            args.addedObjs.Add(type,objs);
+            args.addedObjs.Add(objs.FirstOrDefault().parent.definition.Name, objs);
             objSelectionChangedTrigger(this,args);       
         }
 ```
@@ -128,6 +128,8 @@ def test(type,attribute,down,up):
 
 测试效果如下图：
 
-<img src=".\test.png" alt="test" style="zoom: 40%;" />
+<div style= text-align:center>
+<img src=".\test.png"  style='width:600px'; 'left: 50%'/>
+</div>
 
-由上图可见，符合范围内的Borehole类型的数字化对象在地图和Data View上均被高亮，且在Object View面板中被展示。
+由上图可见，符合范围内的`Borehole`类型的数字化对象在地图和Data View上均被高亮，且在Object View面板中被展示。

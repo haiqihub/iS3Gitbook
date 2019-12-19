@@ -1,32 +1,32 @@
 ###  Python相关库
 
-在这里我们将介绍一下iS3中与Python开发相关的文件库和脚本。本小节将围绕IS3-Python脚本库，Python扩展插件库，Python脚本库，Python配置文件等四个部分内容进行介绍。小节末尾，附上了Python进行iS3开发的readme.txt原件，供读者查阅。
+在这里我们将介绍一下iS3中与Python开发相关的文件库和脚本。本小节将围绕IS3-Python脚本库，Python扩展插件库，Python脚本库，Python配置文件等四个部分内容进行介绍。小节末尾，附上了Python进行iS3开发的`readme.txt`原件，供读者查阅。
 
 #### 1. IS3-Python
 
-放置于..\iS3-Desktop-Client\IS3-Python文件目录下的C#代码库，提供IS3内置的Python功能，包括对IronPythonControl等的实现和控制，一般不必关心。
+放置于`..\iS3-Desktop-Client\IS3-Python`文件目录下的C#代码库，提供IS3内置的Python功能，包括对IronPythonControl等的实现和控制，一般不必关心。
 
 #### 2. Python扩展插件
 
-放置于..\iS3-Desktop-Client\Output\PyPlugins 文件目录下的*.py脚本文件库。主程序运行时将自动执行位于该路径下的所有Python脚本文件（通过Mainframe.xaml.cs文件中定义的loadPyPlugins函数进行加载）。
+放置于`..\iS3-Desktop-Client\Output\PyPlugins `文件目录下的`*.py`脚本文件库。主程序运行时将自动执行位于该路径下的所有Python脚本文件（通过`Mainframe.xaml.cs`文件中定义的l`oadPyPlugins`函数进行加载）。
 
-iS3中提供了名为plugin-demo.py的测试文件，该样例位于..\\Output\IS3Py目录下。
+iS3中提供了名为`plugin-demo.py`的测试文件，该样例位于`..\Output\IS3Py`目录下。
 
 > 注：初始情况下该路径不存在，需用户手动创建该文件夹。
 
 #### 3. Python脚本库
 
-放置于..\Output\IS3Py\目录下的Python脚本文件。该目录下的脚本文件供用户在使用Python进行二次开发时调用。用户编写的Python文件也应放置于该目录下，使用时以import语句导入该库名称即可。
+放置于`..\Output\IS3Py\`目录下的Python脚本文件。该目录下的脚本文件供用户在使用Python进行二次开发时调用。用户编写的Python文件也应放置于该目录下，使用时以`import语句`导入该库名称即可。
 
-以iS3.py脚本库为例，该库提供了对addView（）的封装等操作,调用样例可参考TONGJI.py和plugin-demo.py。
+以`iS3.py`脚本库为例，该库提供了对`addView()`的封装等操作,调用样例可参考`TONGJI.py`和`plugin-demo.py`。
 
 > 补充说明：IronPython-2.7.5.msi是iS3 二次开发主要插件，软件开发和发布都需要安装此插件。二次开发内嵌Python语言开发工具，提供Python语言开发范例，提供C#二次开发接口和范例。   
 
 #### 4. Python配置文件
 
-放置于..\\iS3-Desktop-Client\Output\Data\\[project_name]文件目录下的Python脚本文件。该Python脚本可作为iS3工程管理的入口，主要用于初始化工程，关联XML配置文件，导入二维、三维图形以及数据。该文件实际上就是用于加载[project_name]工程的Python脚本，是加载iS3工程项目的另一种方式（还有一种就是在iS3-Desktop里通过C#加载 ）。
+放置于`..\iS3-Desktop-Client\Output\Data\[project_name]`文件目录下的Python脚本文件。该Python脚本可作为iS3工程管理的入口，主要用于初始化工程，关联XML配置文件，导入二维、三维图形以及数据。该文件实际上就是用于加载`[project_name]`工程的Python脚本，是加载iS3工程项目的另一种方式（还有一种就是在iS3-Desktop里通过C#加载 ）。
 
-以TONGJI的工程项目为例，Python配置文件格式如下所示。其中，LoadPrj() 函数用于加载工程及其相应XML文件。该py文件在使用cong.exe配置项目时自动配置生成。
+以`TONGJI`的工程项目为例，Python配置文件格式如下所示。其中，`LoadPrj()` 函数用于加载工程及其相应XML文件。该py文件在使用`config.exe`配置项目时自动配置生成。
 
  ```python
    # -*- coding:gb2312 -*-

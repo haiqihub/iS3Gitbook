@@ -1,11 +1,11 @@
 ### 3.  Function
-这里将is3脚本库定义的类的函数进行进一步封装，可满足用户添加图层的基本需求。如果用户想要更多的功能性拓展，仿照addView（）等函数的写法，调用C#中的函数即可。
+这里将is3脚本库定义的类的函数进行进一步封装，可满足用户添加图层的基本需求。如果用户想要更多的功能性拓展，仿照`addView()`等函数的写法，调用C#中的函数即可。
 
 #### 3.1 newGraphicsLayer
 
 **接口功能**
 
-新建graphics layer层。该函数调用了IS3GraphicEngine.cs中的 newGraphicsLayer（）函数。
+新建`graphics layer`层。该函数调用了`IS3GraphicEngine.cs`中的 `newGraphicsLayer()`函数。
 
 **接口参数**
 
@@ -31,7 +31,7 @@ layer1WP = is3.newGraphicsLayer('layer1', 'layer1')
 
 **接口功能**
 
-添加3D视图。调用了MainframeWrapper中的 addView()函数。
+添加3D视图。调用了`MainframeWrapper`中的 `addView()`函数。
 
 **接口参数**
 
@@ -57,7 +57,7 @@ is3.addView3d('Map3D', 'TONGJI.unity3d')
 
 **接口功能**
 
-动态加载Gdb图层(GdbLayer)，调用了ViewWrapper中的addGdbLayer（）函数。添加GdbLayer调用该函数而非ViewWrapper中的addGdbLayer（）函数。
+动态加载Gdb图层(`GdbLayer`)，调用了`ViewWrapper`中的`addGdbLayer()`函数。添加`GdbLayer`调用该函数而非`ViewWrapper`中的`addGdbLayer()`函数。
 
 **接口参数**
 
@@ -86,7 +86,7 @@ strLayerWP = is3.addGdbLayer(viewWP, layerDef)
 
 **接口功能**
 
-新建指定类型的空白Gdb图层(GdbLayer)。调用了addGdbLayer（）函数。与2.6区别：加载和新建。
+新建指定类型的空白Gdb图层(`GdbLayer`)。调用了`addGdbLayer()`函数。与2.6区别：加载和新建。
 
 **接口参数**
 
@@ -116,7 +116,7 @@ is3.addGdbLayerLazy(viewWP, 'MON_WAT', is3.GeometryType.Point)
 
 **接口功能**
 
-从本地的shape文件中动态加载Shp图层(ShpLayer)。调用了ViewWrapper中的 addShpLayer（）函数。添加ShpLayer时调用该函数而非ViewWrapper中的addShpLayer（）函数。
+从本地的shape文件中动态加载Shp图层(`ShpLayer`)。调用了`ViewWrapper`中的 `addShpLayer()`函数。添加`ShpLayer`时调用该函数而非`ViewWrapper`中的`addShpLayer()`函数。
 
 **接口参数**
 

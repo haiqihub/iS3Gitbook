@@ -1,6 +1,6 @@
 # 主键
 
-Entity Framework Code First的默认主键约束：*属性名为[ID]或[类名 + ID]*。如在Product类中，Entity Framework Code First会根据默认约定将类中名称为ID或ProductID的属性设置为主键。Entity Framework Code First主键的默认约定也一样可以进行重写，重新根据需要进行设置。
+`Entity Framework Code First`的默认主键约束：*属性名为[ID]或[类名 + ID]*。如在`Product`类中，`Entity Framework Code First`会根据默认约定将类中名称为`ID`或`ProductID`的属性设置为主键。Entity Framework Code First主键的默认约定也一样可以进行重写，重新根据需要进行设置。
 
 ## Data Annotation 方式
 

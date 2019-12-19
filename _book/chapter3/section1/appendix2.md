@@ -1,6 +1,6 @@
 # 长度、数据类型及是否可空
 
-在默认约定的情况下，Entity Framework Code First创建的列名与类的属性名相同，可以根据需要进行重新指定类属性与列名之间的映射关系。
+在默认约定的情况下，`Entity Framework Code First`创建的列名与类的属性名相同，可以根据需要进行重新指定类属性与列名之间的映射关系。
 
 ## Data Annotation 方式
 
@@ -12,7 +12,7 @@ public int ProductID { get; set; }
 public string ProductName { get; set; }
 ```
 
-在使用Required特性(Attribute)设置字段不允许为空时，需要添加命名空间引用：
+在使用`Required`特性(`Attribute`)设置字段不允许为空时，需要添加命名空间引用：
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -32,7 +32,7 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 }
 ```
 
-在默认情况下，`int`类型的属性生成的列名对应SQL SERVER列`int`类型；而`String`类型的属性则对应`SQL SERVER`列的`NVARCHAR`类型。若类的字符串类型属性未设置`MaxLength`，则生成对应的列类型为`NVARCHAR(MAX)`。
+在默认情况下，`int`类型的属性生成的列名对应`SQL SERVER`列`int`类型；而`String`类型的属性则对应`SQL SERVER`列的`NVARCHAR`类型。若类的字符串类型属性未设置`MaxLength`，则生成对应的列类型为`NVARCHAR(MAX)`。
 
 为属性指定对应的`SQL SERVER`数据类型：
 
@@ -82,7 +82,7 @@ modelBuilder.Entity<Product>().Property(t => t.UnitPrice)
     }
 ```
 
-属性设置text数据类型：
+属性设置`text`数据类型：
 
 ```csharp
 [Column("Remark", TypeName = "text")]

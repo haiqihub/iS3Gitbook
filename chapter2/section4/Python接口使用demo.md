@@ -128,6 +128,8 @@ def test(type,attribute,down,up):
 
 测试效果如下图：
 
-<img src=".\test.png" alt="test" style="zoom: 40%;" />
+<div style= text-align:center>
+<img src=".\test.png"  style='width:600px'; 'left: 50%'/>
+</div>
 
 由上图可见，符合范围内的`Borehole`类型的数字化对象在地图和Data View上均被高亮，且在Object View面板中被展示。

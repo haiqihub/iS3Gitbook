@@ -51,6 +51,9 @@ go
 
 添加到数据库后：
 
-![detail3](./img/detail3.png)
+<div style= text-align:center>
+<img src= "./img/detail3.png"   style='width:800px'; 'left: 50%'/>
+</div>
+
 
 添加后，提交更新。

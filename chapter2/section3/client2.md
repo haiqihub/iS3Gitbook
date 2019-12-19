@@ -124,8 +124,9 @@ public class DemoTools : Tools
 
 然后，我们在`DemoWindow.xaml.cs`中定义DemoTool有关的视图和触发事件，详细可查看。由于代码较长，此处不复展开详述。此处，放出最终效果：
 
-<img src="D:\Death in TJU\Junior_1st\iS3\iS3Gitbook-master\chapter2\section3\img\demo.png" style="zoom: 50%;" />
-
+<div style= text-align:center>
+<img src=".\img\demo.png" style='width:600px'; 'left: 50%'/>
+</div>
 
 
 #### 附件：DemoWindow.xaml.cs

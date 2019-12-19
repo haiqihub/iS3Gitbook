@@ -1,6 +1,6 @@
 # Fluent API配置Configuration映射类
 
-​	在使用Fluent API进行Entity Framework Code First数据库映射时，除了以上的在重写OnModelCreating方法中直接对Entity进行配置之外，也可以对Configurations进行配置。这时可以先写一个单独的类，将数据表的全部映射要求都写在构造函数中。
+在使用`Fluent API`进行`Entity Framework Code First`数据库映射时，除了以上的在重写`OnModelCreating`方法中直接对`Entity`进行配置之外，也可以对`Configurations`进行配置。这时可以先写一个单独的类，将数据表的全部映射要求都写在构造函数中。
 
 #### ProductMap.cs类
 
@@ -41,7 +41,7 @@
     }
 ```
 
-有了上面的映射类之后，在转换OnModelCreating方法中则可以直接调用映射类，从而减少了OnModelCreating方法的复杂度，同时也增强了代码维护的替代性。
+有了上面的映射类之后，在转换`OnModelCreating`方法中则可以直接调用映射类，从而减少了`OnModelCreating`方法的复杂度，同时也增强了代码维护的替代性。
 
 ```csharp
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
