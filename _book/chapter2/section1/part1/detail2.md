@@ -5,10 +5,15 @@
 - **Preparation Step 1**：配置iS3及数据目录的路径
 
 - **Preparation Step 2**：配置项目地点和表述信息
+
 - **Step 1 **：基本信息配置
+
 - **Step 2**：2D模型配置（地图引擎配置）
+
 - **Step 3**：配置项目的Domains信息
+
 - **Step 4 **：配置项目树
+
 -  **配置完成**
 
 ###  Preparation Step 1 -- 配置iS3及数据目录的路径
@@ -26,7 +31,7 @@
 
 配置该项目的名称，项目地点和表述信息。
 
-点击加号按钮，添加项目，填写项目ID和描述信息。
+点击加号按钮，添加项目，填写项目`ID`和描述信息。
 
 <div style= text-align:center>
 <img src= "https://i.loli.net/2019/12/07/rQRKMflY4bUF8jp.png" style='width:600px'; 'left: 50%'/>
@@ -48,7 +53,7 @@
 
 ### Step 1 -- 基本信息配置
 
-ID为项目ID，Title为项目名，`Local data path`为[数据文件准备（二、平台使用/第一章 数据准备/第二节 本地数据配置/1.数据文件准备）](./detail1.md)中存储项目数据文件，`Local tile path`为**数据文件准备**中TPKS文件的文件夹路径。这二者默认情况下无需更改。`Database`为数据库地址，分别替换掉IP地址、数据库名称、用户名称和密码。
+`ID`为项目`ID`，`Title`为项目名，`Local data path`为[数据文件准备（二、平台使用/第一章 数据准备/第二节 本地数据配置/1.数据文件准备）](./detail1.md)中存储项目数据文件，`Local tile path`为**数据文件准备**中TPKS文件的文件夹路径。这二者默认情况下无需更改。`Database`为数据库地址，分别替换掉IP地址、数据库名称、用户名称和密码。
 
 <div style= text-align:center>
 <img src="./img/step1.png"  style='width:600px'; 'left: 50%' />
@@ -64,9 +69,9 @@ ID为项目ID，Title为项目名，`Local data path`为[数据文件准备（�
 <img src= "https://i.loli.net/2019/12/07/pdobq4Oyu3zx7XW.png" style='width:600px'; 'left: 50%'>
 </div>
 
-在右边栏填写地图ID（默认ID为`Map0`），选择地图类型（默认类型为`FootPrintMap`)。
+在右边栏填写地图`ID`（默认`ID`为`Map0`），选择地图类型（默认类型为`FootPrintMap`)。
 
-以`TONGJI`项目为例，地图ID为`Map0`，地图类型为`FootPrintMap`。
+以`TONGJI`项目为例，地图`ID`为`Map0`，地图类型为`FootPrintMap`。
 
 <div style= text-align:center>
 <img src= "https://i.loli.net/2019/12/07/aBAntRfpUjNwdXD.png" style='width:600px'; 'left: 50%'/>
@@ -182,7 +187,7 @@ ID为项目ID，Title为项目名，`Local data path`为[数据文件准备（�
 
 选中根项点击右键添加`Digital object`，并填写`Display Name`，选择`Name`和`Digital object`。
 
-注意：在切换`Domain`的Tab前，务必先选中切换前`Domain`的根项，否则选中项的`Digital object`属性会丢失。
+注意：在切换`Domain`的标签前，务必先选中切换前`Domain`的根项，否则选中项的`Digital object`属性会丢失。
 
 <div style= text-align:center>
 <img src= "https://ftp.bmp.ovh/imgs/2019/12/f0044f80af2358ac.png"   style='width:600px'; 'left: 50%'/>

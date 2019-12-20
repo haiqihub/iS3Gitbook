@@ -753,31 +753,31 @@
 <p>&#x672C;&#x5C0F;&#x8282;&#x5C06;&#x5BF9;<code>Extensions</code>&#x7C7B;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#xFF0C;&#x5E76;&#x5F15;&#x5BFC;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>EntryPoint</code>&#x7C7B;&#x3002; <code>EntryPoint</code>&#x7C7B;&#x662F;&#x6269;&#x5C55;&#x5E93;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;<code>iS3.Core</code>&#x4E2D;&#x7684;<code>Extensions</code>&#x7C7B;&#x3002;&#x901A;&#x8FC7;<code>EntryPoint</code>&#x7C7B;&#xFF0C;&#x4E3B;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x624D;&#x80FD;&#x8BC6;&#x522B;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6269;&#x5C55;&#x7C7B;&#x3002;</p>
 <h3 id="1-extensions&#x7C7B;&#x8BF4;&#x660E;">1. Extensions&#x7C7B;&#x8BF4;&#x660E;</h3>
 <p><code>iS3.Core</code>&#x4E2D;&#x7684;<code>Extensions</code>&#x7C7B;&#x662F;&#x7528;&#x6237;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x6269;&#x5C55;&#x7C7B;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x91CD;&#x8981;&#x5BF9;&#x8C61;&#x3002;&#x6240;&#x6709;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6269;&#x5C55;&#x7C7B;&#x5747;&#x9700;&#x7EE7;&#x627F;&#x81EA;&#x8BE5;<code>Extensions</code>&#x7C7B;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x6269;&#x5C55;&#x3002;<code>Extensions</code>&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<pre><code class="lang-c#">    public class Extensions
+<pre><code class="lang-csharp">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Extensions</span>
     {
-        // Summary:
-        //     Name, version and provide of the extension
-        public virtual string name() { return &quot;Unknown extension&quot;; }
-        public virtual string version() { return &quot;Unknown&quot;; }
-        public virtual string provider() { return &quot;Unknown provider&quot;; }
+        <span class="hljs-comment">// Summary:</span>
+        <span class="hljs-comment">//     Name, version and provide of the extension</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">string</span> <span class="hljs-title">name</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown extension&quot;</span>; }
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">string</span> <span class="hljs-title">version</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown&quot;</span>; }
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">string</span> <span class="hljs-title">provider</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown provider&quot;</span>; }
 
-        // Summary:
-        //     Initialize the extension, called immediately after loaded.
-        // Return value:
-        //     A string that will be printed in output window.
-        public virtual string init() 
-        {
-            string msg = String.Format(&quot;Loaded {0} by {1}, version {2}.\n&quot;,
+        <span class="hljs-comment">// Summary:</span>
+        <span class="hljs-comment">//     Initialize the extension, called immediately after loaded.</span>
+        <span class="hljs-comment">// Return value:</span>
+        <span class="hljs-comment">//     A string that will be printed in output window.</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">string</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) 
+        </span>{
+            <span class="hljs-keyword">string</span> msg = String.Format(<span class="hljs-string">&quot;Loaded {0} by {1}, version {2}.\n&quot;</span>,
                 name(), provider(), version());
-            return msg; 
+            <span class="hljs-keyword">return</span> msg; 
         }
     }
 </code></pre>
-<p>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6269;&#x5C55;&#x7C7B;&#x7EE7;&#x627F;&#x81EA;<code>Extensions</code>&#x7C7B;&#x540E;&#xFF0C;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#x5E94;&#x8BE5;&#x653E;&#x7F6E;&#x5728;<code>\bin\extensions</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x88AB;&#x4E3B;&#x7A0B;&#x5E8F;&#x8BC6;&#x522B;&#x3002;<code>iS3.Core</code>&#x4E2D;&#x7684;<code>ExtensionsManager</code>&#x7C7B;&#x5C06;&#x8BFB;&#x53D6;&#x653E;&#x7F6E;&#x4E8E;<code>\bin\extensions</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;dll&#x6587;&#x4EF6;&#xFF0C;&#x4ECE;&#x7C7B;&#x540D;&#x4E2D;&#x521B;&#x5EFA;&#x51FA;&#x5B9E;&#x4F53;&#x3002;</p>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6269;&#x5C55;&#x7C7B;&#x7EE7;&#x627F;&#x81EA;<code>Extensions</code>&#x7C7B;&#x540E;&#xFF0C;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#x5E94;&#x8BE5;&#x653E;&#x7F6E;&#x5728;<code>\bin\extensions</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x88AB;&#x4E3B;&#x7A0B;&#x5E8F;&#x8BC6;&#x522B;&#x3002;<code>iS3.Core</code>&#x4E2D;&#x7684;<code>ExtensionsManager</code>&#x7C7B;&#x5C06;&#x8BFB;&#x53D6;&#x653E;&#x7F6E;&#x4E8E;<code>\bin\extensions</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;<code>dll</code>&#x6587;&#x4EF6;&#xFF0C;&#x4ECE;&#x7C7B;&#x540D;&#x4E2D;&#x521B;&#x5EFA;&#x51FA;&#x5B9E;&#x4F53;&#x3002;</p>
 <h3 id="2-&#x5B9E;&#x73B0;entrypoint&#x7C7B;">2. &#x5B9E;&#x73B0;EntryPoint&#x7C7B;</h3>
 <p>&#x6B64;&#x5904;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6F14;&#x793A;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x6269;&#x5C55;&#x7C7B;&#x7684;&#x5165;&#x53E3;&#x2014;&#x2014;<code>EntryPoint</code>&#x7C7B;&#xFF0C;&#x5E76;&#x5BF9;&#x5176;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x3002;</p>
 <p>&#x4EE5;&#x540C;&#x6D4E;&#x5927;&#x5B66;&#x9879;&#x76EE;&#x7684;&#x6F14;&#x793A;&#x4E3A;&#x4F8B;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">namespace</span> <span class="hljs-title">iS3.Geology</span>
+<pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">iS3.Geology</span>
 {
     <span class="hljs-comment">// Summary:</span>
     <span class="hljs-comment">//     This is the entry point for the extension</span>
@@ -799,352 +799,352 @@
 <h3 id="3-&#x5B9E;&#x73B0;demo&#x6269;&#x5C55;&#x5DE5;&#x5177;">3. &#x5B9E;&#x73B0;Demo&#x6269;&#x5C55;&#x5DE5;&#x5177;</h3>
 <p>&#x6B64;&#x5904;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4EE5;<code>DemoTools</code>&#x5DE5;&#x5177;&#x4E3A;&#x4F8B;&#xFF0C;&#x4ECB;&#x7ECD;&#x6269;&#x5C55;&#x5DE5;&#x5177;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
 <p>iS3 &#x7CFB;&#x7EDF;&#x5728; <code>iS3.Core</code> &#x4E2D;&#x5B9A;&#x4E49;&#x4E86; <code>Tools</code> &#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x7EE7;&#x627F;&#x81EA; <code>Extensions</code> &#x7C7B;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x5DE5;&#x5177;&#x7684;&#x6269;&#x5C55;&#x3002;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5DE5;&#x5177;&#x5747;&#x9700;&#x7EE7;&#x627F;&#x81EA;&#x8BE5;&#x7C7B;&#x3002;<code>Tools</code> &#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<pre><code class="lang-c#">    public class Tools : Extensions
+<pre><code class="lang-csharp">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Tools</span> : <span class="hljs-title">Extensions</span>
     {
-        // Summary:
-        //     Name, version and provide of the tool
-        public override string name() { return &quot;Unknown tool&quot;; }
+        <span class="hljs-comment">// Summary:</span>
+        <span class="hljs-comment">//     Name, version and provide of the tool</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">string</span> <span class="hljs-title">name</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown tool&quot;</span>; }
 
-        // Summary:
-        //     Get treeItems of the tool, called immediately after loaded.
-        public virtual IEnumerable&lt;ToolTreeItem&gt; treeItems()
-        { 
-            return null; 
+        <span class="hljs-comment">// Summary:</span>
+        <span class="hljs-comment">//     Get treeItems of the tool, called immediately after loaded.</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> IEnumerable&lt;ToolTreeItem&gt; <span class="hljs-title">treeItems</span>(<span class="hljs-params"></span>)
+        </span>{ 
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>; 
         }
     }
 </code></pre>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>DemoTool</code>&#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x7EE7;&#x627F;&#x81EA; <code>Tools</code> &#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x662F;&#x70B9;&#x51FB;&#x5DE5;&#x5177;&#x9762;&#x677F;&#x7684;&#x201C;DemoTool&#x201D;&#x5B57;&#x6837;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x5728;&#x5F53;&#x524D;&#x754C;&#x9762;&#x6253;&#x5F00;&#x4E00;&#x4E2A;Demo&#x56FE;&#x5C42;&#x3002;<code>DemoTool</code> &#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<pre><code class="lang-c#">public class DemoTools : Tools
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>DemoTool</code>&#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x7EE7;&#x627F;&#x81EA; <code>Tools</code> &#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x662F;&#x70B9;&#x51FB;&#x5DE5;&#x5177;&#x9762;&#x677F;&#x7684;<strong>DemoTool</strong>&#x5B57;&#x6837;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x5728;&#x5F53;&#x524D;&#x754C;&#x9762;&#x6253;&#x5F00;&#x4E00;&#x4E2A;Demo&#x56FE;&#x5C42;&#x3002;<code>DemoTool</code> &#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">DemoTools</span> : <span class="hljs-title">Tools</span>
     {
-        //&#x57FA;&#x672C;&#x4FE1;&#x606F;
-        public override string name() { return &quot;iS3.DemoTools&quot;; }
-        public override string provider() { return &quot;Tongji iS3 team&quot;; }
-        public override string version() { return &quot;1.0&quot;; }
-        //&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5217;&#x8868;
+        <span class="hljs-comment">//&#x57FA;&#x672C;&#x4FE1;&#x606F;</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">string</span> <span class="hljs-title">name</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;iS3.DemoTools&quot;</span>; }
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">string</span> <span class="hljs-title">provider</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Tongji iS3 team&quot;</span>; }
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">string</span> <span class="hljs-title">version</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;1.0&quot;</span>; }
+        <span class="hljs-comment">//&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5217;&#x8868;</span>
         List&lt;ToolTreeItem&gt; items;
-        public override IEnumerable&lt;ToolTreeItem&gt; treeItems(){
-            return items;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> IEnumerable&lt;ToolTreeItem&gt; <span class="hljs-title">treeItems</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">return</span> items;
         }
-        //&#x65B0;&#x5EFA;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x7A97;&#x53E3;
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x7A97;&#x53E3;</span>
         DemoWindow demoWindow;
-        public void callDemoWindow(){
-            if (demoWindow != null){
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">callDemoWindow</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">if</span> (demoWindow != <span class="hljs-keyword">null</span>){
                 demoWindow.Show();
-                return;
+                <span class="hljs-keyword">return</span>;
             }
 
-            demoWindow = new DemoWindow();
+            demoWindow = <span class="hljs-keyword">new</span> DemoWindow();
             demoWindow.Closed += (o, args) =&gt;{
-                    demoWindow = null;
+                    demoWindow = <span class="hljs-keyword">null</span>;
                 };
             demoWindow.Show();
         }
-        //&#x65B0;&#x5EFA;&#x5DE5;&#x5177;&#x6811;
-        public DemoTools(){
-            items = new List&lt;ToolTreeItem&gt;();
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x5DE5;&#x5177;&#x6811;</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DemoTools</span>(<span class="hljs-params"></span>)</span>{
+            items = <span class="hljs-keyword">new</span> List&lt;ToolTreeItem&gt;();
 
-            ToolTreeItem item = new ToolTreeItem(&quot;Demo|Basic&quot;, &quot;DemoTest&quot;, callDemoWindow);
+            ToolTreeItem item = <span class="hljs-keyword">new</span> ToolTreeItem(<span class="hljs-string">&quot;Demo|Basic&quot;</span>, <span class="hljs-string">&quot;DemoTest&quot;</span>, callDemoWindow);
             items.Add(item);
         }
     }
 </code></pre>
-<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;<code>DemoWindow.xaml.cs</code>&#x4E2D;&#x5B9A;&#x4E49;DemoTool&#x6709;&#x5173;&#x7684;&#x89C6;&#x56FE;&#x548C;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE6;&#x7EC6;&#x53EF;&#x67E5;&#x770B;&#x3002;&#x7531;&#x4E8E;&#x4EE3;&#x7801;&#x8F83;&#x957F;&#xFF0C;&#x6B64;&#x5904;&#x4E0D;&#x590D;&#x5C55;&#x5F00;&#x8BE6;&#x8FF0;&#x3002;&#x6B64;&#x5904;&#xFF0C;&#x653E;&#x51FA;&#x6700;&#x7EC8;&#x6548;&#x679C;&#xFF1A;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;<code>DemoWindow.xaml.cs</code>&#x4E2D;&#x5B9A;&#x4E49;<strong>DemoTool</strong>&#x6709;&#x5173;&#x7684;&#x89C6;&#x56FE;&#x548C;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE6;&#x7EC6;&#x53EF;&#x67E5;&#x770B;&#x3002;&#x7531;&#x4E8E;&#x4EE3;&#x7801;&#x8F83;&#x957F;&#xFF0C;&#x6B64;&#x5904;&#x4E0D;&#x590D;&#x5C55;&#x5F00;&#x8BE6;&#x8FF0;&#x3002;&#x6B64;&#x5904;&#xFF0C;&#x653E;&#x51FA;&#x6700;&#x7EC8;&#x6548;&#x679C;&#xFF1A;</p>
 <div style="text-align:center">
 <img src="img/demo.png" style="width:600px" ;="" 'left:="" 50%'="">
 </div>
 
 
 <h4 id="&#x9644;&#x4EF6;&#xFF1A;demowindowxamlcs">&#x9644;&#x4EF6;&#xFF1A;DemoWindow.xaml.cs</h4>
-<pre><code class="lang-c#">public partial class DemoWindow : Window
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">partial</span> <span class="hljs-keyword">class</span> <span class="hljs-title">DemoWindow</span> : <span class="hljs-title">Window</span>
 {
-    //&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;
+    <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;</span>
     Project _prj;
     Domain _structureDomain;
     IMainFrame _mainFrame;
     IView _inputView;
 
-    //DGObject members
-    DGObjectsCollection _allSLs; //&#x6240;&#x6709;&#x886C;&#x780C;&#x5BF9;&#x8C61;
-    List&lt;string&gt; _slLayerIDs; //&#x886C;&#x780C;&#x56FE;&#x5C42;ID
-    Dictionary&lt;string, IEnumerable&lt;DGObject&gt;&gt; _selectedSLsDict; //&#x9009;&#x4E2D;&#x7684;&#x886C;&#x780C;
+    <span class="hljs-comment">//DGObject members</span>
+    DGObjectsCollection _allSLs; <span class="hljs-comment">//&#x6240;&#x6709;&#x886C;&#x780C;&#x5BF9;&#x8C61;</span>
+    List&lt;<span class="hljs-keyword">string</span>&gt; _slLayerIDs; <span class="hljs-comment">//&#x886C;&#x780C;&#x56FE;&#x5C42;ID</span>
+    Dictionary&lt;<span class="hljs-keyword">string</span>, IEnumerable&lt;DGObject&gt;&gt; _selectedSLsDict; <span class="hljs-comment">//&#x9009;&#x4E2D;&#x7684;&#x886C;&#x780C;</span>
 
-    //graphics members
-    ISpatialReference _spatialRef; //&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7CFB;
+    <span class="hljs-comment">//graphics members</span>
+    ISpatialReference _spatialRef; <span class="hljs-comment">//&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7CFB;</span>
 
-    //result
-    Dictionary&lt;int, int&gt; _slsGrade; //&#x7528;&#x6765;&#x5B58;&#x50A8;&#x886C;&#x780C;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;
-    Dictionary&lt;int, IGraphicCollection&gt; _slsGraphics; //&#x56FE;&#x5F62;&#x7ED3;&#x679C;&#x5B58;&#x50A8;
+    <span class="hljs-comment">//result</span>
+    Dictionary&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt; _slsGrade; <span class="hljs-comment">//&#x7528;&#x6765;&#x5B58;&#x50A8;&#x886C;&#x780C;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;</span>
+    Dictionary&lt;<span class="hljs-keyword">int</span>, IGraphicCollection&gt; _slsGraphics; <span class="hljs-comment">//&#x56FE;&#x5F62;&#x7ED3;&#x679C;&#x5B58;&#x50A8;</span>
 
-    public DemoWindow()
-    {
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DemoWindow</span>(<span class="hljs-params"></span>)
+    </span>{
         InitializeComponent();
 
-        //&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x53D8;&#x91CF;
-        _selectedSLsDict = new Dictionary&lt;string, IEnumerable&lt;DGObject&gt;&gt;();
-        _slsGrade = new Dictionary&lt;int, int&gt;();
-        _slsGraphics = new Dictionary&lt;int, IGraphicCollection&gt;();
+        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x53D8;&#x91CF;</span>
+        _selectedSLsDict = <span class="hljs-keyword">new</span> Dictionary&lt;<span class="hljs-keyword">string</span>, IEnumerable&lt;DGObject&gt;&gt;();
+        _slsGrade = <span class="hljs-keyword">new</span> Dictionary&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt;();
+        _slsGraphics = <span class="hljs-keyword">new</span> Dictionary&lt;<span class="hljs-keyword">int</span>, IGraphicCollection&gt;();
 
         _mainFrame = Globals.mainframe;
         _prj = Globals.project;
         _structureDomain = _prj.getDomain(DomainType.Structure);
-        _allSLs = _structureDomain.getObjects(&quot;SegmentLining&quot;);
-        _slLayerIDs = new List&lt;string&gt;();
-        foreach (DGObjects objs in _allSLs)
+        _allSLs = _structureDomain.getObjects(<span class="hljs-string">&quot;SegmentLining&quot;</span>);
+        _slLayerIDs = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">string</span>&gt;();
+        <span class="hljs-keyword">foreach</span> (DGObjects objs <span class="hljs-keyword">in</span> _allSLs)
             _slLayerIDs.Add(objs.definition.GISLayerName);
 
-        //&#x7A97;&#x53E3;&#x52A0;&#x8F7D;&#x3001;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;
+        <span class="hljs-comment">//&#x7A97;&#x53E3;&#x52A0;&#x8F7D;&#x3001;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;</span>
         Loaded += DemoWindow_Loaded;
         Unloaded += DemoWindow_Unloaded;
     }
 
-    //&#x7A97;&#x53E3;&#x52A0;&#x8F7D;&#x4E8B;&#x4EF6;
-    void DemoWindow_Loaded(object sender,
-        RoutedEventArgs e)
-    {
-        //&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x5728;&#x53F3;&#x4E0B;&#x89D2;&#x5F39;&#x51FA;
+    <span class="hljs-comment">//&#x7A97;&#x53E3;&#x52A0;&#x8F7D;&#x4E8B;&#x4EF6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">DemoWindow_Loaded</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> sender,
+        RoutedEventArgs e</span>)
+    </span>{
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x5728;&#x53F3;&#x4E0B;&#x89D2;&#x5F39;&#x51FA;</span>
         Application curApp = Application.Current;
         Window mainWindow = curApp.MainWindow;
-        this.Owner = mainWindow;
-        this.Left = mainWindow.Left +
-            (mainWindow.Width - this.ActualWidth - 10);
-        this.Top = mainWindow.Top +
-            (mainWindow.Height - this.ActualHeight - 10);
+        <span class="hljs-keyword">this</span>.Owner = mainWindow;
+        <span class="hljs-keyword">this</span>.Left = mainWindow.Left +
+            (mainWindow.Width - <span class="hljs-keyword">this</span>.ActualWidth - <span class="hljs-number">10</span>);
+        <span class="hljs-keyword">this</span>.Top = mainWindow.Top +
+            (mainWindow.Height - <span class="hljs-keyword">this</span>.ActualHeight - <span class="hljs-number">10</span>);
 
-        //&#x8BBE;&#x7F6E;input view combobox&#x6570;&#x636E;&#x6E90;
-        List&lt;IView&gt; planViews = new List&lt;IView&gt;();
-        foreach (IView view in _mainFrame.views)
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;input view combobox&#x6570;&#x636E;&#x6E90;</span>
+        List&lt;IView&gt; planViews = <span class="hljs-keyword">new</span> List&lt;IView&gt;();
+        <span class="hljs-keyword">foreach</span> (IView view <span class="hljs-keyword">in</span> _mainFrame.views)
         {
-            if (view.eMap.MapType == EngineeringMapType.FootPrintMap)
+            <span class="hljs-keyword">if</span> (view.eMap.MapType == EngineeringMapType.FootPrintMap)
                 planViews.Add(view);
         }
         InputCB.ItemsSource = planViews;
-        if (planViews.Count &gt; 0)
+        <span class="hljs-keyword">if</span> (planViews.Count &gt; <span class="hljs-number">0</span>)
         {
-            _inputView = planViews[0];
-            InputCB.SelectedIndex = 0;
+            _inputView = planViews[<span class="hljs-number">0</span>];
+            InputCB.SelectedIndex = <span class="hljs-number">0</span>;
         }
-        else
+        <span class="hljs-keyword">else</span>
         {
-            return;
+            <span class="hljs-keyword">return</span>;
         }
 
-        //&#x8BBE;&#x7F6E;segmenglining listbox&#x6570;&#x636E;&#x6E90;
-        _inputView_objSelectionChangedListener(null, null);
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;segmenglining listbox&#x6570;&#x636E;&#x6E90;</span>
+        _inputView_objSelectionChangedListener(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);
     }
 
-    //&#x7A97;&#x53E3;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;
-    void DemoWindow_Unloaded(object sender,
-        RoutedEventArgs e)
-    {
-        _inputView.addSeletableLayer(&quot;_ALL&quot;);
+    <span class="hljs-comment">//&#x7A97;&#x53E3;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">DemoWindow_Unloaded</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> sender,
+        RoutedEventArgs e</span>)
+    </span>{
+        _inputView.addSeletableLayer(<span class="hljs-string">&quot;_ALL&quot;</span>);
         _inputView.objSelectionChangedTrigger -=
             _inputView_objSelectionChangedListener;
     }
 
-    //&#x89C6;&#x56FE;&#x5BF9;&#x8C61;&#x9009;&#x62E9;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;
-    void _inputView_objSelectionChangedListener(object sender,
+    <span class="hljs-comment">//&#x89C6;&#x56FE;&#x5BF9;&#x8C61;&#x9009;&#x62E9;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;</span>
+    <span class="hljs-keyword">void</span> _inputView_objSelectionChangedListener(<span class="hljs-keyword">object</span> sender,
         ObjSelectionChangedEventArgs e)
     {
-        //&#x8BBE;&#x7F6E;segmenglining listbox&#x6570;&#x636E;&#x6E90;
-        _selectedSLsDict = _prj.getSelectedObjs(_structureDomain, &quot;SegmentLining&quot;);
-        List&lt;DGObject&gt; _sls = new List&lt;DGObject&gt;();
-        foreach (var item in _selectedSLsDict.Values)
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;segmenglining listbox&#x6570;&#x636E;&#x6E90;</span>
+        _selectedSLsDict = _prj.getSelectedObjs(_structureDomain, <span class="hljs-string">&quot;SegmentLining&quot;</span>);
+        List&lt;DGObject&gt; _sls = <span class="hljs-keyword">new</span> List&lt;DGObject&gt;();
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> item <span class="hljs-keyword">in</span> _selectedSLsDict.Values)
         {
-            foreach (var obj in item)
+            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> obj <span class="hljs-keyword">in</span> item)
             {
                 _sls.Add(obj);
             }
         }
-        if (_sls != null &amp;&amp; _sls.Count() &gt; 0)
+        <span class="hljs-keyword">if</span> (_sls != <span class="hljs-keyword">null</span> &amp;&amp; _sls.Count() &gt; <span class="hljs-number">0</span>)
             SLLB.ItemsSource = _sls;
     }
 
-    //input view cobombox&#x9009;&#x62E9;&#x4E8B;&#x4EF6;
-    private void InputCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        //&#x4E0A;&#x4E00;&#x6B21;&#x9009;&#x62E9;&#x7684;view
-        _inputView.addSeletableLayer(&quot;_ALL&quot;);
+    <span class="hljs-comment">//input view cobombox&#x9009;&#x62E9;&#x4E8B;&#x4EF6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">InputCB_SelectionChanged</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> sender, SelectionChangedEventArgs e</span>)
+    </span>{
+        <span class="hljs-comment">//&#x4E0A;&#x4E00;&#x6B21;&#x9009;&#x62E9;&#x7684;view</span>
+        _inputView.addSeletableLayer(<span class="hljs-string">&quot;_ALL&quot;</span>);
         _inputView.objSelectionChangedTrigger -=
                 _inputView_objSelectionChangedListener;
 
-        //&#x65B0;&#x9009;&#x62E9;&#x7684;view
-        _inputView = InputCB.SelectedItem as IView;
-        _inputView.removeSelectableLayer(&quot;_ALL&quot;);
-        foreach (string layerID in _slLayerIDs)
+        <span class="hljs-comment">//&#x65B0;&#x9009;&#x62E9;&#x7684;view</span>
+        _inputView = InputCB.SelectedItem <span class="hljs-keyword">as</span> IView;
+        _inputView.removeSelectableLayer(<span class="hljs-string">&quot;_ALL&quot;</span>);
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> layerID <span class="hljs-keyword">in</span> _slLayerIDs)
             _inputView.addSeletableLayer(layerID);
 
-        //&#x4E3A;&#x65B0;&#x7684;view&#x6DFB;&#x52A0;&#x5BF9;&#x8C61;&#x9009;&#x62E9;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;
+        <span class="hljs-comment">//&#x4E3A;&#x65B0;&#x7684;view&#x6DFB;&#x52A0;&#x5BF9;&#x8C61;&#x9009;&#x62E9;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;</span>
         _inputView.objSelectionChangedTrigger +=
             _inputView_objSelectionChangedListener;
     }
 
-    //&#x5F00;&#x59CB;&#x6309;&#x94AE;&#x4E8B;&#x4EF6;
-    private void Start_Click(object sender, RoutedEventArgs e)
-    {
+    <span class="hljs-comment">//&#x5F00;&#x59CB;&#x6309;&#x94AE;&#x4E8B;&#x4EF6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start_Click</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> sender, RoutedEventArgs e</span>)
+    </span>{
         StartAnalysis();
         SyncToView();
         Close();
     }
 
-    //&#x5173;&#x95ED;&#x6309;&#x94AE;&#x4E8B;&#x4EF6;
-    private void Cancel_Click(object sender, RoutedEventArgs e)
-    {
+    <span class="hljs-comment">//&#x5173;&#x95ED;&#x6309;&#x94AE;&#x4E8B;&#x4EF6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Cancel_Click</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> sender, RoutedEventArgs e</span>)
+    </span>{
         Close();
     }
 
-    void StartAnalysis()
-    {
-        //&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x7684;view&#x548C;&#x590D;&#x5236;&#x5750;&#x6807;&#x7CFB;
-        IView view = InputCB.SelectedItem as IView;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StartAnalysis</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x7684;view&#x548C;&#x590D;&#x5236;&#x5750;&#x6807;&#x7CFB;</span>
+        IView view = InputCB.SelectedItem <span class="hljs-keyword">as</span> IView;
         _spatialRef = view.spatialReference;
 
-        //&#x5F00;&#x59CB;&#x5206;&#x6790;
-        foreach (string SLLayerID in _selectedSLsDict.Keys)
+        <span class="hljs-comment">//&#x5F00;&#x59CB;&#x5206;&#x6790;</span>
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> SLLayerID <span class="hljs-keyword">in</span> _selectedSLsDict.Keys)
         {
-            //&#x83B7;&#x53D6;&#x886C;&#x780C;&#x9009;&#x4E2D;&#x5217;&#x8868;
+            <span class="hljs-comment">//&#x83B7;&#x53D6;&#x886C;&#x780C;&#x9009;&#x4E2D;&#x5217;&#x8868;</span>
             IEnumerable&lt;DGObject&gt; sls = _selectedSLsDict[SLLayerID];
             List&lt;DGObject&gt; slList = sls.ToList();
             IGraphicsLayer gLayer = _inputView.getLayer(SLLayerID);             
-            foreach(DGObject dg in slList)
+            <span class="hljs-keyword">foreach</span>(DGObject dg <span class="hljs-keyword">in</span> slList)
             {
-                //&#x83B7;&#x53D6;&#x5355;&#x4E2A;&#x886C;&#x780C;&#x5BF9;&#x8C61;&#xFF0C;&#x8BA1;&#x7B97;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;
-                SegmentLining sl = dg as SegmentLining;
+                <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5355;&#x4E2A;&#x886C;&#x780C;&#x5BF9;&#x8C61;&#xFF0C;&#x8BA1;&#x7B97;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;</span>
+                SegmentLining sl = dg <span class="hljs-keyword">as</span> SegmentLining;
                 SLConvergenceRecordType slConvergenceRecordType = sl.ConstructionRecord.SLConvergenceRecords;
-                if (slConvergenceRecordType.SLConvergenceItems.Count == 0)
-                    continue;
+                <span class="hljs-keyword">if</span> (slConvergenceRecordType.SLConvergenceItems.Count == <span class="hljs-number">0</span>)
+                    <span class="hljs-keyword">continue</span>;
 
-                SLConvergenceItem slConvergenceItem = slConvergenceRecordType.SLConvergenceItems[0];
-                if(slConvergenceItem.HorizontalDev == double.NaN)
-                    continue;
-                double raduis = (double)slConvergenceItem.HorizontalRad;
-                double deviation = (double)slConvergenceItem.HorizontalDev;
-                double ratio = deviation / (raduis - deviation) * 1000;
+                SLConvergenceItem slConvergenceItem = slConvergenceRecordType.SLConvergenceItems[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">if</span>(slConvergenceItem.HorizontalDev == <span class="hljs-keyword">double</span>.NaN)
+                    <span class="hljs-keyword">continue</span>;
+                <span class="hljs-keyword">double</span> raduis = (<span class="hljs-keyword">double</span>)slConvergenceItem.HorizontalRad;
+                <span class="hljs-keyword">double</span> deviation = (<span class="hljs-keyword">double</span>)slConvergenceItem.HorizontalDev;
+                <span class="hljs-keyword">double</span> ratio = deviation / (raduis - deviation) * <span class="hljs-number">1000</span>;
 
-                int grade;
-                if (ratio &lt;= 3)
-                    grade = 5;
-                else if (ratio &lt;= 5)
-                    grade = 4;
-                else if (ratio &lt;= 8)
-                    grade = 3;
-                else if (ratio &lt;= 10)
-                    grade = 2;
-                else
-                    grade = 1;
+                <span class="hljs-keyword">int</span> grade;
+                <span class="hljs-keyword">if</span> (ratio &lt;= <span class="hljs-number">3</span>)
+                    grade = <span class="hljs-number">5</span>;
+                <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">ratio &lt;= <span class="hljs-number">5</span></span>)
+                    grade </span>= <span class="hljs-number">4</span>;
+                <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">ratio &lt;= <span class="hljs-number">8</span></span>)
+                    grade </span>= <span class="hljs-number">3</span>;
+                <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">ratio &lt;= <span class="hljs-number">10</span></span>)
+                    grade </span>= <span class="hljs-number">2</span>;
+                <span class="hljs-keyword">else</span>
+                    grade = <span class="hljs-number">1</span>;
 
-                //&#x6839;&#x636E;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;&#x83B7;&#x53D6;&#x56FE;&#x5F62;&#x6837;&#x5F0F;
+                <span class="hljs-comment">//&#x6839;&#x636E;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;&#x83B7;&#x53D6;&#x56FE;&#x5F62;&#x6837;&#x5F0F;</span>
                 ISymbol symbol = GetSymbol(grade);
 
-                //&#x4E3A;&#x4E86;&#x6F14;&#x793A;&#xFF0C;&#x91C7;&#x7528;&#x4E86;&#x8F83;&#x590D;&#x6742;&#x7684;&#x65B9;&#x6CD5;
-                //&lt;&#x7B80;&#x4FBF;&#x65B9;&#x6CD5; &#x53EF;&#x66FF;&#x6362;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&gt;
-                //IGraphicCollection gcollection = gLayer.getGraphics(sl);
-                //IGraphic g = gcollection[0];
-                //g.Symbol = symbol;
-                //IGraphicCollection gc = Runtime.graphicEngine.newGraphicCollection();
-                //gc.Add(g);
-                //_slsGraphics[sl.id] = gc;
-                //&lt;/&#x7B80;&#x4FBF;&#x65B9;&#x6CD5;&gt;
+                <span class="hljs-comment">//&#x4E3A;&#x4E86;&#x6F14;&#x793A;&#xFF0C;&#x91C7;&#x7528;&#x4E86;&#x8F83;&#x590D;&#x6742;&#x7684;&#x65B9;&#x6CD5;</span>
+                <span class="hljs-comment">//&lt;&#x7B80;&#x4FBF;&#x65B9;&#x6CD5; &#x53EF;&#x66FF;&#x6362;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&gt;</span>
+                <span class="hljs-comment">//IGraphicCollection gcollection = gLayer.getGraphics(sl);</span>
+                <span class="hljs-comment">//IGraphic g = gcollection[0];</span>
+                <span class="hljs-comment">//g.Symbol = symbol;</span>
+                <span class="hljs-comment">//IGraphicCollection gc = Runtime.graphicEngine.newGraphicCollection();</span>
+                <span class="hljs-comment">//gc.Add(g);</span>
+                <span class="hljs-comment">//_slsGraphics[sl.id] = gc;</span>
+                <span class="hljs-comment">//&lt;/&#x7B80;&#x4FBF;&#x65B9;&#x6CD5;&gt;</span>
 
-                //&#x83B7;&#x53D6;&#x886C;&#x780C;&#x56FE;&#x5F62;
+                <span class="hljs-comment">//&#x83B7;&#x53D6;&#x886C;&#x780C;&#x56FE;&#x5F62;</span>
                 IGraphicCollection gcollection = gLayer.getGraphics(sl);
-                IGraphic g = gcollection[0];
-                IPolygon polygon = g.Geometry as IPolygon;
-                IPointCollection pointCollection = polygon.GetPoints(); //&#x83B7;&#x53D6;&#x7AEF;&#x70B9;
-                //&#x886C;&#x780C;&#x4E3A;&#x957F;&#x65B9;&#x5F62;&#xFF0C;&#x6545;&#x6709;&#x56DB;&#x4E2A;&#x70B9;
-                IMapPoint p1_temp = pointCollection[0];
-                IMapPoint p2_temp = pointCollection[1];
-                IMapPoint p3_temp = pointCollection[2];
-                IMapPoint p4_temp = pointCollection[3];
-                //&#x65B0;&#x5EFA;&#x65B0;&#x7684;&#x70B9;&#xFF0C;&#x6CE8;&#x610F;&#x590D;&#x5236;&#x5750;&#x6807;&#x7CFB;
+                IGraphic g = gcollection[<span class="hljs-number">0</span>];
+                IPolygon polygon = g.Geometry <span class="hljs-keyword">as</span> IPolygon;
+                IPointCollection pointCollection = polygon.GetPoints(); <span class="hljs-comment">//&#x83B7;&#x53D6;&#x7AEF;&#x70B9;</span>
+                <span class="hljs-comment">//&#x886C;&#x780C;&#x4E3A;&#x957F;&#x65B9;&#x5F62;&#xFF0C;&#x6545;&#x6709;&#x56DB;&#x4E2A;&#x70B9;</span>
+                IMapPoint p1_temp = pointCollection[<span class="hljs-number">0</span>];
+                IMapPoint p2_temp = pointCollection[<span class="hljs-number">1</span>];
+                IMapPoint p3_temp = pointCollection[<span class="hljs-number">2</span>];
+                IMapPoint p4_temp = pointCollection[<span class="hljs-number">3</span>];
+                <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x65B0;&#x7684;&#x70B9;&#xFF0C;&#x6CE8;&#x610F;&#x590D;&#x5236;&#x5750;&#x6807;&#x7CFB;</span>
                 IMapPoint p1 = Runtime.geometryEngine.newMapPoint(p1_temp.X, p1_temp.Y, _spatialRef);
                 IMapPoint p2 = Runtime.geometryEngine.newMapPoint(p2_temp.X, p2_temp.Y, _spatialRef);
                 IMapPoint p3 = Runtime.geometryEngine.newMapPoint(p3_temp.X, p3_temp.Y, _spatialRef);
                 IMapPoint p4 = Runtime.geometryEngine.newMapPoint(p4_temp.X, p4_temp.Y, _spatialRef);
-                //&#x751F;&#x6210;&#x65B0;&#x7684;&#x56FE;&#x5F62;
+                <span class="hljs-comment">//&#x751F;&#x6210;&#x65B0;&#x7684;&#x56FE;&#x5F62;</span>
                 g = Runtime.graphicEngine.newQuadrilateral(p1, p2, p3, p4);
                 g.Symbol = symbol;
                 IGraphicCollection gc = Runtime.graphicEngine.newGraphicCollection();
                 gc.Add(g);
-                _slsGraphics[sl.id] = gc; //&#x4FDD;&#x5B58;&#x7ED3;&#x679C;
+                _slsGraphics[sl.id] = gc; <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x7ED3;&#x679C;</span>
             }
         }
     }
 
-    //&#x5728;view&#x4E2D;&#x52A0;&#x8F7D;&#x56FE;&#x5F62;&#xFF0C;&#x548C;&#x540C;&#x6B65;&#x56FE;&#x5F62;
-    void SyncToView()
-    {
-        IView view = InputCB.SelectedItem as IView;
+    <span class="hljs-comment">//&#x5728;view&#x4E2D;&#x52A0;&#x8F7D;&#x56FE;&#x5F62;&#xFF0C;&#x548C;&#x540C;&#x6B65;&#x56FE;&#x5F62;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SyncToView</span>(<span class="hljs-params"></span>)
+    </span>{
+        IView view = InputCB.SelectedItem <span class="hljs-keyword">as</span> IView;
 
-        //&#x4E3A;&#x56FE;&#x5F62;&#x8D4B;&#x503C;&#x201C;Name&#x201D;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x4FBF;&#x56FE;&#x5F62;&#x548C;&#x6570;&#x636E;&#x5173;&#x8054;
-        foreach (int slID in _slsGraphics.Keys)
+        <span class="hljs-comment">//&#x4E3A;&#x56FE;&#x5F62;&#x8D4B;&#x503C;&#x201C;Name&#x201D;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x4FBF;&#x56FE;&#x5F62;&#x548C;&#x6570;&#x636E;&#x5173;&#x8054;</span>
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">int</span> slID <span class="hljs-keyword">in</span> _slsGraphics.Keys)
         {
-            SegmentLining sl = _allSLs[slID] as SegmentLining;
+            SegmentLining sl = _allSLs[slID] <span class="hljs-keyword">as</span> SegmentLining;
             IGraphicCollection gc = _slsGraphics[slID];
-            foreach (IGraphic g in gc)
-                g.Attributes[&quot;Name&quot;] = sl.name;
+            <span class="hljs-keyword">foreach</span> (IGraphic g <span class="hljs-keyword">in</span> gc)
+                g.Attributes[<span class="hljs-string">&quot;Name&quot;</span>] = sl.name;
         }
 
-        //&#x5C06;&#x56FE;&#x5F62;&#x6DFB;&#x52A0;&#x5230;view&#x4E2D;
-        string layerID = &quot;DemoLayer&quot;; //&#x56FE;&#x5C42;ID
-        IGraphicsLayer gLayer = getDemoLayer(view, layerID); //&#x83B7;&#x53D6;&#x56FE;&#x5C42;&#x51FD;&#x6570;
-        foreach (int id in _slsGraphics.Keys)
+        <span class="hljs-comment">//&#x5C06;&#x56FE;&#x5F62;&#x6DFB;&#x52A0;&#x5230;view&#x4E2D;</span>
+        <span class="hljs-keyword">string</span> layerID = <span class="hljs-string">&quot;DemoLayer&quot;</span>; <span class="hljs-comment">//&#x56FE;&#x5C42;ID</span>
+        IGraphicsLayer gLayer = getDemoLayer(view, layerID); <span class="hljs-comment">//&#x83B7;&#x53D6;&#x56FE;&#x5C42;&#x51FD;&#x6570;</span>
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">int</span> id <span class="hljs-keyword">in</span> _slsGraphics.Keys)
         {
             IGraphicCollection gc = _slsGraphics[id];            
             gLayer.addGraphics(gc);
         }
 
-        //&#x4F7F;&#x6570;&#x636E;&#x4E0E;&#x56FE;&#x5F62;&#x5173;&#x8054;
+        <span class="hljs-comment">//&#x4F7F;&#x6570;&#x636E;&#x4E0E;&#x56FE;&#x5F62;&#x5173;&#x8054;</span>
         List&lt;DGObject&gt; sls = _allSLs.merge();
         gLayer.syncObjects(sls);
 
-        //&#x8BA1;&#x7B97;&#x65B0;&#x5EFA;&#x56FE;&#x5F62;&#x8303;&#x56F4;&#xFF0C;&#x5E76;&#x5728;&#x5730;&#x56FE;&#x4E2D;&#x663E;&#x793A;&#x8BE5;&#x8303;&#x56F4;
-        IEnvelope ext = null;
-        foreach (IGraphicCollection gc in _slsGraphics.Values)
+        <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x65B0;&#x5EFA;&#x56FE;&#x5F62;&#x8303;&#x56F4;&#xFF0C;&#x5E76;&#x5728;&#x5730;&#x56FE;&#x4E2D;&#x663E;&#x793A;&#x8BE5;&#x8303;&#x56F4;</span>
+        IEnvelope ext = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">foreach</span> (IGraphicCollection gc <span class="hljs-keyword">in</span> _slsGraphics.Values)
         {
             IEnvelope itemExt = GraphicsUtil.GetGraphicsEnvelope(gc);
-            if (ext == null)
+            <span class="hljs-keyword">if</span> (ext == <span class="hljs-keyword">null</span>)
                 ext = itemExt;
-            else
+            <span class="hljs-keyword">else</span>
                 ext = ext.Union(itemExt);
         }
         _mainFrame.activeView = view;
         view.zoomTo(ext);
     }
 
-    //&#x6839;&#x636E;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;&#x83B7;&#x53D6;&#x6837;&#x5F0F;
-    ISymbol GetSymbol(int grade)
-    {
+    <span class="hljs-comment">//&#x6839;&#x636E;&#x8BC4;&#x4F30;&#x7B49;&#x7EA7;&#x83B7;&#x53D6;&#x6837;&#x5F0F;</span>
+    <span class="hljs-function">ISymbol <span class="hljs-title">GetSymbol</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> grade</span>)
+    </span>{
         ISimpleLineSymbol linesymbol = Runtime.graphicEngine.newSimpleLineSymbol(
-                            Colors.Black, SimpleLineStyle.Solid, 1.0);
+                            Colors.Black, SimpleLineStyle.Solid, <span class="hljs-number">1.0</span>);
         Color color = Colors.Green;
-        if (grade == 5)
+        <span class="hljs-keyword">if</span> (grade == <span class="hljs-number">5</span>)
             color = Colors.LightGreen;
-        if (grade == 4)
+        <span class="hljs-keyword">if</span> (grade == <span class="hljs-number">4</span>)
             color = Colors.LightYellow;
-        if (grade == 3)
+        <span class="hljs-keyword">if</span> (grade == <span class="hljs-number">3</span>)
             color = Colors.LightSkyBlue;
-        if (grade == 2)
+        <span class="hljs-keyword">if</span> (grade == <span class="hljs-number">2</span>)
             color = Colors.LightSalmon;
-        if (grade == 1)
+        <span class="hljs-keyword">if</span> (grade == <span class="hljs-number">1</span>)
             color = Colors.LightPink;
-        return Runtime.graphicEngine.newSimpleFillSymbol(color, SimpleFillStyle.Solid, linesymbol);
+        <span class="hljs-keyword">return</span> Runtime.graphicEngine.newSimpleFillSymbol(color, SimpleFillStyle.Solid, linesymbol);
     }
 
-    //&#x83B7;&#x53D6;&#x65B0;&#x5EFA;&#x56FE;&#x5C42;
-    IGraphicsLayer getDemoLayer(IView view, string layerID)
-    {
+    <span class="hljs-comment">//&#x83B7;&#x53D6;&#x65B0;&#x5EFA;&#x56FE;&#x5C42;</span>
+    <span class="hljs-function">IGraphicsLayer <span class="hljs-title">getDemoLayer</span>(<span class="hljs-params">IView view, <span class="hljs-keyword">string</span> layerID</span>)
+    </span>{
         IGraphicsLayer gLayer = view.getLayer(layerID);
-        if (gLayer == null)
+        <span class="hljs-keyword">if</span> (gLayer == <span class="hljs-keyword">null</span>)
         {
             gLayer = Runtime.graphicEngine.newGraphicsLayer(
                 layerID, layerID);
-            var sym_fill = GraphicsUtil.GetDefaultFillSymbol();
-            var renderer = Runtime.graphicEngine.newSimpleRenderer(sym_fill);
+            <span class="hljs-keyword">var</span> sym_fill = GraphicsUtil.GetDefaultFillSymbol();
+            <span class="hljs-keyword">var</span> renderer = Runtime.graphicEngine.newSimpleRenderer(sym_fill);
             gLayer.setRenderer(renderer);
-            gLayer.Opacity = 0.9;
+            gLayer.Opacity = <span class="hljs-number">0.9</span>;
             view.addLayer(gLayer);
         }
-        return gLayer;
+        <span class="hljs-keyword">return</span> gLayer;
     }
 }
 </code></pre>
@@ -1192,7 +1192,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二节 定义扩展类入口","level":"1.3.3.2","depth":3,"next":{"title":"第三节 自定义DGObject类","level":"1.3.3.3","depth":3,"path":"chapter2/section3/client3.md","ref":"chapter2/section3/client3.md","articles":[]},"previous":{"title":"第一节 创建拓展项目","level":"1.3.3.1","depth":3,"path":"chapter2/section3/client1.md","ref":"chapter2/section3/client1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","expandable-chapters","back-to-top-button","popup","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iS3平台帮助文档","gitbook":"*","description":"教你如何使用iS3平台"},"file":{"path":"chapter2/section3/client2.md","mtime":"2019-12-19T17:57:32.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-19T18:03:58.508Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二节 定义扩展类入口","level":"1.3.3.2","depth":3,"next":{"title":"第三节 自定义DGObject类","level":"1.3.3.3","depth":3,"path":"chapter2/section3/client3.md","ref":"chapter2/section3/client3.md","articles":[]},"previous":{"title":"第一节 创建拓展项目","level":"1.3.3.1","depth":3,"path":"chapter2/section3/client1.md","ref":"chapter2/section3/client1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","expandable-chapters","back-to-top-button","popup","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iS3平台帮助文档","gitbook":"*","description":"教你如何使用iS3平台"},"file":{"path":"chapter2/section3/client2.md","mtime":"2019-12-20T03:49:56.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T10:56:40.486Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

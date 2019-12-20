@@ -4,7 +4,7 @@
 
 此处，我们以`Borehole.cs`为例进行介绍。`Borehole.cs`源代码如下
 
-```cs
+```csharp
 namespace iS3.Geology
 {
    

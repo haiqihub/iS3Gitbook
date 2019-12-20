@@ -63,7 +63,7 @@ is3.MainframeWrapper.loadDomainPanels()
 
 **接口功能**
 
-初始化ViewWrapper
+初始化`ViewWrapper`
 
 **接口参数**
 
@@ -193,7 +193,7 @@ layerWrapper = viewWrapper.addShpLayer(layerDef, shpfile, start, maxFeatures)
 
 **接口功能**
 
-在iS3程序中，对应图层左上方的紫色矩形“select objects on the map”的触发。该函数封装在`ViewWrapper`类中，调用了`IS3View.cs`中的 `selectByRect()`函数。
+在iS3程序中，对应图层左上方的紫色矩形**select objects on the map**的触发。该函数封装在`ViewWrapper`类中，调用了`IS3View.cs`中的 `selectByRect()`函数。
 
 该函数调用尚不明确，功能尚不完善。
 

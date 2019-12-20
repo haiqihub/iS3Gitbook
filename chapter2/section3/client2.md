@@ -6,7 +6,7 @@
 
 `iS3.Core`中的`Extensions`类是用户实现自定义扩展类所依赖的重要对象。所有用户自定义的扩展类均需继承自该`Extensions`类，否则无法实现扩展。`Extensions`类的定义如下所示：
 
-```c#
+```csharp
 	public class Extensions
     {
         // Summary:
@@ -28,7 +28,7 @@
     }
 ```
 
-自定义的扩展类继承自`Extensions`类后，编译生成的动态链接文件应该放置在`\bin\extensions`目录下，否则无法被主程序识别。`iS3.Core`中的`ExtensionsManager`类将读取放置于`\bin\extensions`目录下的dll文件，从类名中创建出实体。
+自定义的扩展类继承自`Extensions`类后，编译生成的动态链接文件应该放置在`\bin\extensions`目录下，否则无法被主程序识别。`iS3.Core`中的`ExtensionsManager`类将读取放置于`\bin\extensions`目录下的`dll`文件，从类名中创建出实体。
 
 
 
@@ -38,7 +38,7 @@
 
 以同济大学项目的演示为例，代码如下：
 
-```cs
+```csharp
 namespace iS3.Geology
 {
     // Summary:
@@ -68,7 +68,7 @@ namespace iS3.Geology
 
 iS3 系统在 `iS3.Core` 中定义了 `Tools` 类，该类继承自 `Extensions` 类，用于实现用户自定义工具的扩展。用户自定义的工具均需继承自该类。`Tools` 类的定义如下所示：
 
-```c#
+```csharp
     public class Tools : Extensions
     {
         // Summary:
@@ -84,9 +84,9 @@ iS3 系统在 `iS3.Core` 中定义了 `Tools` 类，该类继承自 `Extensions`
     }
 ```
 
-首先，我们定义一个`DemoTool`类，该类继承自 `Tools` 类，实现的功能是点击工具面板的“DemoTool”字样时，自动在当前界面打开一个Demo图层。`DemoTool` 类的定义如下所示：
+首先，我们定义一个`DemoTool`类，该类继承自 `Tools` 类，实现的功能是点击工具面板的**DemoTool**字样时，自动在当前界面打开一个Demo图层。`DemoTool` 类的定义如下所示：
 
-```c#
+```csharp
 public class DemoTools : Tools
     {
         //基本信息
@@ -122,7 +122,7 @@ public class DemoTools : Tools
     }
 ```
 
-然后，我们在`DemoWindow.xaml.cs`中定义DemoTool有关的视图和触发事件，详细可查看。由于代码较长，此处不复展开详述。此处，放出最终效果：
+然后，我们在`DemoWindow.xaml.cs`中定义**DemoTool**有关的视图和触发事件，详细可查看。由于代码较长，此处不复展开详述。此处，放出最终效果：
 
 <div style= text-align:center>
 <img src=".\img\demo.png" style='width:600px'; 'left: 50%'/>
@@ -131,7 +131,7 @@ public class DemoTools : Tools
 
 #### 附件：DemoWindow.xaml.cs
 
-```c#
+```csharp
 public partial class DemoWindow : Window
 {
     //定义全局变量

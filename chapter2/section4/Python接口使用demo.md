@@ -6,7 +6,7 @@
 
 API调用格式如下：
 
-```
+```csharp
 toolDemo.test(type,attribute,down,up)
 ```
 
@@ -14,13 +14,13 @@ toolDemo.test(type,attribute,down,up)
 
 #### 2. 传入参数
 
-*`type`*：`Domain`类型，目前只支持`Borehole`
+**type**：`Domain`类型，目前只支持`Borehole`
 
-*`attribute`*:  筛选的属性，目前只支持`Borehole`的`top`属性
+**attribute**:  筛选的属性，目前只支持`Borehole`的`top`属性
 
-*`down`*：下限
+**down**：下限
 
-*`up`*:  上限
+**up**:  上限
 
 
 
@@ -32,7 +32,7 @@ toolDemo.test(type,attribute,down,up)
 
 `getDGObjec() `函数添加在`DGOjects.cs`文件中，该函数作用是以数组形式返回`DGOjects`里所包含的所有`DGOject`。代码如下：
 
-```c#
+```csharp
 //in DGOjects.cs
 public DGObject[] getDGObject(){
             int size=_objs.Count;
@@ -45,7 +45,7 @@ public DGObject[] getDGObject(){
 
 `selectObject()`  函数添加在`IS3View.cs`文件中，该函数用于选取并高亮指定的数字化对象`DGObject`。代码如下：
 
-```c#
+```csharp
 //in IS3View.cs
 public void selectObject(String type,DGObject obj){
             if (Globals.isThreadUnsafe())
@@ -112,11 +112,11 @@ def test(type,attribute,down,up):
 
 **4. 查看效果**
 
-完成后将在IronPython Console里对该demo的实现效果进行测试。
+完成后将在`IronPython Console`里对该demo的实现效果进行测试。
 
 #### 4. 测试用例
 
-在IronPython Console面板里输入以下代码：
+在`IronPython Console`面板里输入以下代码：
 
 ```python
 >>> import toolDemo
@@ -132,4 +132,4 @@ def test(type,attribute,down,up):
 <img src=".\test.png"  style='width:600px'; 'left: 50%'/>
 </div>
 
-由上图可见，符合范围内的`Borehole`类型的数字化对象在地图和Data View上均被高亮，且在Object View面板中被展示。
+由上图可见，符合范围内的`Borehole`类型的数字化对象在地图和**Data View**上均被高亮，且在**Object View**面板中被展示。
