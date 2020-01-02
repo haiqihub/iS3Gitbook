@@ -2,7 +2,7 @@
 
 本小节将对`Extensions`类进行说明，并引导用户定义一个 `EntryPoint`类。 `EntryPoint`类是扩展库的入口，继承自`iS3.Core`中的`Extensions`类。通过`EntryPoint`类，主程序运行时才能识别用户自定义的扩展类。
 
-### 1. Extensions类说明
+## 1. Extensions类说明
 
 `iS3.Core`中的`Extensions`类是用户实现自定义扩展类所依赖的重要对象。所有用户自定义的扩展类均需继承自该`Extensions`类，否则无法实现扩展。`Extensions`类的定义如下所示：
 
@@ -32,7 +32,7 @@
 
 
 
-### 2. 实现EntryPoint类
+## 2. 实现EntryPoint类
 
 此处，我们将演示如何实现扩展类的入口——`EntryPoint`类，并对其函数进行简要介绍。
 
@@ -62,7 +62,7 @@ namespace iS3.Geology
 
 
 
-### 3. 实现Demo扩展工具
+## 3. 实现Demo扩展工具
 
 此处，我们将以`DemoTools`工具为例，介绍扩展工具的实现。
 
@@ -129,7 +129,7 @@ public class DemoTools : Tools
 </div>
 
 
-#### 附件：DemoWindow.xaml.cs
+### 附件：DemoWindow.xaml.cs
 
 ```csharp
 public partial class DemoWindow : Window

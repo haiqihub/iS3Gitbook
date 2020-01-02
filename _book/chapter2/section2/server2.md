@@ -6,7 +6,7 @@ API配置用于给Client端的访问提供接口并返回数据。
 
 
 
-### Geology
+## Geology
 
 **1**.` Geology`类型的数据需要在`.\iS3.MiniServer\iS3.MiniServer\GeologyController.cs`中增加API名称和调用方法。
 
@@ -137,7 +137,7 @@ public Borehole getBoreholeById(string project, int id)
 }
 ```
 
-### Monitoring
+## Monitoring
 
 **1**.`Monitoring`类型的数据需要在`.\iS3.MiniServer\iS3.MiniServer\ MonitoringController.cs`中增加API名称和调用方法。
 

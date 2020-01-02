@@ -1,12 +1,12 @@
-###  Python相关库
+#  Python相关库
 
 在这里我们将介绍一下iS3中与Python开发相关的文件库和脚本。本小节将围绕`IS3-Python`脚本库，Python扩展插件库，Python脚本库，Python配置文件等四个部分内容进行介绍。小节末尾，附上了Python进行iS3开发的`readme.txt`原件，供读者查阅。
 
-#### 1. IS3-Python
+## 1. IS3-Python
 
 放置于`..\iS3-Desktop-Client\IS3-Python`文件目录下的C#代码库，提供IS3内置的Python功能，包括对`IronPythonControl`等的实现和控制，一般不必关心。
 
-#### 2. Python扩展插件
+## 2. Python扩展插件
 
 放置于`..\iS3-Desktop-Client\Output\PyPlugins `文件目录下的`*.py`脚本文件库。主程序运行时将自动执行位于该路径下的所有Python脚本文件（通过`Mainframe.xaml.cs`文件中定义的l`oadPyPlugins`函数进行加载）。
 
@@ -14,7 +14,7 @@ iS3中提供了名为`plugin-demo.py`的测试文件，该样例位于`..\Output
 
 > 注：初始情况下该路径不存在，需用户手动创建该文件夹。
 
-#### 3. Python脚本库
+## 3. Python脚本库
 
 放置于`..\Output\IS3Py\`目录下的Python脚本文件。该目录下的脚本文件供用户在使用Python进行二次开发时调用。用户编写的Python文件也应放置于该目录下，使用时以`import`语句导入该库名称即可。
 
@@ -22,7 +22,7 @@ iS3中提供了名为`plugin-demo.py`的测试文件，该样例位于`..\Output
 
 > 补充说明：IronPython-2.7.5.msi是iS3 二次开发主要插件，软件开发和发布都需要安装此插件。二次开发内嵌Python语言开发工具，提供Python语言开发范例，提供C#二次开发接口和范例。   
 
-#### 4. Python配置文件
+## 4. Python配置文件
 
 放置于`..\iS3-Desktop-Client\Output\Data\[project_name]`文件目录下的Python脚本文件。该Python脚本可作为iS3工程管理的入口，主要用于初始化工程，关联XML配置文件，导入二维、三维图形以及数据。该文件实际上就是用于加载`[project_name]`工程的Python脚本，是加载iS3工程项目的另一种方式（还有一种就是在`iS3-Desktop`里通过C#加载 ）。
 
@@ -39,7 +39,7 @@ iS3中提供了名为`plugin-demo.py`的测试文件，该样例位于`..\Output
    is3.addView3d('Map3D', 'TONGJI.unity3d')
  ```
 
-#### 5. 原readme.txt附件
+## 5. 原readme.txt附件
 
 此处附上原`readme`文件（略有修正）。
 

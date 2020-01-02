@@ -2,11 +2,11 @@
 
 
 
-###  iS3AreaHandle类
+##  iS3AreaHandle类
 
 iS3平台设定每张表的实体类都继承 `.\iS3.MiniServer\iS3.Core\iS3Core.cs`文件中的 `iS3AreaHandle`类，换言之，在不改变这个类的内容的情况下，每张表都要有其中的 `object_id` `ID` `Name` `Description` `FullName` 这五列，数据类型也在类`iS3AreaHandle`中有注明，其余列名用户可根据自己的数据对应命名。当然用户也可以根据自己数据的特点对 `iS3AreaHandle`类进行修改，相应地，表的公共属性也进行对应的改变。
 
-### 建表
+## 建表
 
 Entity Framework Code First与数据表之间有两种映射方式（详见[EFCF属性映射约定(三、附录/第一章 EFCF属性映射约定 )](../../../chapter3/appendix.md)），选择某一种或两种方式兼用也可，根据不同方式创建表名。
 

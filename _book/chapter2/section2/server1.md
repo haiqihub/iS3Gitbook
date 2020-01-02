@@ -6,7 +6,7 @@
 
 其中，`Geology`和`Monitoring`运用了`EntityFramework`映射中的`Data Annotation`方式（详见[EFCF属性映射约定(三、附录/第一章 EFCF属性映射规定)](./../../chapter3/appendix.md)）
 
-### Geology
+## Geology
 
 `Geology`的数据放在`.\iS3.MiniServer\iS3.Geology\Model`中，其中记录着表的属性和对应的数据类型。（不包括类`iS3AreaHandle`中的五个属性及其数据类型，关于类`iS3AreaHandle`详见[表的创建(二、平台使用/第一章 数据准备/第一节 数据库配置/2. 表的创建)](./../section1/part2/detail2.md)中的 `iS3AreaHandle`类）
 
@@ -51,7 +51,7 @@ namespace iS3.Geology.Model
 
 ```
 
-### Monitoring
+## Monitoring
 
 `Monitoring`的数据放在`.\iS3.MiniServer\iS3.Monitoring\Model`中，其中记录着表的列名（不包括类`iS3AreaHandle`中的五个列名）和数据类型。
 

@@ -6,7 +6,7 @@
     "plugins": [
        "toggle-chapters",
 	   "expandable-chapters",
-	   "back-to-top-button",
+       "ancre-navigation",
 	   "popup",
 	   "code"
     ],

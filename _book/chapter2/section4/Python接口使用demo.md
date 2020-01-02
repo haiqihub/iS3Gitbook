@@ -1,8 +1,8 @@
-### Python接口使用demo
+# Python接口使用demo
 
 此处将示例如何利用C#和Python两种语言协同进行接口开发，示例功能为选出属性值在某一范围内的数字化对象（`DGObject`），并将其图标和数据行高亮。该demo目前仅支持`Borehole`类型下对`top`属性的筛选。由于需要传入参数，该demo适合在`IronPython Console`中调用。
 
-#### 1. API格式
+## 1. API格式
 
 API调用格式如下：
 
@@ -12,7 +12,7 @@ toolDemo.test(type,attribute,down,up)
 
 
 
-#### 2. 传入参数
+## 2. 传入参数
 
 **type**：`Domain`类型，目前只支持`Borehole`
 
@@ -24,9 +24,9 @@ toolDemo.test(type,attribute,down,up)
 
 
 
-#### 3. 开发过程
+## 3. 开发过程
 
-##### 3.1 编写C#调用接口
+### 3.1 编写C#调用接口
 
 此处我们将在C#程序里添加两个功能，`getDGObject() `和` selectObject() `函数以供Python调用。娴熟Python者也可以尝试纯Python开发出自己的工具。
 
@@ -69,11 +69,11 @@ public void selectObject(String type,DGObject obj){
         }
 ```
 
-##### 3.2 重新生成dll
+### 3.2 重新生成dll
 
 在C#里添加了自己的代码后，需要重新生成解决方案，更新动态链接库。
 
-##### 3.3 编写Python接口
+### 3.3 编写Python接口
 
 在此，我们将调用上述补充的C#接口，完成自定义demo。代码如下：
 
@@ -114,7 +114,7 @@ def test(type,attribute,down,up):
 
 完成后将在`IronPython Console`里对该demo的实现效果进行测试。
 
-#### 4. 测试用例
+## 4. 测试用例
 
 在`IronPython Console`面板里输入以下代码：
 
@@ -124,7 +124,7 @@ def test(type,attribute,down,up):
 ```
 
 
-#### 5. 测试结果
+## 5. 测试结果
 
 测试效果如下图：
 

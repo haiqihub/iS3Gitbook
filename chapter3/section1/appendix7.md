@@ -2,7 +2,7 @@
 
 在使用`Fluent API`进行`Entity Framework Code First`数据库映射时，除了以上的在重写`OnModelCreating`方法中直接对`Entity`进行配置之外，也可以对`Configurations`进行配置。这时可以先写一个单独的类，将数据表的全部映射要求都写在构造函数中。
 
-#### ProductMap.cs类
+## ProductMap.cs类
 
 ```csharp
     using System;

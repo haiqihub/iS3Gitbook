@@ -1,7 +1,7 @@
-### 3.  Function
+# 3.  Function
 这里将is3脚本库定义的类的函数进行进一步封装，可满足用户添加图层的基本需求。如果用户想要更多的功能性拓展，仿照`addView()`等函数的写法，调用C#中的函数即可。
 
-#### 3.1 newGraphicsLayer
+## 3.1 newGraphicsLayer
 
 **接口功能**
 
@@ -27,7 +27,7 @@ import is3
 layer1WP = is3.newGraphicsLayer('layer1', 'layer1')
 ```
 
-#### 3.2 addView3d
+## 3.2 addView3d
 
 **接口功能**
 
@@ -53,7 +53,7 @@ import is3
 is3.addView3d('Map3D', 'TONGJI.unity3d')
 ```
 
-#### 3.3 addGdbLayer
+## 3.3 addGdbLayer
 
 **接口功能**
 
@@ -82,7 +82,7 @@ import is3
 strLayerWP = is3.addGdbLayer(viewWP, layerDef)
 ```
 
-#### 3.4 addGdbLayerLazy
+## 3.4 addGdbLayerLazy
 
 **接口功能**
 
@@ -112,7 +112,7 @@ import is3
 is3.addGdbLayerLazy(viewWP, 'MON_WAT', is3.GeometryType.Point)
 ```
 
-#### 3.5 addShpLayer
+## 3.5 addShpLayer
 
 **接口功能**
 
