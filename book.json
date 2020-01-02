@@ -4,13 +4,21 @@
     
 
     "plugins": [
-       "toggle-chapters",
-	   "expandable-chapters",
+	   "chapter-fold",
        "ancre-navigation",
 	   "popup",
-	   "code"
+	   "code",
+       "search-pro",
+       "tbfed-pagefooter",
+       "insert-logo"
     ],
     "pluginsConfig": {
-       
+       "tbfed-pagefooter": {
+            "copyright":"&copy Tongji University"
+        },
+        "insert-logo": {
+            "url": "image/TongjiLogo.png",
+            "style": "background: none; max-height: 100px; min-height: 100px"
+        }
     }
 }
