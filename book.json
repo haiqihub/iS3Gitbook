@@ -1,23 +1,22 @@
 {
-	"title": "iS3平台帮助文档",
+    "title": "iS3平台帮助文档",
     "description": "教你如何使用iS3平台",
     
-
     "plugins": [
-	   "chapter-fold",
-       "ancre-navigation",
-	   "popup",
-	   "code",
-       "search-pro",
-       "tbfed-pagefooter",
-       "insert-logo"
+        "chapter-fold",
+        "ancre-navigation",
+        "popup",
+        "code",
+        "search-pro",
+        "tbfed-pagefooter",
+        "insert-logo"
     ],
     "pluginsConfig": {
-       "tbfed-pagefooter": {
+        "tbfed-pagefooter": {
             "copyright":"&copy Tongji University"
         },
         "insert-logo": {
-            "url": "image/TongjiLogo.png",
+            "url": "/image/TongjiLogo.png",
             "style": "background: none; max-height: 100px; min-height: 100px"
         }
     }
