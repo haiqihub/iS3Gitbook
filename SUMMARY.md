@@ -1,7 +1,6 @@
 # Summary
 
 * iS3平台帮助文档
-
 * [一、平台说明](README.md)
     * [第一章 平台架构](chapter1/section1.md)
     * [第二章 界面说明](chapter1/section2.md)
@@ -19,10 +18,17 @@
         * [第一节 数据配置](chapter2/section2/server1.md)
         * [第二节 API配置](chapter2/section2/server2.md)
     * [第三章 client端准备](chapter2/section3.md)
-        * [第一节 创建拓展项目](chapter2/section3/client1.md)
-        * [第二节 定义扩展类入口](chapter2/section3/client2.md)
-        * [第三节 自定义DGObject类](chapter2/section3/client3.md)
-        * [第四节 运行配置](chapter2/section3/client4.md)
+        * [第一节 自定义数字化对象](chapter2/section3/part1.md)
+            * [1. 创建拓展项目](chapter2/section3/part1/detail1.md)
+            * [2. 实现数字化对象实体类](chapter2/section3/part1/detail2.md)
+            * [3. 定义拓展类入口](chapter2/section3/part1/detail3.md)
+            * [4.修改运行配置](chapter2/section3/part1/detail4.md)
+        * [第二节 C#接口文档](chapter2/section3/part2.md)
+            * [常用接口](chapter2/section3/part2/常用接口.md)
+            * [数据调用接口](chapter2/section3/part2/数据调用接口.md)
+        * [第三节 拓展工具面板](chapter2/section3/part3.md)
+            * [简要说明](chapter2/section3/part3/简要说明.md)
+            * [开发过程](chapter2/section3/part3/开发过程.md)
     * [第四章 Python接口](chapter2/section4.md)
         * [第一节 Python相关库](chapter2/section4/Python相关库.md)
         * [第二节 Python调用方式](chapter2/section4/Python调用方式.md)
