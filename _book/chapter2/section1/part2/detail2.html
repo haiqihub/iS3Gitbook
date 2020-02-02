@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2. 表的创建 · iS3平台帮助文档</title>
+        <title>3. 表的创建 · iS3平台帮助文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="detail3.html" />
+    <link rel="next" href="../part1.html" />
     
     
-    <link rel="prev" href="detail1.html" />
+    <link rel="prev" href="detail3.html" />
     
 
     </head>
@@ -226,12 +226,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.1.1.2" data-path="detail2.html">
+        <li class="chapter " data-level="1.3.1.1.2" data-path="detail3.html">
             
-                <a href="detail2.html">
+                <a href="detail3.html">
             
                     
-                    2. 表的创建
+                    2. 配置数据库信息
             
                 </a>
             
@@ -239,12 +239,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.1.3" data-path="detail3.html">
+        <li class="chapter active" data-level="1.3.1.1.3" data-path="detail2.html">
             
-                <a href="detail3.html">
+                <a href="detail2.html">
             
                     
-                    3. server端的配置
+                    3. 表的创建
             
                 </a>
             
@@ -725,7 +725,7 @@
                 <a href="../../../chapter3/section1/appendix2.html">
             
                     
-                    第二节 字段名、长度、数据类型及是否可空
+                    第二节 字段名、长度、数据类型
             
                 </a>
             
@@ -851,7 +851,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >2. 表的创建</a>
+        <a href="../../.." >3. 表的创建</a>
     </h1>
 </div>
 
@@ -873,33 +873,84 @@
 <h2 id="is3areahandle&#x7C7B;"><a name="is3areahandle&#x7C7B;" class="anchor-navigation-ex-anchor" href="#is3areahandle&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>iS3AreaHandle&#x7C7B;</h2>
 <p>iS3&#x5E73;&#x53F0;&#x8BBE;&#x5B9A;&#x6BCF;&#x5F20;&#x8868;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#x90FD;&#x7EE7;&#x627F; <code>.\iS3.MiniServer\iS3.Core\iS3Core.cs</code>&#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>iS3AreaHandle</code>&#x7C7B;&#xFF0C;&#x6362;&#x8A00;&#x4E4B;&#xFF0C;&#x5728;&#x4E0D;&#x6539;&#x53D8;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x5F20;&#x8868;&#x90FD;&#x8981;&#x6709;&#x5176;&#x4E2D;&#x7684; <code>object_id</code> <code>ID</code> <code>Name</code> <code>Description</code> <code>FullName</code> &#x8FD9;&#x4E94;&#x5217;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E5F;&#x5728;&#x7C7B;<code>iS3AreaHandle</code>&#x4E2D;&#x6709;&#x6CE8;&#x660E;&#xFF0C;&#x5176;&#x4F59;&#x5217;&#x540D;&#x7528;&#x6237;&#x53EF;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x547D;&#x540D;&#x3002;&#x5F53;&#x7136;&#x7528;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x6570;&#x636E;&#x7684;&#x7279;&#x70B9;&#x5BF9; <code>iS3AreaHandle</code>&#x7C7B;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x76F8;&#x5E94;&#x5730;&#xFF0C;&#x8868;&#x7684;&#x516C;&#x5171;&#x5C5E;&#x6027;&#x4E5F;&#x8FDB;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x6539;&#x53D8;&#x3002;</p>
 <h2 id="&#x5EFA;&#x8868;"><a name="&#x5EFA;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x5EFA;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5EFA;&#x8868;</h2>
-<p>Entity Framework Code First&#x4E0E;&#x6570;&#x636E;&#x8868;&#x4E4B;&#x95F4;&#x6709;&#x4E24;&#x79CD;&#x6620;&#x5C04;&#x65B9;&#x5F0F;&#xFF08;&#x8BE6;&#x89C1;<a href="../../../chapter3/appendix.html">EFCF&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x7EA6;&#x5B9A;(&#x4E09;&#x3001;&#x9644;&#x5F55;/&#x7B2C;&#x4E00;&#x7AE0; EFCF&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x7EA6;&#x5B9A; )</a>&#xFF09;&#xFF0C;&#x9009;&#x62E9;&#x67D0;&#x4E00;&#x79CD;&#x6216;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x517C;&#x7528;&#x4E5F;&#x53EF;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x8868;&#x540D;&#x3002;</p>
-<p>&#x5728;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x5E93;&#x4E0E;&#x5728;Server&#x7AEF;<code>App.config</code>&#x6587;&#x4EF6;&#xFF08;&#x8BE6;&#x89C1;<a href="detail3.html">server&#x7AEF;&#x7684;&#x914D;&#x7F6E;(&#x4E8C;&#x3001;&#x5E73;&#x53F0;&#x4F7F;&#x7528;/&#x7B2C;&#x4E00;&#x7AE0; &#x6570;&#x636E;&#x51C6;&#x5907;/&#x7B2C;&#x4E00;&#x8282; &#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;/3. server&#x7AEF;&#x7684;&#x914D;&#x7F6E;)</a>&#xFF09;&#x91CC;&#x6DFB;&#x52A0;&#x7684;&#x5E93;&#x540D;&#x4E00;&#x81F4;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5EFA;&#x8868;&#x5E76;&#x5BFC;&#x5165;&#x4E0E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>geodatabase</code>&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x3002;&#x8868;&#x540D;&#x5E94;&#x4E0E;&#x5BF9;&#x5E94;&#x7684;<code>DGObject</code>&#x5728;Server&#x7AEF;&#x7684;<code>Model</code>&#x6587;&#x4EF6;&#x91CC;&#x7684;Table&#x8868;&#x540D;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x4E14;&#x8868;&#x540D;&#x524D;&#x7F00;&#x5E94;&#x4E0E;<code>GeologyContext.cs</code>&#x6587;&#x4EF6;&#x91CC;&#x7684;<code>TablePrefix</code>&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
-<p>&#x4EE5;borehole&#x4E3A;&#x4F8B;&#xFF0C;Geology_Borehole DDL&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> Geology_Borehole( 
-    #&#x4EE5;&#x4E0B;&#x662F;&#x5BF9;borehole&#x5C5E;&#x6027;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5DE6;&#x8FB9;&#x4E00;&#x5217;&#x662F;&#x5C5E;&#x6027;&#xFF0C;&#x53F3;&#x8FB9;&#x4E00;&#x5217;&#x662F;&#x5C5E;&#x6027;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;
-    object_id       <span class="hljs-built_in">int</span>           <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
-    <span class="hljs-keyword">ID</span>              <span class="hljs-built_in">int</span>,
-    <span class="hljs-keyword">Name</span>            <span class="hljs-built_in">varchar</span>(<span class="hljs-number">20</span>)   <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>
-        <span class="hljs-keyword">constraint</span> Geology_Borehole_pk
-            primary <span class="hljs-keyword">key</span> nonclustered,
-    FullName        <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
-    Description     <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>),
-    #&#x4EE5;&#x4E0A;&#x662F; iS3AreaHandle &#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E0B;&#x9762;&#x662F;borehole&#x81EA;&#x8EAB;&#x7684;&#x5C5E;&#x6027;
-    StratumSection  <span class="hljs-built_in">int</span>,
-    SectionSequence <span class="hljs-built_in">int</span>,
-    BoreholeType    <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
-    TopElevation    <span class="hljs-built_in">float</span>         <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
-    BoreholeLength  <span class="hljs-built_in">float</span>         <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
-    Mileage         <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>),
-    Xcoordinate     <span class="hljs-built_in">float</span>,
-    Ycoordinate     <span class="hljs-built_in">float</span>,
-    OBJECTID        <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>)
-)
-<span class="hljs-keyword">go</span>
+<p>Entity Framework&#xFF08;&#x5B9E;&#x4F53;&#x6846;&#x67B6;&#xFF09;&#x662F;ADO.NET&#x4E2D;&#x7684;&#x4E00;&#x7EC4;&#x652F;&#x6301;&#x5F00;&#x53D1;&#x9762;&#x5411;&#x6570;&#x636E;&#x7684;&#x8F6F;&#x4EF6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x662F;&#x5FAE;&#x8F6F;&#x7684;&#x4E00;&#x4E2A;ORM (O/R Mapping) &#x6846;&#x67B6;&#x3002;ORM&#xFF08;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#x6846;&#x67B6;&#xFF09;&#xFF1A;&#x6307;&#x7684;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x548C;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x4E1A;&#x52A1;&#x5B9E;&#x4F53;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x8868;&#x73B0;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x73B0;&#x4E3A;&#x6570;&#x636E;&#xFF0C;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#xFF0C;&#x5B58;&#x5728;&#x5173;&#x8054;&#x548C;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x800C;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8868;&#x8FBE;&#x8FD9;&#x4E9B;&#x5173;&#x7CFB;&#x3002;&#x800C;&#x5BF9;&#x8C61;--&#x5173;&#x7CFB;&#x6620;&#x5C04;&#xFF08;ORM&#xFF09;&#x5C31;&#x662F;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#x7684;&#x3002;ORM&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5B9E;&#x73B0;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;&#x5230;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;EF&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x5E93;&#x548C;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5B9E;&#x4F53;&#x76F8;&#x4E92;&#x6620;&#x5C04;&#x7684;&#x4E00;&#x79CD;&#x5DE5;&#x5177;&#x3002;</p>
+<p>Entity Framework Code First&#x4E0E;&#x6570;&#x636E;&#x8868;&#x4E4B;&#x95F4;&#x6709;&#x4E24;&#x79CD;&#x6620;&#x5C04;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x7684;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x521B;&#x5EFA;&#x8868;&#x3002;&#xFF08;&#x8BE6;&#x89C1;<a href="../../../chapter3/section1/appendix1.html">&#x7B2C;&#x4E00;&#x8282; &#x8868;&#x540D;&#x53CA;&#x6240;&#x6709;&#x8005;(&#x4E09;&#x3001;&#x9644;&#x5F55;/&#x7B2C;&#x4E00;&#x7AE0; EFCF&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x7EA6;&#x5B9A;/&#x7B2C;&#x4E00;&#x8282; &#x8868;&#x540D;&#x53CA;&#x6240;&#x6709;&#x8005; )</a>&#xFF09;</p>
+<p>&#x4EE5; Data Annotation &#x65B9;&#x5F0F;&#xFF0C;&#x521B;&#x5EFA;&#x5B9E;&#x4F53;<code>borehole</code>&#x7684;&#x8868;&#x4E3A;&#x4F8B;&#xFF1A;&#xFF08;<code>borehole.cs</code>&#x4EE3;&#x7801;&#x9644;&#x4E8E;&#x6587;&#x672B;&#xFF09;</p>
+<ol>
+<li><p>&#x5728;Server&#x7AEF;&#x6DFB;&#x52A0;<code>borehole.cs</code>&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x76F8;&#x5F53;&#x4E8E;&#x521B;&#x5EFA;&#x4E0A;&#x6587;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;</p>
+</li>
+<li><p>&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8BBE;&#x5B9A;Table&#x540D;&#x79F0;&#x4E3A;<code>Geology_Borehole</code>&#xFF0C;&#x90A3;&#x4E48;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8868;&#x540D;&#x5C31;&#x662F;<code>Geology_Borehole</code>&#x3002;&#x4E5F;&#x53EF;&#x4E0D;&#x8BBE;&#x5B9A;&#x8868;&#x540D;&#xFF0C;&#x90A3;&#x4E48;&#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x636E;&#x8868;&#x540D;&#x662F;&#x7C7B;&#x540D;&#x7684;&#x590D;&#x6570;&#xFF0C;&#x4F8B;&#xFF0C;boreholes&#xFF1B;</p>
+</li>
+<li><p>&#x901A;&#x8FC7;&#x6620;&#x5C04;&#x81EA;&#x52A8;&#x4EA7;&#x751F;SQL&#x8BED;&#x53E5;&#xFF0C;&#x5728;&#x9ED8;&#x8BA4;&#x7EA6;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6620;&#x5C04;&#x521B;&#x5EFA;&#x7684;&#x5217;&#x540D;&#x4E0E;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x76F8;&#x540C;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6307;&#x5B9A;&#x7C7B;&#x5C5E;&#x6027;&#x4E0E;&#x5217;&#x540D;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF1B;&#xFF08;&#x8BE6;&#x89C1;<a href="../../../chapter3/section1/appendix2.html">&#x7B2C;&#x4E8C;&#x8282; &#x5B57;&#x6BB5;&#x540D;&#x3001;&#x957F;&#x5EA6;&#x3001;&#x6570;&#x636E;&#x7C7B;&#x578B;(&#x4E09;&#x3001;&#x9644;&#x5F55;/&#x7B2C;&#x4E00;&#x7AE0; EFCF&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x7EA6;&#x5B9A; )</a>&#xFF09;</p>
+<p> &#x4EE5;&#x8868;<code>Geology_Borehole</code>&#x4E3A;&#x4F8B;&#xFF0C; &#x6620;&#x5C04;&#x5BF9;&#x5E94;&#x7684;DDL&#xFF08;&#x6570;&#x636E;&#x5E93;&#x5B9A;&#x4E49;&#x8BED;&#x8A00;&#xFF09;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-sql">        <span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> Geology_Borehole( 
+            #&#x4EE5;&#x4E0B;&#x662F;&#x5BF9;borehole&#x5C5E;&#x6027;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5DE6;&#x8FB9;&#x4E00;&#x5217;&#x662F;&#x5C5E;&#x6027;&#xFF0C;&#x53F3;&#x8FB9;&#x4E00;&#x5217;&#x662F;&#x5C5E;&#x6027;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;
+            object_id       <span class="hljs-built_in">int</span>           <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+            <span class="hljs-keyword">ID</span>              <span class="hljs-built_in">int</span>,
+            <span class="hljs-keyword">Name</span>            <span class="hljs-built_in">varchar</span>(<span class="hljs-number">20</span>)   <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>
+                <span class="hljs-keyword">constraint</span> Geology_Borehole_pk
+                    primary <span class="hljs-keyword">key</span> nonclustered,
+            FullName        <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+            Description     <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>),
+            #&#x4EE5;&#x4E0A;&#x662F; iS3AreaHandle &#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E0B;&#x9762;&#x662F;borehole&#x81EA;&#x8EAB;&#x7684;&#x5C5E;&#x6027;
+            StratumSection  <span class="hljs-built_in">int</span>,
+            SectionSequence <span class="hljs-built_in">int</span>,
+            BoreholeType    <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+            TopElevation    <span class="hljs-built_in">float</span>         <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+            BoreholeLength  <span class="hljs-built_in">float</span>         <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+            Mileage         <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>),
+            Xcoordinate     <span class="hljs-built_in">float</span>,
+            Ycoordinate     <span class="hljs-built_in">float</span>,
+            OBJECTID        <span class="hljs-keyword">nvarchar</span>(<span class="hljs-keyword">max</span>)
+        )
+        <span class="hljs-keyword">go</span>
+</code></pre>
+</li>
+<li><p>&#x5728;&#x4E0A;&#x4E00;&#x8282;&#xFF08;<a href="detail3.html">&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;(&#x4E8C;&#x3001;&#x5E73;&#x53F0;&#x4F7F;&#x7528;/&#x7B2C;&#x4E00;&#x7AE0; &#x6570;&#x636E;&#x51C6;&#x5907;/&#x7B2C;&#x4E00;&#x8282; &#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;/2. &#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;)</a>&#xFF09;&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x5E94;&#x7684;&#x8868;&#xFF08;&#x5373;&#x672C;&#x4F8B;&#x4E2D;&#x7684;<code>Geology_Borehole</code>&#xFF09;&#x4E2D;&#x5BFC;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>geodatabase</code>&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5230;&#x6B64;&#xFF0C;&#x4EE5;&#x5EFA;&#x7ACB;<code>borehole</code>&#x7684;&#x8868;&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x5EFA;&#x8868;&#x5B8C;&#x6210;&#x3002;</p>
+</li>
+</ol>
+<p>   &#x672C;&#x4F8B;&#x4E2D;<code>borehole.cs</code>&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-csharp">      <span class="hljs-keyword">using</span> System;
+      <span class="hljs-keyword">using</span> System.Collections.Generic;
+      <span class="hljs-keyword">using</span> System.ComponentModel.DataAnnotations.Schema;
+      <span class="hljs-keyword">using</span> System.Linq;
+      <span class="hljs-keyword">using</span> System.Text;
+      <span class="hljs-keyword">using</span> System.Threading.Tasks;
+      <span class="hljs-keyword">using</span> iS3.Core;
+      <span class="hljs-keyword">namespace</span> <span class="hljs-title">iS3.Geology.Model</span>
+      {
+      <span class="hljs-comment">//&#x6307;&#x5B9A;&#x8868;&#x540D;&#x4E3A;&quot;Geology_Borehole&quot;</span>
+          [Table(<span class="hljs-string">&quot;Geology_Borehole&quot;</span>)]
+          <span class="hljs-keyword">public</span> <span class="hljs-keyword">partial</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Borehole</span>:<span class="hljs-title">iS3AreaHandle</span>
+          {     
+      <span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x662F;&#x8868;&quot;Geology_Borehole&quot;&#x7684;&#x5C5E;&#x6027;&#x53CA;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+      <span class="hljs-comment">//{ get; set; } get &#x662F;&#x8BFB;&#x53D6;&#x5C5E;&#x6027;&#x65F6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;set &#x662F;&#x8BBE;&#x7F6E;&#x5C5E;&#x6027;&#x65F6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</span>
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> OBJECTID { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> FullName { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Description { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">int</span>&gt; StratumSection { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">int</span>&gt; SectionSequence { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> BoreholeType { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> TopElevation { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> BoreholeLength { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Mileage { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">double</span>&gt; Xcoordinate { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+              <span class="hljs-keyword">public</span> Nullable&lt;<span class="hljs-keyword">double</span>&gt; Ycoordinate { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+
+      <span class="hljs-comment">//NotMapped&#x7279;&#x6027;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x5230;&#x9886;&#x57DF;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;EF Code-First&#x9ED8;&#x8BA4;&#x7684;&#x7EA6;&#x5B9A;:&#x4E3A;&#x6240;&#x6709;&#x5E26;&#x6709;get,&#x548C;set&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5C5E;&#x6027;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5217;&#x3002;</span>
+      <span class="hljs-comment">//&#x800C;NotMapped&#x7279;&#x6027;&#x6253;&#x7834;&#x4E86;&#x8FD9;&#x4E2A;&#x7EA6;&#x5B9A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;NotMapped&#x7279;&#x6027;&#x5230;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x4E0A;&#x9762;&#xFF0C;&#x7136;&#x540E;Code-First&#x5C31;&#x4E0D;&#x4F1A;&#x4E3A;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5728;&#x6570;&#x636E;&#x8868;&#x4E2D;&#x521B;&#x5EFA;&#x5217;&#x4E86;&#x3002;</span>
+
+          [NotMapped]
+          <span class="hljs-keyword">public</span> List&lt;BoreholeStrata&gt; BoreholeStratas { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; } = <span class="hljs-keyword">new</span> List&lt;BoreholeStrata&gt;();
+      }
+      }
 </code></pre>
 <footer class="page-footer"><span class="copyright">&#xA9; Tongji University all right reserved&#xFF0C;</span><span class="footer-modification">File Modify: 
-2020-01-23 11:17:49
+2020-02-02 21:02:58
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -944,12 +995,12 @@
 
             
                 
-                <a href="detail1.html" class="navigation navigation-prev " aria-label="Previous page: 1. 数据库说明">
+                <a href="detail3.html" class="navigation navigation-prev " aria-label="Previous page: 2. 配置数据库信息">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="detail3.html" class="navigation navigation-next " aria-label="Next page: 3. server端的配置">
+                <a href="../part1.html" class="navigation navigation-next " aria-label="Next page: 第二节 本地数据配置">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -960,7 +1011,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2. 表的创建","level":"1.3.1.1.2","depth":4,"next":{"title":"3. server端的配置","level":"1.3.1.1.3","depth":4,"path":"chapter2/section1/part2/detail3.md","ref":"chapter2/section1/part2/detail3.md","articles":[]},"previous":{"title":"1. 数据库说明","level":"1.3.1.1.1","depth":4,"path":"chapter2/section1/part2/detail1.md","ref":"chapter2/section1/part2/detail1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","ancre-navigation","popup","code","search-pro","tbfed-pagefooter","insert-logo","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Tongji University"},"chapter-fold":{},"livereload":{},"search-pro":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"/image/TongjiLogo.png"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iS3平台帮助文档","gitbook":"*","description":"教你如何使用iS3平台"},"file":{"path":"chapter2/section1/part2/detail2.md","mtime":"2020-01-23T03:17:49.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-30T05:52:40.649Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3. 表的创建","level":"1.3.1.1.3","depth":4,"next":{"title":"第二节 本地数据配置","level":"1.3.1.2","depth":3,"path":"chapter2/section1/part1.md","ref":"chapter2/section1/part1.md","articles":[{"title":"1. 数据文件准备","level":"1.3.1.2.1","depth":4,"path":"chapter2/section1/part1/detail1.md","ref":"chapter2/section1/part1/detail1.md","articles":[]},{"title":"2. 配置文件生成","level":"1.3.1.2.2","depth":4,"path":"chapter2/section1/part1/detail2.md","ref":"chapter2/section1/part1/detail2.md","articles":[]},{"title":"3. 添加项目到数据库","level":"1.3.1.2.3","depth":4,"path":"chapter2/section1/part1/detail3.md","ref":"chapter2/section1/part1/detail3.md","articles":[]}]},"previous":{"title":"2. 配置数据库信息","level":"1.3.1.1.2","depth":4,"path":"chapter2/section1/part2/detail3.md","ref":"chapter2/section1/part2/detail3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","ancre-navigation","popup","code","search-pro","tbfed-pagefooter","insert-logo","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Tongji University"},"chapter-fold":{},"livereload":{},"search-pro":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"/image/TongjiLogo.png"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iS3平台帮助文档","gitbook":"*","description":"教你如何使用iS3平台"},"file":{"path":"chapter2/section1/part2/detail2.md","mtime":"2020-02-02T13:02:58.353Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-02T11:45:01.094Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

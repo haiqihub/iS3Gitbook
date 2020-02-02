@@ -8,7 +8,7 @@
 
 ## Geology
 
-`Geology`的数据放在`.\iS3.MiniServer\iS3.Geology\Model`中，其中记录着表的属性和对应的数据类型。（不包括类`iS3AreaHandle`中的五个属性及其数据类型，关于类`iS3AreaHandle`详见[表的创建(二、平台使用/第一章 数据准备/第一节 数据库配置/2. 表的创建)](./../section1/part2/detail2.md)中的 `iS3AreaHandle`类）
+`Geology`的数据放在`.\iS3.MiniServer\iS3.Geology\Model`中，其中记录着表的属性和对应的数据类型。（不包括类`iS3AreaHandle`中的五个属性及其数据类型，关于类`iS3AreaHandle`详见[表的创建(二、平台使用/第一章 数据准备/第一节 数据库配置/3. 表的创建)](./../section1/part2/detail2.md)中的 `iS3AreaHandle`类）
 
 以`borehole.cs`（钻孔）为例：
 
@@ -42,7 +42,7 @@ namespace iS3.Geology.Model
         public Nullable<double> Ycoordinate { get; set; }
 
 //NotMapped特性可以应用到领域类的属性中，EF Code-First默认的约定:为所有带有get,和set属性选择器的属性创建数据列。
-//而NotManpped特性打破了这个约定，你可以使用NotMapped特性到某个属性上面，然后Code-First就不会为这个属性在数据表中创建列了。
+//而NotMapped特性打破了这个约定，你可以使用NotMapped特性到某个属性上面，然后Code-First就不会为这个属性在数据表中创建列了。
 
         [NotMapped]
         public List<BoreholeStrata> BoreholeStratas { get; set; } = new List<BoreholeStrata>();
@@ -120,7 +120,7 @@ namespace iS3.Monitoring
         public string fileName { get; set; }
         
 //NotMapped特性可以应用到领域类的属性中，EF Code-First默认的约定:为所有带有get,和set属性选择器的属性创建数据列。
-//而NotManpped特性打破了这个约定，你可以使用NotMapped特性到某个属性上面，然后Code-First就不会为这个属性在数据表中创建列了。
+//而NotMapped特性打破了这个约定，你可以使用NotMapped特性到某个属性上面，然后Code-First就不会为这个属性在数据表中创建列了。
 
         [NotMapped]
         // Summary:
