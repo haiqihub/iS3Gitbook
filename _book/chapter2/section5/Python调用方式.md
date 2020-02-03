@@ -9,7 +9,7 @@
 >  理论上位于`.. \Output\PyPlugins`路径下的Python脚本库也会被iS3识别，但由于位于该目录下的脚本文件在主程序运行时就会被自动执行，不适用于上述场景。
 
 <div style= text-align:center>
-<img src=".\IronPythonConsole.png"  style='width:600px'; 'left: 50%' />
+<img src="./img/IronPythonConsole.png"  style='width:600px'; 'left: 50%' />
 </div>
 
 此处，我们将对**Console**的使用进行简单示范。
@@ -27,7 +27,7 @@
 工程图形展示面板多了一层名为`Map 3D`的3D图层。
 
 <div style= text-align:center>
-<img src=".\1.png"  style='width:600px'; 'left: 50%' />
+<img src="./img/1.png"  style='width:600px'; 'left: 50%' />
 </div>
 
 ## 2. IronPython Pad
@@ -35,7 +35,7 @@
 `IronPython Pad`面板如下所示，此处可加载并执行Python脚本文件，可点击文件图标打开指定路径下的文件加载脚本，也可以直接在该面板编写长段代码。执行代码请点击绿色箭头图标。
 
 <div style= text-align:center>
-<img src=".\IronPythonPad.png"  style='width:600px'; 'left: 50%' />
+<img src="./img/IronPythonPad.png"  style='width:600px'; 'left: 50%' />
 </div>
 
 ## 3.  Python扩展插件
@@ -45,5 +45,5 @@
 以`plugin-demo.py`为例，将`plugin-demo.py`脚本文件放置于该目录下，加载工程时自动执行该脚本，将`Demo`加至**Tools**面板。点击该**Demo**字样时，系统会在图形展示面板添加一层名为`Demo`的3D图层，
 
 <div style= text-align:center>
-<img src=".\Tools.png"  style='width:600px'; 'left: 50%' />
+<img src="./img/Tools.png"  style='width:600px'; 'left: 50%' />
 </div>

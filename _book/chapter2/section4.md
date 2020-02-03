@@ -1,18 +1,20 @@
-# Python接口
+# 相关接口
 
-本节将对iS3的Python开发和使用进行相关介绍和说明。本节共分为4个小节，这4个小节分别介绍了iS3系统中Python开发所涉及的脚本库，调用方式以及开发样例，并附上`is3.py`脚本库的使用说明，供用户调用。此外，本章还对Python二次开发过程中常见的部分问题进行解答。
+iS3平台遵循MVC模式进行开发，并允许用户调用已存在的类和方法进行二次开发。本节将对iS3平台提供的调用接口进行介绍，并分为C#接口和Python接口两个部分进行说明。通过本小节，你将掌握IS3平台二次开发过程中调用的接口。
 
-   * [Python相关库](./section4/Python相关库.md)
-
-   * [Python调用方式](./section4/Python调用方式.md)
-
-   * [Python接口使用demo](.section4/Python接口使用demo.md)
-   
-   * [iS3脚本库使用说明](./section4/iS3脚本库说明.md)
-        * [1. Attribute](./section4/Attributes.md)
-        * [2. Class](./section4/Class.md)
-        * [3. Function](./section4/Function.md) 
+   * [C#接口](./section4/part1.md)
+        * [常用接口](./section4/part1/常用接口.md)
+        * [数据调用接口](./section4/part1/数据调用接口.md)
         
-   * [常见问题](.section4/常见问题.md)
+   * [Python接口](./section4/part2.md)
+        * [attribute](./section4/part2/attribute.md)
+        * [class](./section4/part2/class.md)
+        * [function](./section4/part2/function.md) 
 
 
+
+#### 设计模式图
+
+设计模式示意图如下所示：
+
+<img src="./img/DP.png" style="zoom:75%;" />

@@ -1,4 +1,4 @@
-# Python接口使用demo
+# Python开发样例
 
 此处将示例如何利用C#和Python两种语言协同进行接口开发，示例功能为选出属性值在某一范围内的数字化对象（`DGObject`），并将其图标和数据行高亮。该demo目前仅支持`Borehole`类型下对`top`属性的筛选。由于需要传入参数，该demo适合在`IronPython Console`中调用。
 
@@ -129,7 +129,7 @@ def test(type,attribute,down,up):
 测试效果如下图：
 
 <div style= text-align:center>
-<img src=".\test.png"  style='width:600px'; 'left: 50%'/>
+<img src="./img/test.png"  style='width:600px'; 'left: 50%'/>
 </div>
 
 由上图可见，符合范围内的`Borehole`类型的数字化对象在地图和**Data View**上均被高亮，且在**Object View**面板中被展示。

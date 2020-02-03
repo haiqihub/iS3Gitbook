@@ -1,4 +1,4 @@
-# 2. Class
+# 2 Class
 
 为了实现UI线程中函数的安全调用，is3脚本库中定义了了一些类，将`Mainframe`，`View`中的函数以`Wrapper`的形式进行包装。
 
