@@ -52,12 +52,14 @@ Entity Framework Code First与数据表之间有两种映射方式，可选择�
 
 4. 在上一节（[配置数据库信息(二、平台使用/第一章 数据准备/第一节 数据库配置/2. 配置数据库信息)](./detail3.md)）配置的数据库对应的表（即本例中的`Geology_Borehole`）中导入配置文件`geodatabase`中的数据。
 
+   TONGJI项目中的`Geology_Borehole`，`Geology_Strata`，`Geology_SoilProperty`和`Monitoring_Monpoint`的数据都可以通过[平台使用](./../../README.md)中的链接下载数据库数据导入`sql`文件进行数据库的数据导入。
+
    到此，以建立`borehole`的表为例子，建表完成。
 
    
 
    本例中`borehole.cs`的代码如下：
-
+   
    ```csharp
       using System;
       using System.Collections.Generic;
@@ -95,9 +97,9 @@ Entity Framework Code First与数据表之间有两种映射方式，可选择�
       }
       }
    
-   
-   ```
 
+   ```
+   
    
 
 
