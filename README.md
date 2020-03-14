@@ -19,8 +19,13 @@
 ### 部署方法
 
 1、安装Node.js。<http://nodejs.cn/download/>
+
 2、安装gitbook工具。npm install -g gitbook-cli
+
 3、下载文档并打开根目录
+
 4、在根目录处执行 gitbook init
+
 5、然后执行 gitbook serve
+
 6、浏览器打开http://localhost:4000/
